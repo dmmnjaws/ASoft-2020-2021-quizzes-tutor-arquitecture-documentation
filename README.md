@@ -1,5 +1,5 @@
 ### DISCLAIMER
-This repository is a fork from the original Quizzes Tutor project, needed in order to experiment for the course of Software Architectures in IST.Our group's main contribution was the documentation folder containing the documentation of the software's architecture.
+This repository is a fork from the original Quizzes Tutor project, needed in order to experiment for the course of Software Architectures in IST. Our group's main contribution was the documentation folder containing the documentation of the software's architecture.
 
 <h1 align="center">Quizzes Tutor</h1>
 
