@@ -34,9 +34,6 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 ### D
 1 person: Use some tools to get metrics - coupling, cohesion and complexity
 
-## Link for our fork of the quizzes-tutor
-(link pending)
-
 ## Useful links:
 
 https://fenix.tecnico.ulisboa.pt/disciplinas/ASof7/2020-2021/1-semestre/project
