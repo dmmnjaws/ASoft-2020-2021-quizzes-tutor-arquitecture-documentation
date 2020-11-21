@@ -43,8 +43,7 @@ https://fenix.tecnico.ulisboa.pt/disciplinas/ASof7/2020-2021/1-semestre/project
 
 https://www.inesc-id.pt/projects/II03017/
 
-https://bettercodehub.com/ (TOOL: check code-base quality)
-`results: https://bettercodehub.com/results/dmmnjaws/AS-2020-2021-quizzes-tutor`
+https://bettercodehub.com/ (TOOL: check code-base quality, RESULT: https://bettercodehub.com/results/dmmnjaws/AS-2020-2021-quizzes-tuto)
 
 https://structure101.com/ (TOOL: analyse modular dependencies)
 
