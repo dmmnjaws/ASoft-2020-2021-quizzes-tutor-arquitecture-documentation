@@ -1,4 +1,4 @@
-## 1. The Quizzes Tutor supports a course that follows the flipped classroom model facilitating the reuse of questions across the different executions of the course.
+## 1 The Quizzes Tutor supports a course that follows the flipped classroom model facilitating the reuse of questions across the different executions of the course.
 
 1. Goal-source
     - Course teachers that own quizzes-tutor are the ones who provide the business goal. `(we may ask the professor who specifically?)`
@@ -19,7 +19,7 @@
 
 6. Goal-measures
 	- Total time spent, by the teachers, preparing questions in the beginning or through the course, in contrast to years where traditional evaluation methods were employed - goal achieved if less time spent;
-	- Student's level of satisfaction in end-of-semester feedback surveys, in contrast to years where traditional evaluation methods were employed - goal achieved if satifaction levels are higher;
+	- Student's level of satisfaction in end-of-semester feedback surveys, in contrast to years where traditional evaluation methods were employed - goal achieved if satisfaction levels are higher;
 	- Amount of paper spent, in contrast to years where traditional evaluation methods were employed - goal achieved if less paper used.
 
  7. Pedigree and Value: 
@@ -27,7 +27,7 @@
 
 
 
-## 2. The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge.
+## 2 The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge.
 
 1. Goal-source
 	- Course teachers that own quizzes-tutor are the ones who provide the business goal. `(we may ask the professor who specifically?)`
@@ -54,7 +54,7 @@
 
 
 
-## 3. The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
+## 3 The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
 
 ### Scenario 1: The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects.
 1. Goal-source

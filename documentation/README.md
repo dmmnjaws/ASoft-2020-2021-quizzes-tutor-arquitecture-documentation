@@ -11,18 +11,31 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 
 ## Group members:
 | Name | student number | main responsabilities |
-|----------|:-------------:|------------| 
-| António Teixeira | 97430 | |
+|----------|:-------------:|:------------:| 
+| António Teixeira | 97430 | C |
 | Duarte Miguel | 87527 | |
 | João Vieira | 98624 | |
 | João Marques | 90865 | |
 | Miguel Azinheira | 98725 | |
 
-Available responsabilities to choose from
-- 2 person: read the code, infer structure from code, where are the dependencies ? (try finding a tool for reverse engineering)
-- 1 person: look at the business statement (more info?)
-- 1 person: Infer which are the important qualities by looking at the business goals
-- 1 person: Use some tools to get metrics - coupling, cohesion and complexity
+## Main responsabilities list
+### A
+2 person: read the code, infer structure from code, where are the dependencies ? (try finding a tool for reverse engineering)
+### B
+1 person: look at the business statement (more info?)
+### C
+1 person: Infer which are the important qualities by looking at the business goals
+- Identify the quality atributes from business goals
+- Write the core scenarios for each quality atributes identified
+- Identify the ASRs
+- Write the ASR Utility Tree in tabular form
+- Going back to quality attributes which tactics should we use to fulfill them and where?
+
+### D
+1 person: Use some tools to get metrics - coupling, cohesion and complexity
+
+## Link for our fork of the quizzes-tutor
+(link pending)
 
 ## Useful links:
 
@@ -30,7 +43,9 @@ https://fenix.tecnico.ulisboa.pt/disciplinas/ASof7/2020-2021/1-semestre/project
 
 https://www.inesc-id.pt/projects/II03017/
 
-https://bettercodehub.com/ (TOOL: check code-base quality - results: https://bettercodehub.com/results/dmmnjaws/AS-2020-2021-quizzes-tutor)
+https://bettercodehub.com/ (TOOL: check code-base quality)
 
 https://structure101.com/ (TOOL: analyse modular dependencies)
+
+https://omerad.msu.edu/teaching/teaching-strategies/27-teaching/162-what-why-and-how-to-implement-a-flipped-classroom-model
 
