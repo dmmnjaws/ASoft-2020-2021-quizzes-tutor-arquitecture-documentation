@@ -2,7 +2,7 @@
 
 # How to generate a DSM from IntellJ you need to:
 - Make sure you have the Dependency Structure Matrix plugin installed: `> Ctrl+Alt+S > Plugins > Confirm 'Dependency Structure Matrix' under 'Instaled' tab.`
-- Generate the matrix: `> RMB in the module > Analyse > Dependency Structure Matrix` 
+- Generate the matrix: `> RMB in the module > Analyse > Analyse Dependency Matrix > toggle "Whole Project" > Ok` 
 
 # Result for quizzes-tutor-backend:
 <img src="pictures/DSM.png" width="800" >
