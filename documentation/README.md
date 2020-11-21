@@ -47,10 +47,10 @@ https://structure101.com/ (TOOL: analyse modular dependencies)
 https://omerad.msu.edu/teaching/teaching-strategies/27-teaching/162-what-why-and-how-to-implement-a-flipped-classroom-model
 
 ## Software Architecture Document Template and Example:
-# Template: 
+### Template: 
 https://wiki.sei.cmu.edu/confluence/display/SAD/Software+Architecture+Documentation+Template
 
-# Examples:
+### Examples:
 https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280205
 https://wiki.sei.cmu.edu/confluence/display/SAD/The+Java+Pet+Store+SAD
 
