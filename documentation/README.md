@@ -13,7 +13,7 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 | Name | student number | main responsabilities |
 |----------|:-------------:|:------------:| 
 | António Teixeira | 97430 | C |
-| Duarte Miguel | 87527 | |
+| Duarte Miguel | 87527 | A |
 | João Vieira | 98624 | |
 | João Marques | 90865 | |
 | Miguel Azinheira | 98725 | |
@@ -40,7 +40,7 @@ https://fenix.tecnico.ulisboa.pt/disciplinas/ASof7/2020-2021/1-semestre/project
 
 https://www.inesc-id.pt/projects/II03017/
 
-https://bettercodehub.com/ (TOOL: check code-base quality)
+https://bettercodehub.com/ (TOOL: check code-base quality, RESULT: https://bettercodehub.com/results/dmmnjaws/AS-2020-2021-quizzes-tuto)
 
 https://structure101.com/ (TOOL: analyse modular dependencies)
 
