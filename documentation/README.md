@@ -18,11 +18,13 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 | João Marques | 90865 | |
 | Miguel Azinheira | 98725 | |
 
-## Main responsabilities list
+---
+## Main responsabilities list:
+---
 ### A
 2 person: read the code, infer structure from code, where are the dependencies ? (try finding a tool for reverse engineering)
 #### FOR NOW:
-- Produce a module-view document:
+- Produce a module-view document `(Possibly uses-style since we have access to DSM and Dependency Flow Graph (both available in documentations/pictures), for more Module-Styles - page 65 of DSA - six important module styles)`:
 1. Make an easily understood and organized module diagram
 2. Write an element catalogue (what each module is and it's properties)
 3. Specify each elements interfaces (what each module's interface (if there's one) offers)
@@ -35,8 +37,11 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 3. (IDEA) Specify module-component mappings (ex: 1 user module translates into +1000 user components at runtime; 1 course module translates into dozens of course components at runtime, etc)
 4. Follow the template and examples provided below for more
 
+---
 ### B
 1 person: look at the business statement (more info?)
+
+---
 ### C
 1 person: Infer which are the important qualities by looking at the business goals
 - Identify the quality atributes from business goals
@@ -45,9 +50,11 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 - Write the ASR Utility Tree in tabular form
 - Going back to quality attributes which tactics should we use to fulfill them and where?
 
+---
 ### D
 1 person: Use some tools to get metrics - coupling, cohesion and complexity
 
+---
 ## Useful links:
 
 https://fenix.tecnico.ulisboa.pt/disciplinas/ASof7/2020-2021/1-semestre/project
