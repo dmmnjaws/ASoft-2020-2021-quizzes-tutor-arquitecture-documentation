@@ -29,9 +29,10 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 4. Follow the template and examples provided below for more
 
 #### FOR LATER:
-- Produce a component-and-connector-view document: `(ATTENTION: module vs. component - page 31 of DSA)`
+- Produce a component-and-connector-view document: `(ATTENTION: module vs. component - page 31 of DSA - client/server example explanation)`
 1. Make an easily understood and organized component/connector diagram (extracted from the ER Diagram)
 2. Write an element catalogue (what each component/connector is and it's properties)
+3. (IDEA) Specify module-component mappings (ex: 1 user module translates into +1000 user components at runtime; 1 course module translates into dozens of course components at runtime, etc)
 4. Follow the template and examples provided below for more
 
 ### B
