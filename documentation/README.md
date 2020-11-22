@@ -29,7 +29,7 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 4. Follow the template and examples provided below for more
 
 #### FOR LATER:
-- Produce a component-and-connector-view document:
+- Produce a component-and-connector-view document: `(ATTENTION: module vs. component - page 31 of DSA)`
 1. Make an easily understood and organized component/connector diagram (extracted from the ER Diagram)
 2. Write an element catalogue (what each component/connector is and it's properties)
 4. Follow the template and examples provided below for more
