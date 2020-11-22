@@ -21,6 +21,13 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 ## Main responsabilities list
 ### A
 2 person: read the code, infer structure from code, where are the dependencies ? (try finding a tool for reverse engineering)
+#### FOR NOW:
+- Produce a module-view document:
+1. Make an easily understood and organized module diagram
+2. Write an element catalogue (what each module is and it's properties)
+3. Specify each elements interfaces (what each module's interface (if there's one) offers)
+4. Follow the template and examples provided below for more
+
 ### B
 1 person: look at the business statement (more info?)
 ### C
