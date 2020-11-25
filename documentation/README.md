@@ -37,6 +37,12 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 3. (IDEA) Specify module-component mappings (ex: 1 user module translates into +1000 user components at runtime; 1 course module translates into dozens of course components at runtime, etc)
 4. Follow the template and examples provided below for more
 
+### CONCLUSIONS:
+
+1. When writing a uses-view document we should be careful with circular dependencies. The first step is to identify them thru the DSM, code and Graphs, then we should propose a way to elinminate these circular dependencies based in principles of DDD, written as a *"in the future..."* in the element catalogue for those modules. An example would be the *answer* and *quiz* modules, that have really strong circular dependencies. Identified the dependencies, we should write something like this in the element catalogue for *answer/quiz* - *"In the future, the answer module will be merged with the quiz module in a single module, because there's no sense in keeping them apart."* OR *"In the future, the answer module and the quiz module should be part of the same Shared Kernel."* (The professor likes the first better.)
+
+2. The statistics module is a module that uses a lot of other modules to colect statistics from everywhere (an example is the user class). 
+
 ---
 ### B
 1 person: look at the business statement (more info?)

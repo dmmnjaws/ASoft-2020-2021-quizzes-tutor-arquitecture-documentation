@@ -2,10 +2,10 @@
 
 ## Primary Presentation
 
-<img src="pictures/Decomposition View.png" width="800" >
+<img src="pictures/Decomposition View.png" width="600" >
 
 
-### <span style="color:grey">Fig 1. Decomposition View graphic representation. Modules in white are strictly part of the business logic. Modules in grey are not part of the business logic.</span>
+Fig 1. Decomposition View graphic representation. Modules in white are strictly part of the business logic. Modules in grey are not part of the business logic.
 
 ## Element Catalog
 
@@ -39,7 +39,7 @@ This module contains the business logic related to questions and topics. A Topic
 This module contains the business logic related to question submissions and posterior review/vetting of such submissions.
 
 ### <span style="color:#0080ff">quiz</span>
-This module contains the business logic related to quizzes
+This module contains the business logic related to quizzes, including the ordering of the questions, among others.
 
 ### <span style="color:#0080ff">statement</span>
 This module contains services to handle the data colected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed.
