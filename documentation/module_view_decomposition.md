@@ -52,8 +52,8 @@ This module doesn't have persistent content and is simply used to present data.
 This module contains the business logic related with the tournaments functionality.
 
 ### <span style="color:#0080ff">user</span>
-
-*In the future, to migrate quizzes-tutor into a microservices architecture, this module may be turned into an event published publishing events to all the other modules. In turn the other modules would have a specific user module in that context, that would adapt to the changed brought by the events.*
+This module contains the business logic related with a user. In particular, it contains the god class User.
+*In the future, to migrate quizzes-tutor into a microservices architecture, this module may be turned into an event published publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the changed brought by the events.*
 
 
 ## Context Diagram
