@@ -1,11 +1,11 @@
-# Module View: Decomposition View
+# Quizzes-Tutor - Module View: Decomposition View
 
 ## Primary Presentation
 
-<img src="pictures/Decomposition View.png" width="600" >
+<img src="pictures/Decomposition View.png" width="800" >
 
 
-Fig 1. Decomposition View graphic representation. Modules in white are strictly part of the business logic. Modules in grey are not part of the business logic.
+### <span style="color:grey">Fig 1. Decomposition View graphic representation. Modules in white are strictly part of the business logic. Modules in grey are not part of the business logic.</span>
 
 ## Element Catalog
 
@@ -39,7 +39,7 @@ This module contains the business logic related to questions and topics. A Topic
 This module contains the business logic related to question submissions and posterior review/vetting of such submissions.
 
 ### <span style="color:#0080ff">quiz</span>
-This module contains the business logic related to quizzes, including the ordering of the questions, among others.
+This module contains the business logic related to quizzes
 
 ### <span style="color:#0080ff">statement</span>
 This module contains services to handle the data colected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed.
@@ -52,8 +52,8 @@ This module doesn't have persistent content and is simply used to present data.
 This module contains the business logic related with the tournaments functionality.
 
 ### <span style="color:#0080ff">user</span>
-This module contains the business logic related with a user. In particular, it contains the god class User.
-*In the future, to migrate quizzes-tutor into a microservices architecture, this module may be turned into an event published publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the changed brought by the events.*
+
+*In the future, to migrate quizzes-tutor into a microservices architecture, this module may be turned into an event published publishing events to all the other modules. In turn the other modules would have a specific user module in that context, that would adapt to the changed brought by the events.*
 
 
 ## Context Diagram
