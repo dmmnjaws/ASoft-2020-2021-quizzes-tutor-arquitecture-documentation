@@ -18,16 +18,16 @@ Fig 1. Decomposition View graphic representation. Modules in white are strictly 
 - Students may answer quizzes;
 - Discussions between users can be created and carried for each quizz question;
 - Tournaments between students can be organized. These tournaments may be password restricted;
-- Student are allowed to view their current stats.
+- Student are allowed to view their current stats. (Gamification)
 
 ### <span style="color:#0080ff">answer</span>
-This module contains the business logic related to the answer to a question
+This module contains the business logic related to the various answers of a question.
 
 ### <span style="color:#0080ff">auth</span>
-This module provides the means to authenticate a user into the system using token-based authentication. 
+This module provides the means to authenticate a user into the system using token-based authentication. Authentication works for both IST students and external students. 
 
 ### <span style="color:#0080ff">course</span>
-This module contains the business logic related to a course. A distinction is done between a Cource and a CourceExecution, since a course can be executed multiple times over the years, and with different students, but the same questions.
+This module contains the business logic related to a course. A distinction is done between a Cource and a CourceExecution, since a course can be executed multiple times over the years, and with different students, but reuse of questions.
 
 ### <span style="color:#0080ff">discussion</span>
 This module contains the business logic related to the discussions functionality and management of replies.
@@ -43,10 +43,10 @@ This module contains the business logic related to quizzes, including the orderi
 
 ### <span style="color:#0080ff">statement</span>
 This module contains services to handle the data colected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed.
-*This module is deprecated so, in the future it will disappear and all data is to be handled directly by other elements of the domain.*
+*This module is deprecated. In the future it is expected to disappear and all data to be handled directly by other elements of the domain.*
 
 ### <span style="color:#0080ff">statistics</span>
-This module doesn't have persistent content and is simply used to present data.
+This module doesn't have persistent content and is simply used to present data. It is however relevant for the business logic as it materializes the gamification aspect of the system, in the form of a stats board.
 
 ### <span style="color:#0080ff">tournament</span>
 This module contains the business logic related with the tournaments functionality.
