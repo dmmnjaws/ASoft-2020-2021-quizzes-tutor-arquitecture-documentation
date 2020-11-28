@@ -69,6 +69,8 @@ https://www.inesc-id.pt/projects/II03017/
 
 https://bettercodehub.com/ (TOOL: check code-base quality, RESULT: https://bettercodehub.com/results/dmmnjaws/AS-2020-2021-quizzes-tuto)
 
+https://github.com/cqfn/jpeek (TOOL: more code-base quality metrics)
+
 https://structure101.com/ (TOOL: analyse modular dependencies)
 
 https://omerad.msu.edu/teaching/teaching-strategies/27-teaching/162-what-why-and-how-to-implement-a-flipped-classroom-model
