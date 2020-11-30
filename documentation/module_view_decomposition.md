@@ -61,3 +61,6 @@ This module contains the business logic related with a user. In particular, it c
 ## Rationale
 
 ## Related Views
+
+## References
+For a detailed style guide, refer to Chapter 2.1 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
