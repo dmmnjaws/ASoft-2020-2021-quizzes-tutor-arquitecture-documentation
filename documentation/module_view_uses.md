@@ -2,7 +2,9 @@
 
 ## Primary Presentation
 
-## Primary Presentation
+<img src="pictures/Uses View.png" width="900" >
+
+Fig 1. Uses View graphic representation. All arrows represent *uses* relations, which are specialized cases of *depends-on* relations between modules. Pairs of red arrows highlight cyclic dependencies.
 
 ## Element Catalog
 
