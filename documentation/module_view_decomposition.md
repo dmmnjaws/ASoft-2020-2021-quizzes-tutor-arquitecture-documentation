@@ -2,7 +2,7 @@
 
 ## Primary Presentation
 
-<img src="pictures/Decomposition View.png" width="600" >
+<img src="pictures/Decomposition View.png" width="900" >
 
 
 Fig 1. Decomposition View graphic representation. Modules in white are strictly part of the business logic. Modules in grey are not part of the business logic. The **config** module in itself does not contain any business logic other than the **permissions** module.
@@ -56,7 +56,7 @@ This module contains the business logic related with a user. In particular, it c
 *In the future, to migrate quizzes-tutor into a microservices architecture, this module may be turned into an event publisher, publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the changed brought by the events.*
 
 ### <span style="color:#0080ff">permission</span>
-This module handles permissions of access to all the 
+This module handles permissions of access to all the logical business entities - Relevant questions like: Can a user view this course? Can a user view this tournament? ...
 
 ### <span style="color:#0080ff">backend modules</span>
 These submodules contains the server-side logic of their parent module.
