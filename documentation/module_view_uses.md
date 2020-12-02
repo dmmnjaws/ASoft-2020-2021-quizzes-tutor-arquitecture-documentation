@@ -52,6 +52,8 @@ This module contains the business logic related with the tournaments functionali
 This module contains the business logic related with a user. In particular, it contains the god class User.
 *In the future, to migrate quizzes-tutor into a microservices architecture, this module may be turned into an event publisher, publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the changed brought by the events.*
 
+### <span style="color:#0080ff">permission</span>
+This module handles permissions of access to all the logical business entities - Relevant questions like: Can a user view this course? Can a user view this tournament? ...
 
 ## Context Diagram
 
