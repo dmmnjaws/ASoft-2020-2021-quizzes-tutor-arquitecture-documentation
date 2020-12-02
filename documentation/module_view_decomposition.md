@@ -5,7 +5,7 @@
 <img src="pictures/Decomposition View.png" width="600" >
 
 
-Fig 1. Decomposition View graphic representation. Modules in white are strictly part of the business logic. Modules in grey are not part of the business logic.
+Fig 1. Decomposition View graphic representation. Modules in white are strictly part of the business logic. Modules in grey are not part of the business logic. The **config** module in itself does not contain any business logic other than the **permissions** module.
 
 ## Element Catalog
 
@@ -42,7 +42,7 @@ This module contains the business logic related to question submissions and post
 This module contains the business logic related to quizzes, including the ordering of the questions, among others.
 
 ### <span style="color:#0080ff">statement</span>
-This module contains services to handle the data colected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed.
+This module contains services to handle the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed.
 *This module is deprecated. In the future it is expected to disappear and all data to be handled directly by other elements of the domain.*
 
 ### <span style="color:#0080ff">statistics</span>
@@ -55,6 +55,14 @@ This module contains the business logic related with the tournaments functionali
 This module contains the business logic related with a user. In particular, it contains the god class User.
 *In the future, to migrate quizzes-tutor into a microservices architecture, this module may be turned into an event publisher, publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the changed brought by the events.*
 
+### <span style="color:#0080ff">permission</span>
+This module handles permissions of access to all the 
+
+### <span style="color:#0080ff">backend modules</span>
+These submodules contains the server-side logic of their parent module.
+
+### <span style="color:#0080ff">frontend modules</span>
+These submodules contains the client-side logic of their parent module and handle related presentation.
 
 ## Context Diagram
 
