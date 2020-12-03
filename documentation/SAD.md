@@ -11,9 +11,9 @@
     2. [Decomposition View](module_view_decomposition.md)
     3. [Uses View](module_view_uses.md)
 2. Component and Connector Views
-    1. [Client-Server View](c&c_client_server.md)
+    1. [Client-Server View](c&c_view_client_server.md)
 3. Allocation Views
 
-[Mapping Between Views](mapping_between_views.md)
+[Mapping Between Views](mapping_views.md)
 
-[Mapping Requirements to Architecture](mapping_between_views.md)
+[Mapping Requirements to Architecture](mapping_requirements_architecture.md)

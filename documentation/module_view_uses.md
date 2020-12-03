@@ -23,7 +23,7 @@ Fig 1. Uses View graphic representation. All arrows represent *uses* relations, 
 This module contains the business logic related to the various answers of a question.
 
 ### <span style="color:#0080ff">auth</span>
-This module provides the means to authenticate a user into the system using token-based authentication. Authentication works for both IST students and external students. 
+This module provides the means to authenticate a user into the system using token-based authentication. Authentication works for both IST students and external students. This module has a *uses* relation to a module from an external bounded context, the FenixEdu REST API, whose ubiquitous language is a publicly published language to which quizzes-tutor assumes a comformist posture. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).
 
 ### <span style="color:#0080ff">course</span>
 This module contains the business logic related to a course. A distinction is done between a Cource and a CourceExecution, since a course can be executed multiple times over the years, and with different students, but reuse of questions.
