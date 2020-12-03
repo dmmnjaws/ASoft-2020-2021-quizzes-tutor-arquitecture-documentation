@@ -10,7 +10,7 @@ Fig 1. Representation of all the Component and Connector Types used in this view
 
 <img src="pictures/C&C View.png" width="600" >
 
-Fig 2. Client/Server View graphic representation. Components appear in light-grey which their ports in white. Connectors appear in dark-grey with their ports in white. The connector linking **backend-server** with **database** is a typical DB-Access connector.
+Fig 2. Client/Server View graphic representation. Components appear in light-grey with their ports in white. Connectors appear in dark-grey with their ports in white. The connector linking **backend-server** with **database** is a typical DB-Access connector.
 
 ## Element Catalog
 
