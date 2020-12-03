@@ -4,7 +4,7 @@
 
 <img src="pictures/C&C Type Definition.png" width="900" >
 
-Fig 1. Representation of all the Component and Connector Types used in this view. Component Types appear in light-grey which their ports in white. Connectors Types appear in dark-grey with their ports in white. * Queueing System, explained in the Element Catalogue.
+Fig 1. Representation of all the Component and Connector Types used in this view. Component Types appear in light-grey with their ports in white. Connectors Types appear in dark-grey with their ports in white. * Queueing System, explained in the Element Catalogue.
 
 ## Primary Presentation
 
