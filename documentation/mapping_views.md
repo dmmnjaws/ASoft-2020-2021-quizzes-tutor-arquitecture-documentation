@@ -1,5 +1,8 @@
 # Quizzes-Tutor - Mapping Between Views
 
+These are other mappings between views, that weren't foreseen in the Allocation Views.
+
+`Some ideas:`
 ## Mapping Module Views with other Module Views
 `Map the Entities in the Data Model with the modules in the Decomposition View`
 

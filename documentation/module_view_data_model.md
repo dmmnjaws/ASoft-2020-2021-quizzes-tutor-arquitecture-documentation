@@ -12,8 +12,12 @@
 ## Context Diagram
 
 ## Rationale
+`According to the professor, we should only have a view as close to the physical level as this one if we're catching up on scenarios that justify it. Either one of these two: António comes up with scenarios for the appropriate QAs. OR Another simpler view has to be done, closer to de Conceptual/Logic level of Data Model, and this one, closer to the Physical level, is left as a attachment, for further considerations...`
 
 ## Related Views
+
+## References
+For a detailed style guide, refer to Chapter 2.6 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
 
 ----------------------------------------------
 Reply			        XY
