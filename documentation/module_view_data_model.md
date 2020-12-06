@@ -4,6 +4,10 @@
 
 <img src="pictures/Data Model View.png" width="900" >
 
+Fig 1. Data Model graphic representation. Caption:
+
+<img src="pictures/Data Model View Caption.png" width="900" >
+
 ## Element Catalog
 
 ### <span style="color:#0080ff">QuestionAnswerItem</span>
