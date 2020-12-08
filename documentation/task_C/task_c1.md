@@ -1,4 +1,4 @@
-## **C1** Identify the Quality Attributes from the Business Goals
+## **C1** Identify the Quality Attributes and functionalities from the Business Goals
 
 ### **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
 - Detected Functionalities
