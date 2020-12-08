@@ -20,7 +20,7 @@ Fig 1. Uses View graphic representation. All arrows represent *uses* relations, 
 - Student are allowed to view their current stats. (Gamification)
 
 ### <span style="color:#0080ff">answer</span>
-This module contains the business logic related to the various answers of a question.
+This module contains the business logic related to the various answers of a question. *There's a cyclic uses-dependency between this module and the **quesiton** module. Please refer to the **Rationale** section below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">auth</span>
 This module provides the means to authenticate a user into the system using token-based authentication. Authentication works for both IST students and external students. This module has a *uses* relation to a module from an external bounded context, the FenixEdu REST API, whose ubiquitous language is a publicly published language to which quizzes-tutor assumes a comformist posture. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).
@@ -32,7 +32,7 @@ This module contains the business logic related to a course. A distinction is do
 This module contains the business logic related to the discussions functionality and management of replies.
 
 ### <span style="color:#0080ff">question</span>
-This module contains the business logic related to questions and topics. A Topic has a set of Questions and a Question has a Topic.
+This module contains the business logic related to questions and topics. A Topic has a set of Questions and a Question has a Topic. *There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale** section below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">questionsubmission</span>
 This module contains the business logic related to question submissions and posterior review/vetting of such submissions.
@@ -62,6 +62,10 @@ This module handles permissions of access to all the logical business entities -
 `NOTE: To document the interfaces of each module, the best place to look is at the Service classes in each module.`
 
 ## Rationale
+
+Rationale on Model Integrity improvements and considerations:
+
+*Since the **answer** uses the **question** module, which in turn also uses the **answer** module, there's a prominent cyclic dependency. To eliminate this cyclic dependency and improve the continuous integration of these and the dependent modules, a possible future solution is to merge **answer** and **question** in the same module and make them a part of the same Bounded Context. Furthermore, given the fact this conjoined Bounded Context has a lot of incoming uses-dependencies, this should be considered a Shared Kernel, among all other Bounded Contexts that use it. This guarantees uncoordinated teams have a common point of knowledge. It's important to keep in mind that the combination of these two modules is a fundamental piece of quizzes-tutor and that any change will impact the remaining peripheral Bounded Contexts, therefore this shouldn't be changed without consultation with all participating teams.*
 
 ## Related Views
 
