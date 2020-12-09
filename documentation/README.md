@@ -50,12 +50,12 @@ Business goals general scenarios: [link](business_goals_general_scenarios.md)
 ---
 ### C
 1 person: Infer which are the important qualities by looking at the business goals
-- Identify the quality attributes from business goals
-- Write the core scenarios for each quality attributes identified
-- Identify the ASRs
-- Write the ASR Utility Tree in tabular form
-- Going back to quality attributes which tactics should we use to fulfill them and where?
-- Evaluate how to fit all this information into a SAD as shown here:  https://wiki.sei.cmu.edu/confluence/display/SAD/System+Overview
+c1. Identify the funcionalities and quality attributes from business goals
+c2. Write the core scenarios for each quality attributes identified
+c3. Write general scenarios for the Business Goals 
+c4. Write the ASR Utility Tree in tabular form
+c5. Going back to quality attributes which tactics should we use to fulfill them and where?
+c6. Evaluate how to fit all this information into a SAD as shown here:  https://wiki.sei.cmu.edu/confluence/display/SAD/System+Overview
 
 ---
 ### D

@@ -8,7 +8,7 @@
     - Course teachers that own quizzes-tutor are the ones who provide the business goal. `(we may ask the professor who specifically?)`
 
 2. Goal-subject
-    - Teachers interested in using quizzes-tutor in their courses, because evalutation is easier, more flexible and less time consuming; 
+    - Teachers interested in using quizzes-tutor in their courses, because evaluation is easier, more flexible and less time consuming; 
     - Students, because evaluation is remote and therefore more practical;
     - Environment, because the need to use paper is removed.
 
@@ -38,7 +38,6 @@
 
 2. Goal-subject
 	- Students, because they are aquiring competence;
-	- Quizzes-tutor developers, because there's recognition involved in making a fine learning application that may be used at a greater scale;
 	- Schools that benefit from having this system for student evaluation, because they want to form competent engineers.
 
 3. Goal-object
@@ -53,12 +52,12 @@
 6. Goal-measure
 	- The student's grades, in contrast to years where traditional teaching methods were employed - goal achieved if grades are higher.
 
-7. Value
-	- `("The pedigree of the goal tells us the degree of confidence the person who stated the goal has in it" - ask the goal source, professor Rito)`
+7. Pedigree and Value
+	- High
 
 
 
-#### **BG1** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
+#### **BG3** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
 
 ### Scenario 1: The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects.
 1. Goal-source
@@ -81,7 +80,7 @@
 	- Total time spent, by the teachers, preparing course projects, in contrast with years where other projects were prepared - goal achieved if less time spent.
 
 7. Value
-	- `("The pedigree of the goal tells us the degree of confidence the person who stated the goal has in it" - ask the goal source, professor Rito)`
+	- High
 
 
 
@@ -107,7 +106,7 @@
     - `(While developing web applications Students do less errors, take less time and at a lower cost in the future(aplica-se ao Environment?)`
 
 7. Value
-	- `("The pedigree of the goal tells us the degree of confidence the person who stated the goal has in it" - ask the goal source, professor Rito)`
+	- High
 
 
 `NOTES`
