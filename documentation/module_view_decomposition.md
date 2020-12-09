@@ -69,18 +69,22 @@ These submodules contains the client-side logic of their parent module and handl
 ## Rationale
 
 From a point of view of DDD Distillation, the following modules are part of the **Core Domain**:
-- course;
-- question and answer;
-- question submission;
-- quiz;
-- user;
-- permission;
+- course
+- question and answer
+- question submission
+- quiz
+- user
+
+And the following modules are **Core Subdomains**:
+- discussion
+- tournament
+- statistics
+- permission
 
 And the following modules are **Generic Subdomains**:
-- auth;
-- discussion;
-- tournament;
-- statistics;
+- auth
+- mailer
+
 
 ## Related Views
 
