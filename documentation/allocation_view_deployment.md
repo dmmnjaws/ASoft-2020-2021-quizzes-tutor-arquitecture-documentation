@@ -9,7 +9,7 @@
 ## Rationale
 `Mapping C&C components and connectors to execution hardware.` 
 
-`MOTIVATION: We know that the component backend-server runs in a single 4 core machine and we know the code implementation that concretizes this server isn't prepared for concurrent replicated execution, so that should be a little spark for this view to take off... This might be important to rationalize about Performance, Availability, Reliability, Security, Modifiability (more funcionalities - more demanding backend-server component - need more potent machines?) and Scalability (how easy is it to add computational power?)!`
+`MOTIVATION: We know that the component backend-server runs in a single 4 core machine with 16GB of RAM, and we know the code implementation that concretizes this server isn't prepared for concurrent replicated execution, so that should be a little spark for this view to take off... This might be important to rationalize about Performance, Availability, Reliability, Security, Modifiability (more funcionalities - more demanding backend-server component - need more potent machines?) and Scalability (how easy is it to add computational power?)!`
 
 ## Related Views
 

@@ -10,8 +10,35 @@ Fig 1. Data Model graphic representation. Caption:
 
 ## Element Catalog
 
+### <span style="color:#0080ff">AnswerDetails</span>
+### <span style="color:#0080ff">Assessment</span>
+### <span style="color:#0080ff">AuthDemoUser</span>
+### <span style="color:#0080ff">AuthExternalUser</span>
+### <span style="color:#0080ff">AuthUser</span>
+### <span style="color:#0080ff">Course</span>
+### <span style="color:#0080ff">CourseExecution</span>
+### <span style="color:#0080ff">Discussion</span>
+### <span style="color:#0080ff">Image</span>
+### <span style="color:#0080ff">MultipleChoiceQuestion</span>
+### <span style="color:#0080ff">MultipleChoiceAnswer</span>
+### <span style="color:#0080ff">MultipleChoiceAnswerItem</span>
+### <span style="color:#0080ff">Option</span>
+### <span style="color:#0080ff">Question</span>
+### <span style="color:#0080ff">QuestionAnswer</span>
 ### <span style="color:#0080ff">QuestionAnswerItem</span>
 `Separation Ways DDD Pattern since we're using Foreign Keys instead of Object References for quizId, quizQuestionId and username`
+### <span style="color:#0080ff">QuestionDetails</span>
+### <span style="color:#0080ff">QuestionSubmission</span>
+### <span style="color:#0080ff">Quiz</span>
+### <span style="color:#0080ff">QuizAnswer</span>
+### <span style="color:#0080ff">QuizAnswerItem</span>
+### <span style="color:#0080ff">QuizQuestion</span>
+### <span style="color:#0080ff">Reply</span>
+### <span style="color:#0080ff">Review</span>
+### <span style="color:#0080ff">Topic</span>
+### <span style="color:#0080ff">TopicConjunction</span>
+### <span style="color:#0080ff">Tournament</span>
+### <span style="color:#0080ff">User</span>
 
 ## Context Diagram
 
