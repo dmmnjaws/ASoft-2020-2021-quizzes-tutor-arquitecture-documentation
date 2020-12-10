@@ -5,7 +5,7 @@
 #### **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
 
 1. Goal-source
-    - Course teachers that own quizzes-tutor are the ones who provide the business goal. `(we may ask the professor who specifically?)`
+    - Course teachers that own quizzes-tutor are the ones who provide the business goal.
 
 2. Goal-subject
     - Teachers interested in using quizzes-tutor in their courses, because evaluation is easier, more flexible and less time consuming; 
@@ -34,14 +34,14 @@
 #### **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge.
 
 1. Goal-source
-	- Course teachers that own quizzes-tutor are the ones who provide the business goal. `(we may ask the professor who specifically?)`
+	- Course teachers that own quizzes-tutor are the ones who provide the business goal.
 
 2. Goal-subject
 	- Students, because they are aquiring competence;
 	- Schools that benefit from having this system for student evaluation, because they want to form competent engineers.
 
 3. Goal-object
-	- Quizzes-tutor. `(read System in Table 16.3, page 302 of SAP)`
+	- Quizzes-tutor.
 
 4. Environment
 	- Academic study context.
@@ -61,7 +61,7 @@
 
 ### Scenario 1: The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects.
 1. Goal-source
-	- Course teachers that desire to use quizzes-tutor as a pedagogical tool, as project-study material, are the ones who provide the business goal. `(we may ask the professor which courses use Quizzes Tutor as Project-study material specifically, but we'd guess Software Engineering and Software Arquitectures?)`
+	- Course teachers that desire to use quizzes-tutor as a pedagogical tool, as project-study material, are the ones who provide the business goal. 
 
 2. Goal-subject
 	- Course teachers that desire to use quizzes-tutor as a pedagogical tool, as project-study material, because less time is used when preparing projects and teaching process brings course students closer to a real world scenario;
@@ -86,11 +86,10 @@
 
 ### Scenario 2: The students learn how to develop a web application more easily.
 1. Goal-source
-	- Course teachers that desire to use quizzes-tutor as a pedagogical tool, as project-study material, are the ones who provide the business goal. `(we may ask the professor which courses use Quizzes Tutor as Project-study material specifically, but we'd guess Software Engineering and Software Arquitectures?)`
+	- Course teachers that desire to use quizzes-tutor as a pedagogical tool, as project-study material, are the ones who provide the business goal.
 	
 2. Goal-subject
 	- Students, because they're offered the opportunity to gain competence.
-	- `(The Professors because their students become familiar with web application development?)`
 
 3. Goal-object
 	- The students.
@@ -103,11 +102,9 @@
 
 6. Goal-measure (examples, based on goal categories)
     - The student's project grades, in contrast to years where other projects were prepared - goal achieved if project grades are higher.
-    - `(While developing web applications Students do less errors, take less time and at a lower cost in the future(aplica-se ao Environment?)`
 
 7. Value
 	- High
-
 
 `NOTES`
    - Was it ok that we broke BG3 into 2 distinct Business Goals Scenarios? 
