@@ -25,7 +25,7 @@
 	- Amount of paper spent, in contrast to years where traditional evaluation methods were employed - goal achieved if less paper used.
 
  7. Pedigree and Value: 
- 	- `("The pedigree of the goal tells us the degree of confidence the person who stated the goal has in it" - ask the goal source, professor Rito)`
+ 	- High
 
 
 
