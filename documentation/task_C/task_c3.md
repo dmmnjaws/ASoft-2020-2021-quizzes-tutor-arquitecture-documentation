@@ -1,8 +1,6 @@
-## **C3**  Identify the ASRs
+# **C3**  Write general scenarios for the Business Goals
 
-### **C3-1** Business Goals General Scenarios
-
-#### **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
+## **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
 
 1. Goal-source
     - Course teachers that own quizzes-tutor are the ones who provide the business goal.
@@ -13,7 +11,7 @@
     - Environment, because the need to use paper is removed.
 
 3. Goal-object
-    - Quizzes Tutor. `(read System in Table 16.3, page 302 of SAP)`
+    - Quizzes Tutor.
 
 4. Environment
     - Academic evaluation context.
@@ -31,7 +29,7 @@
 
 
 
-#### **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge.
+## **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge.
 
 1. Goal-source
 	- Course teachers that own quizzes-tutor are the ones who provide the business goal.
@@ -57,7 +55,7 @@
 
 
 
-#### **BG3** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
+## **BG3** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
 
 ### Scenario 1: The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects.
 1. Goal-source
