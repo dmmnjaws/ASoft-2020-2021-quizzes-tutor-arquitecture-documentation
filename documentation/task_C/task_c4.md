@@ -10,7 +10,7 @@
 `Atribute Refinement`: Adding new questions `?`
 `Quality Attribute`: Modifiability
 
-`ASR`: At the end of the lecture a new quizz is unlocked. The students enter a code to access the quizz. The system must be available throughout the quizz.
+`ASR`: At the end of the lecture a new quizz is unlocked. The students enter a code to access the quizz. The system must be available throughout the quizz.  `(H,H)?` 
 `Atribute Refinement`: No downtime 
 `Quality Attribute`: Availability
 
