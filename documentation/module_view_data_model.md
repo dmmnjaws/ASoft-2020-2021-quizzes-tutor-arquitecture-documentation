@@ -64,7 +64,7 @@ This entity corresponds to a question-answer's data and it's identified by an In
 
 
 ### <span style="color:#0080ff">QuestionDetails</span>
-This entity is a link entity that maps to a single **Question** entity, and vice-versa, and it's identified primarily by an Integer id. This is a particular case of entity, since what it really does, is mapping the **Question** entity to a type of question. For now quizzes-tutor only supports multiple choice questions (note the inheritance relation between **MultipleChoiceQuestion** and **QuestionDetails**), but in the future, it's expected to support other kinds of questions. Aditional kinds of questions will require entities homologue to **MultipleChoiceQuestion** to inherit from **QuestionDetails**  
+This entity is a link entity that maps to a single **Question** entity, and vice-versa, and it's identified primarily by an Integer id. This is a particular case of entity, since what it really does, is mapping the **Question** entity to a type of question. For now quizzes-tutor only supports multiple choice questions (note the inheritance relation between **MultipleChoiceQuestion** and **QuestionDetails**), but in the future, it's expected to support other kinds of questions. Aditional kinds of questions will require entities homologue to **MultipleChoiceQuestion** to inherit from **QuestionDetails**. `(MODIFIABILITY!!!)`
 - **Semantics:** Question details is roughly speaking, the broad concept of "type of question". The different kinds of question details (it's inheritances) are the concrete types of question.
 
 ### <span style="color:#0080ff">QuestionSubmission</span>
