@@ -16,8 +16,7 @@ This entity is a link entity that maps to a single **QuestionAnswer** entity, an
 
 ### <span style="color:#0080ff">Assessment</span>
 This entity corresponds to an assessment's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **CourseExecution**.
-- **Semantics:** An assessment is an evaluation, in the form of a group of questions polled from a conjunction of topics (Refer to **TopicConjunction** to understand how an assessment is mapped to a conjunction of topics). An asssessment exists exclusively in the context of a course's execution, since using the exact same assessments in different executions of the course may lead to student evalutation fraud.
-`Discuss with teacher if this is correct, because it seems assessment fetches questions based on Topiconjunction and I'm not sure.`
+- **Semantics:** An assessment is a group of questions polled from a conjunction of topics (Refer to **TopicConjunction** to understand how an assessment is mapped to a conjunction of topics). An asssessment exists exclusively in the context of a course's execution, since even though the questions remain the same across multiple executions of the course, the assessments should be created according to annual/semiannual necessities.
 
 ### <span style="color:#0080ff">AuthDemoUser</span>
 This entity is a *specialization* of **AuthUser**, relating to the authentication of a demo user. It's identified by a unique Integer id.
@@ -41,7 +40,7 @@ This entity corresponds to a course's data and it's identified by a unique Integ
 
 ### <span style="color:#0080ff">CourseExecution</span>
 This entity corresponds to a course-execution's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **Course**.
-- **Semantic:** A course execution corresponds to an annual/semiannual execution of a course. For example, the course of SOFTWARE ARQUITECTURES had multiple executions including in 2017/2018, 2018/2019 and 2019/2020.
+- **Semantic:** A course execution corresponds to an annual/semiannual execution of a course. For example, the course of *Software Arquitectures* had multiple executions including in 2017/2018, 2018/2019 and 2019/2020.
 
 ### <span style="color:#0080ff">Discussion</span>
 This entity corresponds to a discussion's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **Question**.
@@ -60,7 +59,8 @@ This entity is a *specialization* of **AnswerDetails** and therefore identifies 
 - **Semantic:** A multiple choice answer is a possible type of answer.
 
 ### <span style="color:#0080ff">MultipleChoiceAnswerItem</span>
-`Ask professor for revision and discussion`
+This entity is a *specialization* of **QuizAnswerItem** and together with it serves an homologue purpose to **MultipleChoiceAnswer** and **AnswerDetails**. It's identified by a unique Integer id.
+- **Semantic:** A mutiple-choice-answer-item's semantic purpose is to *specialize* the asynchronous collection of data for multiple choice questions. Since quizzes-tutor allows a question's options to be scrambled, which means the answers may appear in a completely altered order for the user, it's also crucial to map the option selected by the user with the right option of the question, by using the *optionId* Integer parameter.
 
 ### <span style="color:#0080ff">Option</span>
 This entity corresponds to an option's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **MultipleChoiseQuestion**.
@@ -71,15 +71,12 @@ This entity corresponds to a question's data and it's identified by a unique Int
 - **Semantics:** A question, as the name suggests, corresponds to a question that can be put in a quiz. In particular the question entity relates to what's absolutely common to all kinds of question - the "concept" of "a question". The type and parameters of the question are attributed by other entities and relations, mainly by what *specialization* of **QuestionDetails** the question owns.
 
 ### <span style="color:#0080ff">QuestionAnswer</span>
-This entity corresponds to a question-answer's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **QuizAnswer** entity.
-- **Semantics:** A question answer exists in the context of a quiz answer (the route until the user clicks to the "next question"), and is characterized by the clicked answer (sequence attribute) and how much time it took to select that answer. Therefore, a question-answer corresponds to a "click" in an answer for the question (which may be many in the context of one question). For example, an instance of a **QuestionAnswer** entity is created if a quiz starts, the first question is presented to the user and he/she picks answer B in 2 seconds. Another instance is created if the user changes it's question to question A in 3 seconds.
-`Ask professor for revision and discussion`
+This entity corresponds to a question-answer's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **QuizAnswer**.
+- **Semantics:** A question answer exists in the context of a quiz answer and is characterized by the final clicked answer (sequence attribute) to a given question and how much time it took to select that answer.
 
 ### <span style="color:#0080ff">QuestionAnswerItem</span>
-`Ask professor for revision and discussion`
-
-`Separation Ways DDD Pattern since we're using Foreign Keys instead of Object References for quizId, quizQuestionId and username`
-
+This entity corresponds to a question-answer-item's data and it's identified by a unique Integer id. This entity is generated asynchronously during the answering of the quiz.
+- **Semantics:** A question-answer-item corresponds to a grouping of important data adjacent to a "click" in an answer for the question (which may be many in the context of one question). For example, an instance of a **QuestionAnswerItem** entity is created if a quiz starts, the first question is presented to the user and he/she picks answer B. Another instance is created if the user changes it's answer to answer A.
 
 ### <span style="color:#0080ff">QuestionDetails</span>
 This entity is a link entity that maps to a single **Question** entity, and vice-versa, and it's identified primarily by a unique Integer id. This is a particular case of entity, since what it really does, is mapping the **Question** entity to a type of question. *For now quizzes-tutor only supports multiple choice questions (note the inheritance relation between **MultipleChoiceQuestion** and **QuestionDetails**), but this form of specialization/generalization favors **modifiability**, since, in the future, quizzes-tutor is expected to support other kinds of questions. Aditional kinds of questions will require entities homologue to **MultipleChoiceQuestion** to inherit from **QuestionDetails**.*
@@ -88,26 +85,22 @@ This entity is a link entity that maps to a single **Question** entity, and vice
 ### <span style="color:#0080ff">QuestionSubmission</span>
 This entity corresponds to a question-submission's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **Question** entity.
 - **Semantics:** A question submission corresponds to the act of a user submitting a question to the system, that then becomes dependent on reviews (**Review** entity) for approval/vetting.
-`Ask professor to discuss if questionsubmission is a weak entity to question, because even though it generates a question, and has uses relation to question, the QuestionSubmission instance may exist prior to the question itself, before the user "types" the question?`
 
 ### <span style="color:#0080ff">Quiz</span>
 This entity corresponds to a quiz's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **CourseExecution** entity.
 - **Semantics:** A quiz corresponds to a set of questions a user can answer.
-`Ask professor to discuss if it really is a weak entity towards CourseExecution`
-
 
 ### <span style="color:#0080ff">QuizAnswer</span>
-This entity corresponds to a quiz-answer's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **Quiz** entity.
-- **Semantics:** A quiz answer corresponds to a description of the entire route it took an user, from the moment a question appears on the screen, to the moment he/she "skips" to the next question.
+This entity corresponds to a quiz-answer's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **Quiz** entity. This entity is instantiated in the beginning of a quiz but populated in the end of the quiz with the processing of the data collected in the database.
+- **Semantics:** A quiz answer corresponds to the grouping of the user's answers to all questions in a quizz, from the moment a question appears on the screen, to the moment he/she "ends" the quiz.
 
 ### <span style="color:#0080ff">QuizAnswerItem</span>
-`Ask professor for revision and discussion`
-
+This entity corresponds to a quiz-answer-item's data and it's identified by a unique Integer id. This entity is generated asynchronously during the answering of the quiz.
+- **Semantics:** A quiz-answer-item corresponds to a grouping of important data adjacent to the conclusion of a quiz.
 
 ### <span style="color:#0080ff">QuizQuestion</span>
 This entity is a link entity that maps a single **Quiz** entity to a single **Question** entity, and it's identified primarily by a unique Integer id.
 - **Semantics:** This QuizQuestion entity actually carries semantic value, as it also gives information about the position (sequence attribute) a question appears at, in the quiz.
-`Ask teacher what this sequence is; because the option entity also has a sequence number, which seems to make this redundant.`
 
 ### <span style="color:#0080ff">Reply</span>
 This entity corresponds to a reply's data and it's identified primarily by a unique int id. It's a weak entity depending on one and only one **Discussion** entity.
@@ -122,8 +115,8 @@ This entity corresponds to a topic's data and it's identified primarily by a uni
 - **Semantics:** A topic is characterized by it's name and refers to a given subject used to characterize questions. For example, a question about *Software Engineering* has *Software Engineering* as it's topic.
 
 ### <span style="color:#0080ff">TopicConjunction</span>
-This entity is a link entity that maps a single **Assessment** entity to many **Topic** entities, and it's identified primarily by a unique Integer id. 
-- **Semantics:** It has no semantic value.
+This entity is a link entity that maps a single **Assessment** entity to **Questions** grouped by **Topics**, and it's identified primarily by a unique Integer id. 
+- **Semantics:** A topic conjunction is a grouping of topics that takes in consideration the topics of the questions available in the quizzes-tutor.
 
 ### <span style="color:#0080ff">Tournament</span>
 This entity corresponds to a tournament's data and it's identified primarily by a unique Integer id. 
