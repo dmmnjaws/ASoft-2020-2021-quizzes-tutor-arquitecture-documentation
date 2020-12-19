@@ -14,7 +14,7 @@ Fig 1. Data Model graphic representation. Caption:
 This entity is a link entity that maps to a single **QuestionAnswer** entity, and vice-versa, and it's identified primarily by a unique Integer id. This is a particular case of entity, since what it really does, is mapping the **QuestionAnswer** entity to a type of answer. *For now quizzes-tutor only supports multiple choice answers (note the inheritance relation between **MultipleChoiceAnswers** and **AnswerDetails**), but this form of specialization/generalization favors **modifiability**, since, in the future, quizzes-tutor is expected to support other kinds of questions with other kinds of answers. Aditional kinds of answers will require entities homologue to **MultipleChoiceAnswer** to inherit from **AnswerDetails**.*
 - **Semantics:** Answer details is roughly speaking, the broad concept (or *generalization*) of "type of answer". The different kinds of answer details (it's inheritances) are the concrete (or *specialized*) types of answers. For instance, different types of questions may require different kinds of answers, which should be threated differently: A multiple choice question requires a multiple choice answer; an open question requires a written answer.
 
-*Please refer to the **Rationale's section 1.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">Assessment</span>
 This entity corresponds to an assessment's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **CourseExecution**.
@@ -56,13 +56,13 @@ This entity corresponds to an image's data and it's identified by a unique Integ
 This entity is a *specialization* of **QuestionDetails** and therefore identifies the concrete type of a question. It's identified by a unique Integer id. If a **Question** has this entity as the *questionDetails* attribute, it's a multiple choice question. Refer to **QuestionDetails** for aditional information
 - **Semantic:** A multiple choice question is a possible type of question.
 
-*Please refer to the **Rationale's section 1.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">MultipleChoiceAnswer</span>
 This entity is a *specialization* of **AnswerDetails** and therefore identifies the concrete type of an answer. It's identified by a unique Integer id. If a **QuestionAnswer** has this entity as the *answerDetails* attribute, it's a multiple choice answer. Refer to **AnswerDetails** for aditional information 
 - **Semantic:** A multiple choice answer is a possible type of answer.
 
-*Please refer to the **Rationale's section 1.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">MultipleChoiceAnswerItem</span>
 This entity is a *specialization* of **QuizAnswerItem** and together with it serves an homologue purpose to **MultipleChoiceAnswer** and **AnswerDetails**. It's identified by a unique Integer id.
@@ -88,7 +88,7 @@ This entity corresponds to a question-answer-item's data and it's identified by 
 This entity is a link entity that maps to a single **Question** entity, and vice-versa, and it's identified primarily by a unique Integer id. This is a particular case of entity, since what it really does, is mapping the **Question** entity to a type of question. *For now quizzes-tutor only supports multiple choice questions (note the inheritance relation between **MultipleChoiceQuestion** and **QuestionDetails**), but this form of specialization/generalization favors **modifiability**, since, in the future, quizzes-tutor is expected to support other kinds of questions. Aditional kinds of questions will require entities homologue to **MultipleChoiceQuestion** to inherit from **QuestionDetails**.*
 - **Semantics:** Question details is roughly speaking, the broad concept (or *generalization*) of "type of question". The different kinds of question details (it's inheritances) are the concrete (or *specialized*) types of question.
 
-*Please refer to the **Rationale's section 1.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">QuestionSubmission</span>
 This entity corresponds to a question-submission's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **Question** entity.
@@ -141,7 +141,7 @@ This entity corresponds to a user's data and it's identified primarily by a uniq
 
 Rationale on **Domain Distillation** improvements and considerations:
 
-1. *The Core Domains, Core Subdomains and Generic Subdomains have been defined in the [Decomposition View](module_view_decomposition.md) but the boundaries can be refined and well defined with the help of the Data Model. These boundaries are particularly evident in the relation with the **Question** and **Answer** entities and the **QuestionDetails** and **AnswerDetails** entities. **Question** and **Answer** are undoubtably parts of the Core Domain, but what makes them a strong and stable part of it is their relation with **QuestionDetails** and **AnswerDetails**, which exist to support **modifiability** and deline the decoupling boundaries between the generic attributes of questions/answers and the quite differing semantics of different kinds of questions/answers. As mentioned prior, this clear distinction of the Core Domain and the Core Subdomains is a godsend to **modifiability**, as developers trust this stable core containing **Questions** and **Answers** entities, to implement aditional kinds of questions and answers independently, such as multiple choice questions and answers (the entities **MultipleChoiceQuestions** and **MultipleChoiceAnswers**), and possibly, in the future, open questions and written answers, among others.* `(segregated core)`
+1. *The Core Domains, Core Subdomains and Generic Subdomains have been defined in the [Decomposition View](module_view_decomposition.md) but the boundaries can be refined and well defined with the help of the Data Model. These boundaries are particularly evident in the relation with the **Question** and **Answer** entities and the **QuestionDetails** and **AnswerDetails** entities. **Question** and **Answer** are undoubtably parts of the Core Domain, but what makes them a strong and stable part of it is their relation with **QuestionDetails** and **AnswerDetails**, which exist to support **modifiability** and deline the decoupling boundaries between the generic attributes of questions/answers and the quite differing semantics of different kinds of questions/answers. As mentioned prior, this clear distinction of the Core Domain and the Core Subdomains is a godsend to **modifiability**, as developers trust this stable core containing **Questions** and **Answers** entities, to implement aditional kinds of questions and answers independently, such as multiple choice questions and answers (the entities **MultipleChoiceQuestions** and **MultipleChoiceAnswers**), and possibly, in the future, open questions and written answers, among others.* `(segregated core?)`
 
 ## Related Views
 

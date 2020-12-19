@@ -16,7 +16,7 @@ Main module.
 - *Uses*: **question**
 - *Is used by*: **discussion**, **question**
 
-*There's a cyclic uses-dependency between this module and the **question** module. Please refer to the **Rationale's section 1.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*There's a cyclic uses-dependency between this module and the **question** module. Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">auth</span>
 - *Uses*: -
@@ -33,13 +33,13 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 - *Uses*: **answer**, **course**, **question**, **user**
 - *Is used by*: -
 
-*This module, like **tournament** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **tournament** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">question</span>
 - *Uses*: **answer**, **course**
 - *Is used by*: **answer**, **discussion**, **questionsubmission**, **quiz**, **tournament**
 
-*There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section 1.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">questionsubmission</span>
 - *Uses*: **course**, **question**, **user**
@@ -61,13 +61,13 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 - *Uses*: **course**, **question**, **quiz**, **user**
 - *Is used by*: -
 
-*This module, like **discussion** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **discussion** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">user</span>
 - *Uses*: **auth**
 - *Is used by*: **discussion**, **questionsubmission**, **quiz**, **tournament**
 
-*This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section 2.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section 2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">permission</span>~
 - *Uses*: -
