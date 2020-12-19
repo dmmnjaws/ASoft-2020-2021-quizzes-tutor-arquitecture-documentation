@@ -84,6 +84,10 @@ And the following modules are **Generic Subdomains**:
 - auth
 - mailer
 
+---------
+
+From a point of view of `Modifiability tactics` decomposition-view uses the information-hiding principle of the *Encapsulate* tactic. Encapsulation reduces the probability that a change to one module propagastes to other modules. This is achieved through the introduction of an explicit interface to the modules which in in the quizzes-tutor are the *Service* classes of each module.
+
 
 ## Related Views
 
