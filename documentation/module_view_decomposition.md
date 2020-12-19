@@ -67,8 +67,6 @@ These submodules contains the client-side logic of their parent module and handl
 
 ## Rationale
 
----
-
 From a point of view of DDD Distillation, the following modules are part of the **Core Domain**:
 - course
 - question and answer
@@ -88,7 +86,7 @@ And the following modules are **Generic Subdomains**:
 
 Rationale on **Domain Model Integrity** improvements and considerations:
 
-1. *Quizzes-tutor was planned to be developed by multiple independent teams which called for the need for distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the **Encapsulate modifiability quality attribute tactic**. Encapsulation reduces the probability that a change to one module propagastes to other modules. This is achieved through the introduction of an explicit interface to the modules which in in the quizzes-tutor are the Service classes of each module.*
+1. *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of an explicit interfaces to modules which in in the quizzes-tutor are the Service classes of each module.*
 
 
 ## Related Views

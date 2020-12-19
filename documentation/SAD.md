@@ -7,12 +7,11 @@
 
 ### Views
 1. Module Views
-    1. [Top Level Module Uses View](module_view_top_level_view.md) `(we will probably not do this one)`
-    2. [Decomposition View](module_view_decomposition.md)
-    3. [Uses View](module_view_uses.md)
-    4. [Layered View](module_view_layered.md)
+    1. [Decomposition View](module_view_decomposition.md)
+    2. [Uses View](module_view_uses.md)
+    3. [Layered View](module_view_layered.md)
     4. [Aspects View](module_view_aspects.md)
-    4. [Data Model](module_view_data_model.md)
+    5. [Data Model](module_view_data_model.md)
 2. Component and Connector Views
     1. [Client-Server View](c&c_view_client_server.md)
 3. Allocation Views

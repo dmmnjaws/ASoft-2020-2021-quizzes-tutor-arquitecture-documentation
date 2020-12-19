@@ -22,7 +22,7 @@ Main module.
 - *Uses*: -
 - *Is used by*: **course**, **user** 
 
-This module *uses* a module from an external bounded context, the FenixEdu REST API, whose ubiquitous language is a publicly published language to which quizzes-tutor assumes a comformist posture. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).
+This module *uses* a module from an external Bounded Context, the FenixEdu REST API, whose Ubiquitous Language is a publicly published language to which quizzes-tutor assumes a Comformist posture. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).
 
 
 ### <span style="color:#0080ff">course</span>
@@ -33,9 +33,11 @@ This module *uses* a module from an external bounded context, the FenixEdu REST 
 - *Uses*: **answer**, **course**, **question**, **user**
 - *Is used by*: -
 
+*This module, like **tournament** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
+
 ### <span style="color:#0080ff">question</span>
 - *Uses*: **answer**, **course**
-- *Is used by*: **answer**, **discussion**, **questionsubmission**, **tournament**
+- *Is used by*: **answer**, **discussion**, **questionsubmission**, **quiz**, **tournament**
 
 *There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section 1.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
 
@@ -56,8 +58,10 @@ This module *uses* a module from an external bounded context, the FenixEdu REST 
 - *Is used by*: -
 
 ### <span style="color:#0080ff">tournament</span>
-- *Uses*: **question**
-- *Is used by*: **discussion**, **question**
+- *Uses*: **course**, **question**, **quiz**, **user**
+- *Is used by*: -
+
+*This module, like **discussion** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible future considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">user</span>
 - *Uses*: **auth**
@@ -83,7 +87,7 @@ Rationale on **Domain Model Integrity** improvements and considerations:
 
 Rationale on **Domain Distillation** improvements and considerations:
 
-3. *The **tournament** and **discussion** modules (which are core subdomains and implement enganement functionalities) don't have any incoming uses relation, but rather only use modules of the core domain. this means that from a point of view of **modifiability** it's easy to modify and delete them, and also add homologue engagement functionalities. From a point of view of Domain Model Integrity the Bounded Context of these periferic functionalities assume a Conformist position towards the Bounded Contexts of the Core Domain, expecially since it's likely that teams of the Software Engineering course students are charged of developing these engagement functionalities.* 
+3. *The **tournament** and **discussion** modules (which are core subdomains and implement engagement functionalities) don't have any incoming uses relation, but rather only use modules of the core domain. This means that from a point of view of **modifiability** it's easy to modify and delete them, and also add other  homologue engagement functionalities. From a point of view of Domain Model Integrity the Bounded Context of these peripheric functionalities (likely to be teams of Software Engineering students) assume a Conformist position towards the Bounded Contexts of the Core Domain.* 
 
 ## Related Views
 

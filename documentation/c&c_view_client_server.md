@@ -4,7 +4,7 @@
 
 <img src="pictures/C&C Type Definition.png" width="600" >
 
-Fig 1. Representation of all the Component and Connector Types used in this view. This representation uses Lollipop - Wrapper notations for the ports of the components. This means a lollipop-wrapper represents the readyness of the component type for a relation component-*attachment*-connector-*attachment*.component. * Queueing System, explained in the Element Catalogue.
+Fig 1. Representation of all the Component and Connector Types used in this view. This representation uses Lollipop - Wrapper notations for the ports of the components. This means a lollipop-wrapper represents the readyness of the component type for a relation component-*attachment*-connector-*attachment*-component. * Queueing System, explained in the Element Catalogue.
 
 ## Primary Presentation
 
