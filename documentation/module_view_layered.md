@@ -4,6 +4,11 @@
 
 ## Element Catalog
 
+- Presentation
+- Engagement
+- Core Business
+- Springboot
+
 ## Context Diagram
 
 ## Rationale
