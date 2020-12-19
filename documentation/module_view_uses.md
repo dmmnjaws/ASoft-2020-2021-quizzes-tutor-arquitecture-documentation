@@ -75,13 +75,15 @@ This module *uses* a module from an external bounded context, the FenixEdu REST 
 
 ## Rationale
 
-Rationale on Domain Model Integrity improvements and considerations:
+Rationale on **Domain Model Integrity** improvements and considerations:
 
 1. *Since the **answer** uses the **question** module, which in turn also uses the **answer** module, there's a prominent cyclic dependency. To eliminate this cyclic dependency and improve the continuous integration of these and the dependent modules, a possible future solution is to merge **answer** and **question** in the same module and make them a part of the same Bounded Context. Furthermore, given the fact this conjoined Bounded Context has a lot of incoming uses-dependencies, this should be considered a Shared Kernel, among all other Bounded Contexts that use it. This guarantees uncoordinated teams have a common point of knowledge, but since it's part of the realization of the business goals for quizzes-tutor to allow the implementation of new functionalities by outside teams (groups of students developing projects), for all effects, and outside the normal conventions of a Shared Kernel, the dependent Bounded Contexts assume a Comformist position to what the new **answer+question** module has to offer. Another reason to consider the union of these two modules relates to the semantic meaning of the **QuestionDetails** and **AnswerDetails** entities described in the [Data Model](module_view_data_model.md) as most likely, in a **modifiability** scenario where a new type of question is added to quizzes-tutor, a new type of answer will also be required.*
 
 2. *The **user** module has a lot of incoming uses dependencies, and therefore, In the future (and a possible solution to migrate quizzes-tutor into a microservices architecture), this module may be turned into an event publisher, publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the change brought by the events.*
 
-3. `The tournament and discussion modules (which are core subdomains and implement enganement functionalities) don't have any incoming uses relation, but rather only use modules of the core domain. this means that from a point of view of modifiability it's easy to modify and delete them, and also add homologue engamgement functionalities.`
+Rationale on **Domain Distillation** improvements and considerations:
+
+3. *The **tournament** and **discussion** modules (which are core subdomains and implement enganement functionalities) don't have any incoming uses relation, but rather only use modules of the core domain. this means that from a point of view of **modifiability** it's easy to modify and delete them, and also add homologue engagement functionalities. From a point of view of Domain Model Integrity the Bounded Context of these periferic functionalities assume a Conformist position towards the Bounded Contexts of the Core Domain, expecially since it's likely that teams of the Software Engineering course students are charged of developing these engagement functionalities.* 
 
 ## Related Views
 
