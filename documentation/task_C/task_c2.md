@@ -20,7 +20,7 @@
 -----------
 
 ## **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge
-### Usability/Modifiability scenario (p.178 of SAP)
+### Usability scenario (p.178 of SAP)
 `DISCUSS WITH PROFESSOR`
 - `Source` : The student
 - `Stimulus` : Ability to filter the stats in the quizzes-tutor to view different perpectives on the quizz results(e.g how different are the grades from wendnesday different from monday?)

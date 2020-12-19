@@ -18,7 +18,7 @@
  
 
 ### **BG3** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application
-- `ASR`: A module that has been identified as having more than 2 sets of responsabilities must be divided into proper modules `(H.H)?`
+- `ASR`: A module that has been identified as having more than 2 sets of responsabilities must be divided into its proper modules `(H.H)?`
 - `Atribute Refinement`: Code more modular `?`
 - `Quality Attribute` : Modifiability
 
