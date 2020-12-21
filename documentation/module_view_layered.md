@@ -2,12 +2,15 @@
 
 ## Primary Presentation
 
+<img src="pictures/Layered View.png" width="1200" >
+
 ## Element Catalog
 
 - Presentation
 - Engagement
 - Core Business
-- Springboot
+- Springboot + NodeJS
+- Infrastructure: JVM
 
 ## Context Diagram
 
