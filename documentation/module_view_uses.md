@@ -4,7 +4,7 @@
 
 <img src="pictures/Uses View.png" width="500" >
 
-Fig 1. Uses View graphic representation. All arrows represent *uses* relations, which are specialized cases of *depends-on* relations between modules. Pairs of red arrows highlight cyclic dependencies.
+Fig 1. Uses View graphic representation. All arrows represent *uses* relations, which are specialized cases of *depends-on* relations between modules. Pairs of red arrows highlight cyclic dependencies. Keep in mind that the **permission** module doesn't have incoming *uses* dependencies, but *uses* other modules. This wasn't represented for the sake of not cluttering the diagram, but these relations can be consulted below, in the **permission** module entry in the Element Catalogue.
 
 ## Element Catalog
 For detailed descriptions of each module, please refer to the [Decomposition View's **Element Catalogue**](module_view_decomposition.md/#element-catalogue). In this section we highlight considerations related exclusively to the *uses* relationship among modules.
@@ -45,6 +45,8 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 - *Uses*: **course**, **question**, **user**
 - *Is used by*: -
 
+`This module was added before the modules of engagement functionality (therefore is part of the Core Domain, but there's an interesting refactoring here if we consider the professor can also submit questions. - Professor Rito`
+
 ### <span style="color:#0080ff">quiz</span>
 - *Uses*: **course**, **question**, **user**
 - *Is used by*: **tournament**
@@ -70,7 +72,7 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 *This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section 2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">permission</span>~
-- *Uses*: -
+- *Uses*: **answer**, **course**, **discussion**, **question**, **questionsubmission**, **quiz**, **user**
 - *Is used by*: -
 
 ## Context Diagram
