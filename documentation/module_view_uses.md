@@ -24,7 +24,6 @@ Main module.
 
 This module *uses* a module from an external Bounded Context, the FenixEdu REST API, whose Ubiquitous Language is a publicly published language to which quizzes-tutor assumes a Comformist posture. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).
 
-
 ### <span style="color:#0080ff">course</span>
 - *Uses*: **auth**
 - *Is used by*: **discussion**, **question**, **questionsubmission**, **quiz**, **tournament** 
@@ -71,7 +70,7 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 
 *This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section 2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
-### <span style="color:#0080ff">permission</span>~
+### <span style="color:#0080ff">permission</span>
 - *Uses*: **answer**, **course**, **discussion**, **question**, **questionsubmission**, **quiz**, **user**
 - *Is used by*: -
 
@@ -92,6 +91,8 @@ Rationale on **Domain Distillation** improvements and considerations:
 3. *The **tournament** and **discussion** modules (which are core subdomains and implement engagement functionalities) don't have any incoming uses relation, but rather only use modules of the core domain. This means that from a point of view of **modifiability** it's easy to modify and delete them, and also add other  homologue engagement functionalities. From a point of view of Domain Model Integrity the Bounded Context of these peripheric functionalities (likely to be teams of Software Engineering students) assume a Conformist position towards the Bounded Contexts of the Core Domain.* 
 
 ## Related Views
+
+- Refer to the [Decomposition View](module_view_decomposition.md) for module descriptions and purposes. 
 
 ## References
 For a detailed style guide, refer to Chapter 2.2 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
