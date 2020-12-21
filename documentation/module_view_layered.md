@@ -35,7 +35,7 @@ This layer isn't allowed to use the **repository** layer, which is directly belo
 - **Springboot** module in the **TECHNOLOGY** layer.
 - **VIRTUAL MACHINE** layer.
 
-Similarly to how the modules in the **api (CONTROLLER)** layer are separated, the modules that make this layer have a peculiar separation as well, in three main Segments: the **core subdomains (engagement functionalities)**, the **core domain** and the **genderic subdomains** segments. Just like the relation of the homologue segments in the **api (CONTROLLER)** layer, the **core subdomains (engagement functionalities)** segment *is-allowed-to-use* the **core domain** and the **generic subdomains** segments, but not the other way around.
+Similarly to how the modules in the **api (CONTROLLER)** layer are separated, the modules that make this layer have a peculiar separation as well, in three main Segments: the **core subdomains (engagement functionalities)**, the **core domain** and the **generic subdomains** segments. Just like the relation of the homologue segments in the **api (CONTROLLER)** layer, the **core subdomains (engagement functionalities)** segment *is-allowed-to-use* the **core domain** and the **generic subdomains** segments, but not the other way around.
 
 ### <span style="color:#0080ff">TECHNOLOGY</span>
 *Is-allowed-to-use*:
@@ -55,6 +55,8 @@ Considering quizzes-tutor was meant, from the beginning to be a web application,
 
 - Refer to the [Decomposition View](module_view_decomposition.md) for a brief uncollapsed description of each module.
 - Refer to the [Allocation Implementation View](allocation_view_implementation.md) to form a better understanding of how the modules represented in this layered view are organized in the development environment file system.
+
+`Fazer uma Layered View mas em vez de ser de um ponto de vista de DISTILLATION, de um ponto de vista de LARGE SCALE STRUCTURE - RESPONSABILITY LAYERS`
 
 ## References
 For a detailed style guide, refer to Chapter 2.4 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
