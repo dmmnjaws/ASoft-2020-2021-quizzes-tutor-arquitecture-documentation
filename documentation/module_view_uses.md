@@ -14,7 +14,7 @@ Main module.
 
 ### <span style="color:#0080ff">answer</span>
 - *Uses*: **question**
-- *Is used by*: **discussion**, **question**
+- *Is used by*: **discussion**, **question**, **statistics**
 
 *There's a cyclic uses-dependency between this module and the **question** module. Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
@@ -36,7 +36,7 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 
 ### <span style="color:#0080ff">question</span>
 - *Uses*: **answer**, **course**
-- *Is used by*: **answer**, **discussion**, **questionsubmission**, **quiz**, **tournament**
+- *Is used by*: **answer**, **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
 
 *There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
@@ -48,15 +48,17 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 
 ### <span style="color:#0080ff">quiz</span>
 - *Uses*: **course**, **question**, **user**
-- *Is used by*: **tournament**
+- *Is used by*: **statistics**, **tournament**
 
 ### <span style="color:#0080ff">statement</span>
 - *Uses*: -
 - *Is used by*: -
 
 ### <span style="color:#0080ff">statistics</span>
-- *Uses*: -
+- *Uses*: **answer**, **question**, **quiz**, **user**
 - *Is used by*: -
+
+The StatsService in this module collects statistics on quizzes, questions and answers for each user. Howeber, it does so solely by accessing the **user** module. However, without the existence of the **answer**, **question** and **quiz** modules, **statistics** would make no sense conceptually, and therefore it's said to have outbound uses-dependencies to these modules as well.
 
 ### <span style="color:#0080ff">tournament</span>
 - *Uses*: **course**, **question**, **quiz**, **user**
@@ -66,7 +68,7 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 
 ### <span style="color:#0080ff">user</span>
 - *Uses*: **auth**
-- *Is used by*: **discussion**, **questionsubmission**, **quiz**, **tournament**
+- *Is used by*: **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
 
 *This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section 2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
@@ -96,155 +98,3 @@ Rationale on **Domain Distillation** improvements and considerations:
 
 ## References
 For a detailed style guide, refer to Chapter 2.2 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
------------------------------------------------------
-TOURNAMENT
-
-Correct implementation depends on:
-- quiz
-- question
-- user
-- course
-
-Other dependencies:
-- exceptions
-- statement
-- config
-- answer
------------------------------------------------------
-DISCUSSION
-
-Correct implementation depends on:
-- question
-- course
-- user
-- answer
-
-Other dependencies:
-- exceptions
-- impexp
-- config
-- quiz
------------------------------------------------------
-ANSWER
-
-Correct implementation depends on:
-- question
-
-Other dependencies:
-- impexp
-- statement
-- config
-- discussion
-- quiz
-- course
-- user
-- exceptions
------------------------------------------------------
-QUIZ
-
-Correct implementation depends on:
-- question
-- course
-- user
-
-Other dependencies:
-- impexp
-- tournament
-- statement
-- config
-- answer
-- exceptions
------------------------------------------------------
-QUESTIONSUBMISSION
-
-Correct implementation depends on:
-- course
-- user
-- question
-
-Other dependencies:
-- tournament
-- config
-- exceptions
------------------------------------------------------
-QUESTION
-
-Correct implementation depends on:
-- answer
-- course
-
-Other dependencies:
-- impexp
-- tournament
-- statement
-- config
-- discussion
-- quiz
-- exceptions
------------------------------------------------------
-COURSE
-
-Correct implementation depends on:
-- auth
-
-Other dependencies:
-- impexp
-- statement
-- config
-- discussion
-- answer
-- quiz
-- questionsubmission
-- question
-- user
-- exceptions
------------------------------------------------------
-USER
-
-Correct implementation depends on:
-- auth
-
-Other dependencies:
-- impexp
-- tournament
-- config
-- discussion
-- answer
-- quiz
-- questionsubmission
-- question
-- course
-- exceptions
-- mailer
-- utils
------------------------------------------------------
-CROSS-CUTTING CONCERN MODULES (MORE RELEVANT TO ASPECTS STYLE):
-
-- impexp 
-- mailer
-- utils
-- exceptions
-- config
-- auth?
-
------------------------------------------------------
-
------------------------------------------------------
-
-OTHER NOTES:
-- impexp can be a ONE HOST SERVICE ?
