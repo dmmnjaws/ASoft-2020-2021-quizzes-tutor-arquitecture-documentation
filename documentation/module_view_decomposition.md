@@ -67,28 +67,30 @@ These submodules contains the client-side logic of their parent module and handl
 
 ## Rationale
 
-From a point of view of DDD Distillation, the following modules are part of the **Core Domain**:
-- course
-- question and answer
-- question submission
-- quiz
-- user
+Rationale on **Domain Model Integrity** comments, improvements and considerations:
 
-And the following modules are **Core Subdomains**:
-- discussion
-- tournament
-- statistics
-- permission
+- **DMI1.** *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of an explicit interfaces to modules which in in the quizzes-tutor are the Service classes of each module.*
 
-And the following modules are **Generic Subdomains**:
-- auth
-- mailer
+Rationale on **Domain Distillation** comments, improvements and considerations:
 
-It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.
+- **DD1.** *From a point of view of **Domain Distillation**, the following modules are part of the Core Domain:* 
+  - **course**
+  - **question** and **answer**
+  - **questionsubmission**
+  - **quiz**
+  - **user**
+  
+  *And the following modules are **Core Subdomains**:*
+  - **discussion**
+  - **tournament**
+  - **statistics**
+  - **permission**
 
-Rationale on **Domain Model Integrity** improvements and considerations:
+  *And the following modules are **Generic Subdomains**:*
+  - **auth**
+  - **mailer**
 
-1. *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of an explicit interfaces to modules which in in the quizzes-tutor are the Service classes of each module.*
+  *It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.*
 
 ## Related Views
 
