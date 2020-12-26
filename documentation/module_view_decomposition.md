@@ -69,28 +69,34 @@ These submodules contains the client-side logic of their parent module and handl
 
 Rationale on **Domain Model Integrity** comments, improvements and considerations:
 
-- **DMI1.** *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of an explicit interfaces to modules which in in the quizzes-tutor are the Service classes of each module.*
+- **DMI1.** 
+
+  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of explicit interfaces to each module. `(which in the quizzes-tutor are the Service classes of each module?)`.*
 
 Rationale on **Domain Distillation** comments, improvements and considerations:
 
-- **DD1.** *From a point of view of **Domain Distillation**, the following modules are part of the Core Domain:* 
+- **DD1.** 
+
+  *From a point of view of **Domain Distillation**, the following modules are part of the Core Domain:* 
   - **course**
   - **question** and **answer**
-  - **questionsubmission**
+  - **questionsubmission** `(is questionsubmission really a part of the Core Domain?)`
   - **quiz**
   - **user**
   
-  *And the following modules are **Core Subdomains**:*
+  *And the following modules are Core Subdomains:*
   - **discussion**
   - **tournament**
   - **statistics**
   - **permission**
 
-  *And the following modules are **Generic Subdomains**:*
+  *And the following modules are Generic Subdomains:*
   - **auth**
   - **mailer**
 
-  *It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.*
+  *It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.* 
+  
+  *This is a rough reference, because in some cases, the boundaries between the Subdomains don't equate to the boundaries between modules and this is made clear through the rest of this SAD. An example of this is the **question** and **answer** modules, so keep this in mind.*
 
 ## Related Views
 
@@ -99,3 +105,5 @@ Rationale on **Domain Distillation** comments, improvements and considerations:
 
 ## References
 For a detailed style guide, refer to Chapter 2.1 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
+
+For detailed information on the Domain Driven Design strategies mentioned, refer to Part IV of Domain Driven Design: Tackling Complexity in the Heart of Software: Eric Evans 2003 Addison-Wesley.

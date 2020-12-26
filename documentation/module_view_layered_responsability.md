@@ -49,4 +49,6 @@ This layer has the following modules:
 
 For a detailed style guide, refer to Chapter 2.4 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
 
-For information on Responsability Layers, a pattern of the third Domain Driven Design paradigm of Large Scale Structure, refer to Chapter 6 of Domain Driven Design: Tackling Complexity in the Heart of Software: Eric Evans 2003 Addison-Wesley. 
+For detailed information on the Domain Driven Design strategies mentioned, refer to Part IV of Domain Driven Design: Tackling Complexity in the Heart of Software: Eric Evans 2003 Addison-Wesley.
+
+For information on Responsability Layers, a pattern of the third Domain Driven Design paradigm of Large Scale Structure, refer to Chapter 16 of Domain Driven Design: Tackling Complexity in the Heart of Software: Eric Evans 2003 Addison-Wesley. 
