@@ -8,7 +8,6 @@
 
 In his book on Domain Driven Design, Eric Evans defends that in some cases, in order to shape a domain design into a set of Responsability Layers that work, these layers might need to be original, therefore, this SAD proposes the following Responsability Layers:
 
-
 ### <span style="color:#0080ff">Policy</span>
 This layer's responsability is associated with the policies enforced upon quizzes-tutor to allow the safe materialization of the business goals. These policies are in particular the authentication and authorization policies and constrain the behaviour of the lower layers.
 
@@ -16,13 +15,13 @@ This layer has the following modules:
 - permission
 
 ### <span style="color:#0080ff">Analysis and Decision Making</span>
-This layer's responsability is in part associated with the collection of audit data for analysis and possible decision making.
+This layer's responsability is in part associated with the collection of data for individual end-user analysis and possible decision making.
 
 This layer has the following modules:
 - statistics
 
 ### <span style="color:#0080ff">Operation</span>
-This layer's responsability is associated with the operations allowed on the resources of quizzes-tutor. In short, what kinds of "activities" quizzes-tutor offers.
+This layer's responsability is associated with the operations allowed on the resources of quizzes-tutor. In short, what kinds of "activities" quizzes-tutor offers. In particular, questions can be submitted, grouped into quizzes, answered and discussed by users. Tournaments may be organized by users. 
 
 This layer has the following modules:
 - answer
@@ -44,10 +43,9 @@ This layer has the following modules:
 
 ## Related Views
 
-- Refer to the [Standard Layered View](module_view_layered.md) for a layered view focused technical aspects and dependencies, highlighting Domain Distillation.
+- Refer to the [Standard Layered View](module_view_layered.md) for a layered view focused on technical aspects and dependencies, highlighting Domain Distillation.
 
 ### References
-`This layered view differs from the typical layered view, therefore has a unique style guide of it's own. Refer to [Layered Responsabilities View Style Guide]()`
 
 For a detailed style guide, refer to Chapter 2.4 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
 

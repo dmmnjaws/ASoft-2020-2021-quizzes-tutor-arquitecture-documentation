@@ -16,7 +16,7 @@ Main module.
 - *Uses*: **question**
 - *Is used by*: **discussion**, **question**, **statistics**
 
-*There's a cyclic uses-dependency between this module and the **question** module. Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*There's a cyclic uses-dependency between this module and the **question** module. Please refer to the **Rationale's section DMI1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">auth</span>
 - *Uses*: -
@@ -32,13 +32,13 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 - *Uses*: **answer**, **course**, **question**, **user**
 - *Is used by*: -
 
-*This module, like **tournament** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **tournament** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">question</span>
 - *Uses*: **answer**, **course**
 - *Is used by*: **answer**, **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
 
-*There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section 1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section DMI1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">questionsubmission</span>
 - *Uses*: **course**, **question**, **user**
@@ -60,17 +60,19 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 
 The StatsService in this module collects statistics on quizzes, questions and answers for each user. Howeber, it does so solely by accessing the **user** module. However, without the existence of the **answer**, **question** and **quiz** modules, **statistics** would make no sense conceptually, and therefore it's said to have outbound uses-dependencies to these modules as well.
 
+*This module, like **discussion** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+
 ### <span style="color:#0080ff">tournament</span>
 - *Uses*: **course**, **question**, **quiz**, **user**
 - *Is used by*: -
 
-*This module, like **discussion** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section 3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **discussion** and **statistics** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">user</span>
 - *Uses*: **auth**
 - *Is used by*: **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
 
-*This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section 2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section DMI2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">permission</span>
 - *Uses*: **answer**, **course**, **discussion**, **question**, **questionsubmission**, **quiz**, **user**
@@ -82,15 +84,17 @@ The StatsService in this module collects statistics on quizzes, questions and an
 
 ## Rationale
 
-Rationale on **Domain Model Integrity** improvements and considerations:
+Rationale on **Domain Model Integrity** comments, improvements and considerations:
 
-1. *Since the **answer** uses the **question** module, which in turn also uses the **answer** module, there's a prominent cyclic dependency. To eliminate this cyclic dependency and improve the continuous integration of these and the dependent modules, a possible future solution is to merge **answer** and **question** in the same module and make them a part of the same Bounded Context. Furthermore, given the fact this conjoined Bounded Context has a lot of incoming uses-dependencies, this should be considered a Shared Kernel, among all other Bounded Contexts that use it. This guarantees uncoordinated teams have a common point of knowledge, but since it's part of the realization of the business goals for quizzes-tutor to allow the implementation of new functionalities by outside teams (groups of students developing projects), for all effects, and outside the normal conventions of a Shared Kernel, the dependent Bounded Contexts assume a Comformist position to what the new **answer+question** module has to offer. Another reason to consider the union of these two modules relates to the semantic meaning of the **QuestionDetails** and **AnswerDetails** entities described in the [Data Model](module_view_data_model.md) as most likely, in a **modifiability** scenario where a new type of question is added to quizzes-tutor, a new type of answer will also be required.*
+- **DMI1.** *Since the **answer** uses the **question** module, which in turn also uses the **answer** module, there's a prominent cyclic dependency. To eliminate this cyclic dependency and improve the continuous integration of these and the dependent modules, a possible future solution is to merge **answer** and **question** in the same module and make them a part of the same Bounded Context. Furthermore, given the fact this conjoined Bounded Context has a lot of incoming uses-dependencies, this should be considered a Shared Kernel, among all other Bounded Contexts that use it. This guarantees uncoordinated teams have a common point of knowledge, but since it's part of the realization of the business goals for quizzes-tutor to allow the implementation of new functionalities by outside teams (groups of students developing projects), for all effects, and outside the normal conventions of a Shared Kernel, the dependent Bounded Contexts assume a Comformist position to what the new **question+answer** module has to offer. Another reason to consider the union of these two modules relates to the semantic meaning of the **QuestionDetails** and **AnswerDetails** entities described in the [Data Model](module_view_data_model.md) as most likely, in a **modifiability** scenario where a new type of question is added to quizzes-tutor, a new type of answer will also be required.*
 
-2. *The **user** module has a lot of incoming uses dependencies, and therefore, In the future (and a possible solution to migrate quizzes-tutor into a microservices architecture), this module may be turned into an event publisher, publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the change brought by the events.*
+- **DMI2.** *The **user** module has a lot of incoming uses dependencies, and therefore, In the future (and a possible solution to migrate quizzes-tutor into a microservices architecture), this module may be turned into an event publisher, publishing events to all the other modules. In turn the other modules would have a specific partition of the original user module, relevant in that context, that would adapt to the change brought by the events.*
+ 
+- **DMI3.** (It's recommended to read **DD1.** in the **Domain Distillation** section first) *The Bounded Context of the **tournament**, **discussion** and **statistics** peripheric functionalities (likely to be teams of Software Engineering students) may either assume Conformist positions or Customer/Supplier relations towards the Bounded Contexts of the Core Domain, or even put in place Anticorruption Layers to retrench the effect of changes in the Bounded Contexts of the Core Domain. However, as a consequence of the decoupling between the generic attributes of questions/answers and the types of questions/answers (described in **DD1.** in the [Data Model](module_view_data_model.md)), the **question**/**answer** modules are unlikely to be modified in ways that directly affect the engagement functionalities, which in turn allows for a more independent relation between the Core Subdomains and this crucial part of the Core Domain, therefore suggesting the possibility of a Conformist position for developers of **tournament**, **discussion** and **statistics** towards the **question+answer** Bounded Context. The Core Domain should be relatively stable, but other modules of the Core Domain, like **course**, **quiz** and **user**, may still change over time, and these changes may ultimately affect the engagement functionalities, given the uses relations. What can be done about this? A Customer/Supplier relation implies responsability from the upstream teams of the Core Domain, which may not be ideal here, given the fact the engagement functionalities are largely of the responsability of teams of students, therefore, it's best to shift the responsability to each of these teams individually. This can be done thru the implementation of Anticorruption Layers (each engagement functionality team is responsible for it's own), saving the Bounded Contexts of the Core Domain from additional constraints imposed by Customer/Supplier relations.*
 
-Rationale on **Domain Distillation** improvements and considerations:
+Rationale on **Domain Distillation** comments, improvements and considerations:
 
-3. *The **tournament** and **discussion** modules (which are core subdomains and implement engagement functionalities) don't have any incoming uses relation, but rather only use modules of the core domain. This means that from a point of view of **modifiability** it's easy to modify and delete them, and also add other  homologue engagement functionalities. From a point of view of Domain Model Integrity the Bounded Context of these peripheric functionalities (likely to be teams of Software Engineering students) assume a Conformist position towards the Bounded Contexts of the Core Domain.* 
+- **DD1.** *The **tournament**, **discussion** and **statistics** modules (which are Core Subdomains and implement engagement functionalities) don't have any incoming uses relation, but rather only use modules of the stable Core Domain. This means that from a point of view of **modifiability** it's easy to modify and delete them, and by following the same principle, add other homologue engagement functionalities.* (It's recommended to read **DMI3.** in the **Domain Model Integrity** section next) 
 
 ## Related Views
 

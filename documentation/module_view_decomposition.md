@@ -42,7 +42,7 @@ This module contains the business logic related to question submissions and post
 This module contains the business logic related to quizzes, including the ordering of the questions, among others.
 
 ### <span style="color:#0080ff">statement</span>
-This module contains services to handle the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed.
+This module contains services to handle the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed. The data is collected in a format relevant for audit trails and frontend presentation.
 *This module is deprecated. In the future it is expected to disappear and all data to be handled directly by other elements of the domain.*
 
 ### <span style="color:#0080ff">statistics</span>
