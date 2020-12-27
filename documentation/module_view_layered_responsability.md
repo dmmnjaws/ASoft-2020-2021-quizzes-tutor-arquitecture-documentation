@@ -37,6 +37,12 @@ This layer has the following modules:
 - question
 - user
 
+### <span style="color:#0080ff">Commodities</span>
+This layer's responsability is associated with commodities useful for quizzes-tutor, in particular authentication and a mailing system. Other modules present in the [Decomposition View](module_view_decomposition.md) such as the **mailer** or **impexp** may also be seen as commodities, but they do not contain business logic so we're not including them in the responsability layers, as they don't have a responsability towards the business model.
+
+This layer has the following modules:
+- auth
+
 ## Context Diagram
 
 ## Rationale

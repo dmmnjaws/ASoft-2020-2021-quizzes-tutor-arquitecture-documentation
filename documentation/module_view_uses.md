@@ -108,7 +108,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
   
   <img src="pictures/Uses View Context Map.png" width="500" >
   
-  Fig 2. The proposed Context Map of quizzes-tutor, reflecting the considerations in this section. Each Bounded Context is highlighted in a different color. The color scheme is an attempt to map the Bounded Contexts with the bigger portion of each Subdomain they are a part of (explicit in **DD1.** in the [Decomposition View](module_view_decomposition.md)). Once again, keep in mind that the boundaries between Subdomains don't equate to neither the boundaries between Bounded Contexts, or the boundaries between modules.
+  Fig 2. The proposed Context Map of quizzes-tutor, reflecting the considerations in this section. Each Bounded Context is highlighted in a different color. Anticorruption Layers are represented as small boxes with **ACL** notation. The color scheme is an attempt to map the Bounded Contexts with the bigger portion of each Subdomain they are a part of (explicit in **DD1.** in the [Decomposition View](module_view_decomposition.md)). Once again, keep in mind that the boundaries between Subdomains don't equate to neither the boundaries between Bounded Contexts, or the boundaries between modules.
 
   - **DD1.** 
     - The **question** and **answer** modules should be a part of the same Bounded Context - **question+answer**.
