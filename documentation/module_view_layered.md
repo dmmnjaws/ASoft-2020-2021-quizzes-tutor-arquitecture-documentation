@@ -49,14 +49,15 @@ This layer features the JVM (Java Virtual Machine), purely for completion purpos
 ## Context Diagram
 
 ## Rationale
-Considering quizzes-tutor was meant, from the beginning to be a web application, a layered architecture ended up being a constraint on the design of the system. This favored modifiability and portability even outside the scenarious highlighted in the [System Overview](system_overview.md).
+Considering quizzes-tutor was meant, from the beginning to be a web application, a layered architecture ended up being a constraint on the design of the system. This favored modifiability and portability even outside the scenarious highlighted in the [System Overview](system_overview.md). However, even though this layered view highlights Domain Distillation, and helps easily trace dependencies, a different kind of layered view is more suitable for rationalizing about the domain modeling decisions and responsabilities. - [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md).
 
 ## Related Views
 
 - Refer to the [Decomposition View](module_view_decomposition.md) for a brief uncollapsed description of each module.
 - Refer to the [Allocation Implementation View](allocation_view_implementation.md) to form a better understanding of how the modules represented in this layered view are organized in the development environment file system.
-
-`Fazer uma Layered View mas em vez de ser de um ponto de vista de DISTILLATION, de um ponto de vista de LARGE SCALE STRUCTURE - RESPONSABILITY LAYERS`
+- Refer to the [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md) for a layered view on the optics of Domain Large Scale Structure Responsability Layers.
 
 ## References
 For a detailed style guide, refer to Chapter 2.4 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
+
+For detailed information on the Domain Driven Design strategies mentioned, refer to Part IV of Domain Driven Design: Tackling Complexity in the Heart of Software: Eric Evans 2003 Addison-Wesley.
