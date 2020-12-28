@@ -2,6 +2,11 @@
 
 ## Primary Presentation
 
+<img src="pictures/Responsability Layered View.png" width="900" >
+
+Fig 1. Responsability Layered View graphic representation. Layers are represented with different shades of grey. Layers contain modules - these are presented as white boxes. All the arrows in this diagram symbolize *is-allowed-to-use* relations. For this Layered View in particular, a relaxed layered system, which allows a layer to use any lower layer, was adopted, as opposed to a strict layered system, that only allows a layer to use the immediate lower layer. The relation between the **Analysis and Decision Making** and the **Engagement** layer is noteworthy - they are not allowed to use each other. Refer to the Element Catalogue for more.
+
+
 ## Element Catalog
 
 *"..., these layers might have to be completely original"* - Eric Evans, Domain Driven Design
@@ -15,22 +20,29 @@ This layer has the following modules:
 - permission
 
 ### <span style="color:#0080ff">Analysis and Decision Making</span>
-This layer's responsability is in part associated with the collection of data for individual end-user analysis and possible decision making.
+This layer's responsability is in part associated with the collection of data for individual end-user analysis and possible decision making. 
 
 This layer has the following modules:
 - statistics
 
+Even though **statistics** is implements in it's core, an engagement functionality, introducing an element of gamification to quizzes-tutor, it's ultimately a collection of data for analysis on the part of the end-user and therefore is in a separate layer, horizontal to the **Engagement** layer. These two layers are not allowed to use each other, since the engagement functionalities should follow the Separate Ways DDD principle, allowing them to evolve idependently (refer to **DMI3** in the [Uses View](module_view_uses.md)).
+
+### <span style="color:#0080ff">Engagement</span>
+This layer's responsability is associated with what we've been calling engagement functionalities, or in other words, the "activities" quizzes-tutor offers to promote the student engagement.
+
+This layer has the following modules:
+- tournament
+- discussion
+
 ### <span style="color:#0080ff">Operation</span>
-This layer's responsability is associated with the operations allowed on the resources of quizzes-tutor. In short, what kinds of "activities" quizzes-tutor offers. In particular, questions can be submitted, grouped into quizzes, answered and discussed by users. Tournaments may be organized by users. 
+This layer's responsability is associated with the basic operations allowed on the assets of quizzes-tutor. In short, what kinds of "operations" quizzes-tutor offers. In particular, questions can be submitted, grouped into quizzes, and answered. 
 
 This layer has the following modules:
 - answer
-- tournament
-- discussion
 - questionsubmission
 - quiz
 
-### <span style="color:#0080ff">Potential Resources</span>
+### <span style="color:#0080ff">Assets</span>
 This layer's responsability is associated with the resources (assets) that characterize the business model of quizzes-tutor, in particular questions and users.
 
 This layer has the following modules:
