@@ -14,7 +14,7 @@ Fig 1. Responsability Layered View graphic representation. Layers are represente
 In his book on Domain Driven Design, Eric Evans defends that in some cases, in order to shape a domain design into a set of Responsability Layers that work, these layers might need to be original, therefore, this SAD proposes the following Responsability Layers:
 
 ### <span style="color:#0080ff">Policy</span>
-This layer's responsability is associated with the policies enforced upon quizzes-tutor to allow the safe materialization of the business goals. These policies are in particular the authentication and authorization policies and constrain the behaviour of the lower layers.
+This layer's responsability is associated with the policies enforced upon quizzes-tutor to allow the safe materialization of the business goals. The only unique policy inforced on quizzes-tutor besides generic authentication is authorization. Ultimately, this constrains the behaviour of the lower layers, but doesn't block the continuous evolution of the domain model.
 
 This layer has the following modules:
 - permission
@@ -25,7 +25,7 @@ This layer's responsability is in part associated with the collection of data fo
 This layer has the following modules:
 - statistics
 
-Even though **statistics** is implements in it's core, an engagement functionality, introducing an element of gamification to quizzes-tutor, it's ultimately a collection of data for analysis on the part of the end-user and therefore is in a separate layer, horizontal to the **Engagement** layer. These two layers are not allowed to use each other, since the engagement functionalities should follow the Separate Ways DDD principle, allowing them to evolve idependently (refer to **DMI3** in the [Uses View](module_view_uses.md)).
+*Even though **statistics** is implements in it's core, an engagement functionality, introducing an element of gamification to quizzes-tutor, it's ultimately a collection of data for analysis on the part of the end-user and therefore is in a separate layer, horizontal to the **Engagement** layer. These two layers are not allowed to use each other, since the engagement functionalities should follow the Separate Ways DDD principle, allowing them to evolve idependently (refer to **DMI3** in the [Uses View](module_view_uses.md)).*
 
 ### <span style="color:#0080ff">Engagement</span>
 This layer's responsability is associated with what we've been calling engagement functionalities, or in other words, the "activities" quizzes-tutor offers to promote the student engagement.
@@ -34,6 +34,8 @@ This layer has the following modules:
 - tournament
 - discussion
 
+*For the same reason the **Analysis and Decision** and **Engagement** layers are not allowed to use each other, the modules within this layer are also not allowed to use each other.*
+
 ### <span style="color:#0080ff">Operation</span>
 This layer's responsability is associated with the basic operations allowed on the assets of quizzes-tutor. In short, what kinds of "operations" quizzes-tutor offers. In particular, questions can be submitted, grouped into quizzes, and answered. 
 
@@ -41,6 +43,8 @@ This layer has the following modules:
 - answer
 - questionsubmission
 - quiz
+
+*Typically, according to the definition of the commmon **Operation** layer, an Operational object may reference or even be composed of Potential objects (here, **Assets** is the analogous layer), therefore, something that hasn't been mentioned yet and is worth considering is that the quiz object (**quiz** module, in the **Operation** layer) is a composition of question objects (**question** module, in the **Assets** layer), and therefore, can be looked at as a DDD Aggregate. Also, considering these are saved and loaded as a whole to and from data storage (How? Refer to the **QuizAnswerItem** and **QuestionAnswerItem** entities described in the [Data Model's **Element Catalogue**]((module_view_data_model.md/#element-catalogue))).*
 
 ### <span style="color:#0080ff">Assets</span>
 This layer's responsability is associated with the resources (assets) that characterize the business model of quizzes-tutor, in particular questions and users.
@@ -60,6 +64,14 @@ Other modules present in the [Decomposition View](module_view_decomposition.md) 
 ## Context Diagram
 
 ## Rationale
+
+Rationale on **Domain Large-Scale Structure** comments, improvements and considerations:
+
+- **DLSS1.**
+
+  *This view highlights the modules of quizzes-tutor in cohesive responsability units and organizes them in Responsability Layers, bringing out the priorities of the system. Higher layers can be changed freely without affecting lower layers, so this View in particular is useful to understand what layers are susceptible to grow and change.*
+
+  *The engagement functionality modules...* (`Ask Professor Rito if we can look at the engagement functionalities as applications that may be plugged or unplugged from quizzes-tutor on demand - Pluggable Component Framework.`)
 
 ## Related Views
 
