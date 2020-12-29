@@ -4,10 +4,10 @@
 
 <img src="pictures/Uses View.png" width="500" >
 
-Fig 1. Uses View graphic representation. All arrows represent *uses* relations, which are specialized cases of *depends-on* relations between modules. Pairs of red arrows highlight cyclic dependencies. * The **permission** module doesn't have incoming *uses* dependencies, but *uses* other modules. This wasn't represented for the sake of not cluttering the diagram, but these relations can be consulted below, in the **permission** module entry in the Element Catalogue.
+Fig 1. Uses View graphic representation. All arrows represent *uses* relations, which are specialized cases of *depends-on* relations between modules. Pairs of red arrows highlight cyclic dependencies. * The **permission** module doesn't have incoming *uses* dependencies, but *uses* other modules. This wasn't represented for the sake of not cluttering the diagram, but these relations can be consulted below, in the **permission** module entry in the Element Catalog.
 
 ## Element Catalog
-For detailed descriptions of each module, please refer to the [Decomposition View's **Element Catalogue**](module_view_decomposition.md/#element-catalogue). In this section we highlight considerations related exclusively to the *uses* relationship among modules.
+For detailed descriptions of each module, please refer to the [Decomposition View's **Element Catalog**](module_view_decomposition.md/#element-catalog). In this section we highlight considerations related exclusively to the *uses* relationship among modules.
 
 ### <span style="color:#0080ff">quizzes-tutor</span>
 Main module.

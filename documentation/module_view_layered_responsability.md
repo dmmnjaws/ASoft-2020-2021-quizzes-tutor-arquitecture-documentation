@@ -4,7 +4,7 @@
 
 <img src="pictures/Responsability Layered View.png" width="900" >
 
-Fig 1. Responsability Layered View graphic representation. Layers are represented with different shades of grey. Layers contain modules - these are presented as white boxes. All the arrows in this diagram symbolize *is-allowed-to-use* relations. For this Layered View in particular, a relaxed layered system, which allows a layer to use any lower layer, was adopted, as opposed to a strict layered system, that only allows a layer to use the immediate lower layer. The relation between the **Analysis and Decision Making** and the **Engagement** layer is noteworthy - they are not allowed to use each other. Refer to the Element Catalogue for more.
+Fig 1. Responsability Layered View graphic representation. Layers are represented with different shades of grey. Layers contain modules - these are presented as white boxes. All the arrows in this diagram symbolize *is-allowed-to-use* relations. For this Layered View in particular, a relaxed layered system, which allows a layer to use any lower layer, was adopted, as opposed to a strict layered system, that only allows a layer to use the immediate lower layer. The relation between the **Analysis and Decision Making** and the **Engagement** layer is noteworthy - they are not allowed to use each other. Refer to the Element Catalog for more.
 
 
 ## Element Catalog
@@ -44,7 +44,7 @@ This layer has the following modules:
 - questionsubmission
 - quiz
 
-*Typically, according to the definition of the commmon **Operation** layer, an Operational object may reference or even be composed of Potential objects (here, **Assets** is the analogous layer), therefore, something that hasn't been mentioned yet and is worth considering is that the quiz object (**quiz** module, in the **Operation** layer) is a composition of question objects (**question** module, in the **Assets** layer), and therefore, can be looked at as a DDD Aggregate. Also, considering these are saved and loaded as a whole to and from data storage (How? Refer to the **QuizAnswerItem** and **QuestionAnswerItem** entities described in the [Data Model's **Element Catalogue**]((module_view_data_model.md/#element-catalogue))).*
+*Typically, according to the definition of the commmon **Operation** layer, an Operational object may reference or even be composed of Potential objects (here, **Assets** is the analogous layer), therefore, something that hasn't been mentioned yet and is worth considering is that the quiz object (**quiz** module, in the **Operation** layer) is a composition of question objects (**question** module, in the **Assets** layer), and therefore, can be looked at as a DDD Aggregate. Also, considering these are saved and loaded as a whole to and from data storage (How? Refer to the **QuizAnswerItem** and **QuestionAnswerItem** entities described in the [Data Model's **Element Catalog**]((module_view_data_model.md/#element-catalogue))).*
 
 ### <span style="color:#0080ff">Assets</span>
 This layer's responsability is associated with the resources (assets) that characterize the business model of quizzes-tutor, in particular questions and users.
@@ -72,6 +72,8 @@ Rationale on **Domain Large-Scale Structure** comments, improvements and conside
   *This view highlights the modules of quizzes-tutor in cohesive responsability units and organizes them in Responsability Layers, bringing out the priorities of the system. Higher layers can be changed freely without affecting lower layers, so this View in particular is useful to understand what layers are susceptible to grow and change.*
 
   *The engagement functionality modules...* (`Ask Professor Rito if we can look at the engagement functionalities as applications that may be plugged or unplugged from quizzes-tutor on demand - Pluggable Component Framework.`)
+
+  `adicionar cource (esquecime)`
 
 ## Related Views
 
