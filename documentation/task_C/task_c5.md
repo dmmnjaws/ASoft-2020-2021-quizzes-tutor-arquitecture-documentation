@@ -1,4 +1,11 @@
-## **C5**  Tactics for QA
+## **C5** Tactics for Modifiability
 
-module_view_decomposition.md
-**Encapsulate modifiability quality attribute tactic**
+### places where tactics are mentioned(subject to change)
+
+### module_view_decomposition.md
+  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of explicit interfaces to each module. `(which in the quizzes-tutor are the Service classes of each module?)`.*
+
+### module_view_data_model.md
+    *The Core Domains, Core Subdomains and Generic Subdomains have been defined in the [Decomposition View](module_view_decomposition.md) and the [Layered View](module_view_layered.md), but the boundaries can be refined and well defined with the help of the Data Model. One of these boundaries is particularly evident in the relation with the **Question** and **Answer** entities and the **QuestionDetails** and **AnswerDetails** entities. Also **Question** and **Answer** are undoubtably parts of the Core Domain, but what makes them a strong and stable part of it is their relation with **QuestionDetails** and **AnswerDetails** - an Abstraction of common services that exists to support **modifiability** and deline the decoupling boundaries between the generic attributes of questions/answers and the quite differing semantics of different kinds of questions/answers. This encapsulation of the types of question and answers behind the abstract entities **QuestionDetails** and **AnswerDetails** reduces coupling between **Question**/**Answer** (unlikely to change), and the types of question/answer (likely to be added, deleted or changed). As mentioned prior, the clear distinction of the Core Domain and the Core Subdomains is a godsend to **modifiability**, as developers trust this stable Segregated Core Domain containing the **Questions** and **Answers** entities, to implement aditional kinds of questions and answers independently, such as multiple choice questions and answers (the entities **MultipleChoiceQuestions** and **MultipleChoiceAnswers**), and possibly, in the future, open questions and written answers, among others.*
+
+### ### module_view_uses.md
