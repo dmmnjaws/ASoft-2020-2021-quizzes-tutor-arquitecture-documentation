@@ -17,7 +17,7 @@ The functionalities and quality attribute scenarios that follow were infered fro
 - **UC3:** Students should be able to answer quizzes for evaluation and self-assessment.
 - **UC4:** Engagement functionalities, such as discussions, tournaments, statistics and others.
 
-## Quality Attributes
+## Quality Attribute Scenarios
 
 ### Modifibility
 
@@ -29,3 +29,5 @@ The functionalities and quality attribute scenarios that follow were infered fro
 ### Availability
 
 This SAD won't be focusing on Availability, but rather on Modifiability. However, it's worth mentioning that the system should be highly available, as it's used by students for formal evaluation.
+
+- Refer to [QA Formal Scenarios](quality_attribute_formal_scenarios.md) for a formal description of the identified QA scenarios
