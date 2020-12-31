@@ -110,14 +110,14 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
   
   Fig 2. The proposed Context Map of quizzes-tutor, reflecting the considerations in this section. Each Bounded Context is highlighted in a different color. Anticorruption Layers are represented as small boxes with **ACL** notation. The color scheme is an attempt to map the Bounded Contexts with the bigger portion of each Subdomain they are a part of (explicit in **DD1.** in the [Decomposition View's **Rationale**](module_view_decomposition.md#rationale)). Once again, keep in mind that the boundaries between Subdomains don't equate to neither the boundaries between Bounded Contexts, or the boundaries between modules.
 
-  - **DD1.** 
+  - **DMI1.** 
     - The **question** and **answer** modules should be a part of the same Bounded Context - **question+answer**.
     - Peripheral functionalities should assume a Conformist position towards the **question+answer** Bounded Context, as if they were part of a different system, since these are implemented as so changes are unlikely to leak to other modules.
 
-  - **DD2.**
+  - **DMI2.**
     - The **user** module could be turned into an event publisher if quizzes-tutor migrates from a monolith to a microservices architecture. A part of the *user* Bounded Context would be preserved, but the dependent Bounded Contexts would need to adapt.
 
-  - **DD3.**
+  - **DMI3.**
     - The **tournament**, **discussion** and **statistics** modules, as implementations of engagement functionalities, should:
       - Assume a Conformist position towards **questions+answers**, as these are implemented as so changes are unlikely to affect the engagement functionalities.
       - Implement Anticorruption Layers between other Bounded Contexts of the Core Domain, such as **course**, **quiz** and **user**.
