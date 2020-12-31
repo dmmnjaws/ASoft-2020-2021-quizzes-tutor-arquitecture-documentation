@@ -149,7 +149,7 @@ Further rationale on the relationship between the  **Data Model** and **modifiab
 
 - **DMM1.** 
 
-    *The Data Model is particularly important for modifiability analysis. Consider, for example scenario [MS2](system_overview.md#modifibility) where a developer must add a new engagement functionality. In order to properly analyze the impact of required modifications to the system, he cannot only look at the code structure. This modification will require altering the data model (and possibly data abstractions, their operations or their properties) and hence its physical implementation. This can be costly depending on how the data model is structured and therefore an analysis is needed* 
+    *The Data Model is particularly important for **modifiability** analysis. Consider, for example scenario [MS2](system_overview.md#modifibility) where a developer must add a new engagement functionality. In order to properly analyze the impact of required modifications to the system, he cannot only look at the code structure. This modification will require altering the data model (and possibly data abstractions, their operations or their properties) and hence its physical implementation. This can be costly depending on how the data model is structured and therefore an analysis is needed.* 
 
 ## Related Views
 
