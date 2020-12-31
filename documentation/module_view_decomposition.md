@@ -71,16 +71,16 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - **DMI1.** 
 
-  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of explicit interfaces to each module. `(which in the quizzes-tutor are the Service classes of each module?)`.*
+  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of explicit interfaces to each module.*
 
 Rationale on **Domain Distillation** comments, improvements and considerations:
 
 - **DD1.** 
 
-  *From a point of view of **Domain Distillation**, the following modules are part of the Core Domain:* 
+  *The following modules are part of the Core Domain:* 
   - **course**
   - **question** and **answer**
-  - **questionsubmission** `(is questionsubmission really a part of the Core Domain?)`
+  - **questionsubmission**
   - **quiz**
   - **user**
   

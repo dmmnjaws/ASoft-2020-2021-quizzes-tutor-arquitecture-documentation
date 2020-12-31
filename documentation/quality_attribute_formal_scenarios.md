@@ -46,6 +46,17 @@
 - `Response` : Make the modifications test and deploy them
 - `Response Measure` : Time to implement the change. Number of resources created. Number of interfaces created between the newly created modules and the rest of the application. Number of cyclic dependencies created.  
 
+**AS1:** An internal, omission fault (such as a student requesting a quiz and the quiz not appearing; or a question in a quiz being skipped without the student's consent, among others) happens during the normal operation of the system, in particular during the period of evaluation of a student. The fault must be isolated, preventing it from becoming a failure, and it must be logged to safeguard the student's evaluation. A good measure would be the percentage of evaluation of a class lost during the course of the semester.
+
+- `Source` : Internal
+- `Stimulus` : Omission fault
+- `Artifacts` : Persistent storage (database)
+- `Environment` : Normal operation, during the period of evaluation of a student 
+- `Response` : Prevent the fault from becoming a failure and log it
+- `Response Measure` : percentage of evaluation of a class lost during the course of the semester.
+
+
+
 -----------------
 `AVALIAR A UTILIZAÇÃO DOS SEGUINTES CENÁRIOS - considerar overlaps com os de cima`
 
