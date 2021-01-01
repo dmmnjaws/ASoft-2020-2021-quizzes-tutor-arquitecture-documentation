@@ -25,7 +25,7 @@ This layer's responsability is in part associated with the collection of data fo
 This layer has the following modules:
 - statistics
 
-*Even though **statistics** is implemented in it's core, an engagement functionality, introducing an element of gamification to quizzes-tutor, it's ultimately a collection of data for analysis on the part of the end-user and therefore is in a separate layer, horizontal to the **Engagement** layer. These two layers are not allowed to use each other, since the engagement functionalities should follow the Separate Ways DDD principle, allowing them to evolve idependently (refer to **DMI3** in the [Uses View's **Rationale**](module_view_uses.md#rationale)).*
+*Even though **statistics** is in it's core an engagement functionality, introducing an element of gamification to quizzes-tutor, it's ultimately a collection of data for analysis on the part of the end-user and therefore is in a separate layer, horizontal to the **Engagement** layer. These two layers are not allowed to use each other, since the engagement functionalities should follow the Separate Ways DDD principle, allowing them to evolve idependently (refer to **DMI3** in the [Uses View's **Rationale**](module_view_uses.md#rationale)).*
 
 ### <span style="color:#0080ff">Engagement</span>
 This layer's responsability is associated with what we've been calling engagement functionalities, or in other words, the "activities" quizzes-tutor offers to promote the student engagement.
