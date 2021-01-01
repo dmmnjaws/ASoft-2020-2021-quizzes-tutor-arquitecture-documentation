@@ -46,10 +46,14 @@
 - `Response` : Make the modifications test and deploy them
 - `Response Measure` : Time to implement the change. Number of resources created. Number of interfaces created between the newly created modules and the rest of the application. Number of cyclic dependencies created  
 
+<<<<<<< HEAD
 **MS5:** A Software Engineering student refactors the system in order to make all questions available to all courses by means of implementing shared question repositories, each of these with its own field of study (e.g. Software Engineering, Software Architectures, etc). This will require changes to the code and data structures. The objective is to make, test and deploy the modifications within the duration of the project.
+=======
+**MS5:** A Software Engineering student changes the system in order to make all questions available to all courses by means of implementing shared question repositories, each of these with its own topic(e.g. Software Engineering, Software Architectures, etc). This will require changes to the code and data structures. The objective is to make, test and deploy the modifications within the duration of the project.
+>>>>>>> 619a3f150726db648f283aaff9e2d48580a7035e
 
 - `Source` : Software Engineering student
-- `Stimulus` : Refactor the system in order to make all questions available to all courses
+- `Stimulus` : Change the system in order to make all questions available to all courses
 - `Artifacts` : Code and data structures.
 - `Environment` : Design time
 - `Response` : Make the modifications test and deploy them
