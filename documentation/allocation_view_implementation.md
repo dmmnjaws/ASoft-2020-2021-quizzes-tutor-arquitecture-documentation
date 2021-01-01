@@ -2,14 +2,95 @@
 
 ## Primary Presentation
 
+
+| Modules            | Backend            | Frontend                         |
+| ------------------ | ------------------ | -------------------------------- |
+| answer             | answer             | models/management/questions <br /> models/management <br /> views/teacher/assessments components/multiple-choice       |
+| auth               | auth               | models/user  <br /> components/auth                  |
+| course             | course             | models/user <br /> views/admin/Courses              |
+| discussion         | discussion         | models/management <br /> views/student/discussions <br /> views/teacher/discussions        |
+| question           | question           | models/management <br /> models/management/questions <br /> views/teacher/questions <br /> components/multiple-choice       |
+| questionsubmission | questionsubmission | models/management <br />| views/questionsubmission         |
+| quiz               | quiz               | models/management <br /> views/student/quiz <br /> views/teacher/quizzes            |
+| statistics         | statistics         | models/statement/StudentStats.ts |
+| tournament         | tournament         | models/user <br /> views/student/tournament <br /> views/teacher/tournaments        |
+| user               | user               | models/user <br /> views/user <br /> views/student <br /> views/teacher <br /> views/teacher/students           |
+| statement          | statement          | models/statement                 |
+| {config}           | {config}           | project and source root folders  |
+| config/permission  | config/permission  | project and source root folders  |
+| {exceptions}       | {exceptions}       |                                  |
+| {impexp}           | {impexp}           | views/teacher/impexp             |
+| {mailer}           | {mailer}           |                                  |
+| {utils}            | {utils}            | components/ <br /> views/ <br /> services/ <br /> {assets}                         |
+
+
 ## Element Catalog
+
+
+### <span style="color:#0080ff">Modules</span>
+This column lists the modules identified in the module [Decomposition View](module_view_decomposition.md).
+
+
+### <span style="color:#0080ff">Backend</span>
+This column describes the packages from the backend project which are responsible for the module in question.  
+
+
+### <span style="color:#0080ff">Frontend</span>
+This column describes the files, folders or packages from the frontend project which are responsible for the module in question. These elements contain something related with the module in a fundamental level or may need changes when the module changes.
+
+We can simplify the folder structure to this hierarchy:
+- frontend
+    - src
+        - assets
+        - components
+        - models
+        - services
+        - views
+
+In the table we mention locations in a file system path notation, being “src” the root folder.
+The Frontend corresponds to the Web (VIEW) layer in the [Layered View](module_view_layered.md).
+
+
+### <span style="color:#0080ff">Frontend - models</span>
+The model’s folder contains TypeScript files (“.ts”) for the business model representations.
+
+
+### <span style="color:#0080ff">Frontend - components</span>
+The components folder contains small Vue template components, with the file type “.vue”. These will typically be imported by the page templates in the views folder. 
+
+
+### <span style="color:#0080ff">Frontend - views</span>
+The views folder contains Vue templates, with the file type “.vue”. These can be page templates or smaller components.
+
+
+### <span style="color:#0080ff">Frontend - services</span>
+The models folder contains TypeScript files (“.ts”). These files have service logic and utility classes for the interaction with the backend. Including the backend API requests themselves.
+
+
+### <span style="color:#0080ff">Frontend - assets</span>
+The assets folder contains style sheets and binary resources, such as images.
+
+
+### <span style="color:#0080ff">Frontend - project and source root folders</span>
+The project folder corresponds to the frontend project root. And the source folder corresponds to the “src” folder inside it.
+
+
 
 ## Context Diagram
 
-## Rationale
-`As we discussed, this view might be extremely relevant for a new developer that arrives at quizzes-tutor and wishes to take a look at a quick overview of the file system, but since this is listed in "Other Alocation Styles", might not be focal. Anyhow, seems pretty easy to do, so I'd go for it!`
+//note: should we have a more detailed frontend diagram here?
 
-`The relation between the frontend and the backend not having similar implementation structures might open discussion for this to be a design smell that leads to fuzzy boundaries between Bounded Contexts, and therefore should be revised. The teacher already mentioned why this was done this way, and why it's wrong, but I can't remember and it's something we should discuss with him.`
+## Rationale
+
+We can see from the primary presentation that while the backend project has a very straight forward (typically 1 to 1) representation of the modules in the implementation, the frontend spreads the modules more, using a different organization.
+This is due to the backend organizing the first level folders based on the modules, and only deeper in the tree the architectural and then technical categories are used. While the frontend does the opposite, starting by the architectural and technical categories, and only at the deeper level separating the modules.
+One could propose a different general approach. But even in the current one, if in the frontend we organize the module level folders according to the decomposition view, a much-cleared appreciation of the overall system could be achieved.
+
+
 
 ## Related Views
+
+- Refer to the [Decomposition View](module_view_decomposition.md) for more details on the modules.
+- Refer to the [Uses View](module_view_uses.md) for the follow-up on which modules *use* each module.
+- Refer to the [Layered View](module_view_layered.md) for the follow-up layered distribution of the modules, taking in consideration DDD Distillation principles.
 

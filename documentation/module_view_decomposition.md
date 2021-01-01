@@ -42,7 +42,7 @@ This module contains the business logic related to question submissions and post
 This module contains the business logic related to quizzes, including the ordering of the questions, among others.
 
 ### <span style="color:#0080ff">statement</span>
-This module contains services to handle the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed.
+This module contains services to handle the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed. The data is collected in a format relevant for audit trails and frontend presentation.
 *This module is deprecated. In the future it is expected to disappear and all data to be handled directly by other elements of the domain.*
 
 ### <span style="color:#0080ff">statistics</span>
@@ -67,28 +67,36 @@ These submodules contains the client-side logic of their parent module and handl
 
 ## Rationale
 
-From a point of view of DDD Distillation, the following modules are part of the **Core Domain**:
-- course
-- question and answer
-- question submission
-- quiz
-- user
+Rationale on **Domain Model Integrity** comments, improvements and considerations:
 
-And the following modules are **Core Subdomains**:
-- discussion
-- tournament
-- statistics
-- permission
+- **DMI1.** 
 
-And the following modules are **Generic Subdomains**:
-- auth
-- mailer
+  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of explicit interfaces to each module.*
 
-It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.
+Rationale on **Domain Distillation** comments, improvements and considerations:
 
-Rationale on **Domain Model Integrity** improvements and considerations:
+- **DD1.** 
 
-1. *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of an explicit interfaces to modules which in in the quizzes-tutor are the Service classes of each module.*
+  *The following modules are part of the Core Domain:* 
+  - **course**
+  - **question** and **answer**
+  - **questionsubmission**
+  - **quiz**
+  - **user**
+  
+  *And the following modules are Core Subdomains:*
+  - **discussion**
+  - **tournament**
+  - **statistics**
+  - **permission**
+
+  *And the following modules are Generic Subdomains:*
+  - **auth**
+  - **mailer**
+
+  *It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.* 
+  
+  *This is a rough reference, because in some cases, the boundaries between the Subdomains don't equate to the boundaries between modules and this is made clear through the rest of this SAD. An example of this is the **question** and **answer** modules, so keep this in mind.*
 
 ## Related Views
 
@@ -97,3 +105,5 @@ Rationale on **Domain Model Integrity** improvements and considerations:
 
 ## References
 For a detailed style guide, refer to Chapter 2.1 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
+
+For detailed information on the Domain Driven Design strategies mentioned, refer to Part IV of Domain Driven Design: Tackling Complexity in the Heart of Software: Eric Evans 2003 Addison-Wesley.

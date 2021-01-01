@@ -17,7 +17,7 @@ The functionalities and quality attribute scenarios that follow were infered fro
 - **UC3:** Students should be able to answer quizzes for evaluation and self-assessment.
 - **UC4:** Engagement functionalities, such as discussions, tournaments, statistics and others.
 
-## Quality Attributes
+## Quality Attribute Scenarios
 
 ### Modifibility
 
@@ -28,4 +28,8 @@ The functionalities and quality attribute scenarios that follow were infered fro
 
 ### Availability
 
-This SAD won't be focusing on Availability, but rather on Modifiability. However, it's worth mentioning that the system should be highly available, as it's used by students for formal evaluation.
+This SAD won't be focusing on Availability, but rather on Modifiability. However, it's worth mentioning that the system should be highly available, as it's used by students for formal evaluation. In this context, a myriad of scenarios that differentiate sources and types of stimulus exist, but a single more general scenario is considered here, for simplicity purposes.
+
+- **AS1:** An internal, omission fault (such as a student requesting a quiz and the quiz not appearing; or a question in a quiz being skipped without the student's consent, among others) happens during the normal operation of the system, in particular during the period of evaluation of a student, causing an unfair grade to be registered in the database. The fault must be isolated, preventing it from becoming a failure, and it must be logged to safeguard the student's evaluation. A good measure would be the percentage of evaluation of a class lost during the course of the semester (Ex: In a semester with 10 students, each answering 10 5-question quizzes, each question equates to (100/(10 x 10 x 5)) % = 0,2%. If, over the semester, student A fails to answer one question due to a fault, and the same happens to student B, the amount of lost evaluation during the semester would be of 0,4%).
+
+Refer to [QA Formal Scenarios](quality_attribute_formal_scenarios.md) for a formal description of the identified QA scenarios

@@ -1,7 +1,7 @@
 ## **C2**  Create scenarios for the identified QAs
 
 ## **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
-### Modifiability scenario
+### Modifiability scenario for BG1
 - `Source` : The teacher
 - `Stimulus` : Create a new question with the purpose of being reused in the future
 - `Artifacts` : The question asset
@@ -9,7 +9,7 @@
 - `Response` : Create the asset and deploy it
 - `Response Measure` : Number of uses of asset. Time to create the asset
 
-### Availability scenario
+### Availability scenario for BG1
 - `Source` : Internal fault
 - `Stimulus` : A student submission to the quizz did not appear due to DB malfunction
 - `Artifacts` : Database
@@ -20,7 +20,7 @@
 -----------
 
 ## **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge
-### Usability scenario (p.178 of SAP)
+### Usability scenario for BG2 (p.178 of SAP)
 `DISCUSS WITH PROFESSOR`
 - `Source` : The student
 - `Stimulus` : Ability to filter the stats in the quizzes-tutor to view different perpectives on the quizz results(e.g how different are the grades from wendnesday different from monday?)
