@@ -4,7 +4,7 @@
 
 <img src="pictures/Aspects View.png" width="1200" >
 
-Fig 1. Aspects View graphic representation. In the aspects box are the main aspects of the software, this are identified by class alike boxes that may use entitys, handlers or controllers. This boxes identify were they crosscut with other modules.
+Fig 1. Aspects View graphic representation. In the aspects box are the main aspects of the software, these are identified by class-alike boxes that may use entities, handlers or controllers. These boxes identify the crosscutting with other modules.
 
 ## Element Catalog
 
@@ -63,9 +63,7 @@ Crosscuts any methods with @Service, @Controller, @Repository and @RestControlle
 
 ## Rationale
 
-Quizzes-Tutor backend was developed in Java in the Spring framework, this enables many things including the use of annotations. This annotations refer to layers of the software, being Repository the lowest layer which comunicates with the database and the RestController the top layer and the exposed layer.
-With this design the backend acts like a Service which is available to communicate with the frontend via restfull requests, then these requests go down the layers, inside Controllers and then Services to filter business logic and end in the Repository when needed.
-This framework and it's application in this software allows crosscuting modules more easily.
+The backend of quizzes-tutor was developed in Java in the Spring framework, this enables the use of annotations, among other things. These annotations refer to layers of the software, being Repository the lowest layer which comunicates with the database and the RestController the top, exposed layer. With this design the backend acts like a Service which is available to communicate with the frontend via RESTful requests, that go down the layers, inside Controllers and then Services to filter business logic and end in the Repository when needed. This framework and it's application allows the crosscutting modules more easily.
 
 ## Related Views
 
