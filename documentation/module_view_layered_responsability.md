@@ -77,6 +77,13 @@ Rationale on **Domain Large-Scale Structure** comments, improvements and conside
   *This view highlights the modules of quizzes-tutor in cohesive responsability units and organizes them in Responsability Layers, bringing out the priorities of the system. Higher layers can be changed freely without affecting lower layers, so this View in particular is useful to understand what layers are susceptible to grow and change.*
 
   *The engagement functionality modules, in the **Analysis and Decision Making** and the **Engagement** layers (for simplicity, both refered to as "**Engagement** layers" from here on) can, as mentioned in **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md/#rationale), be treated almost as external systems, and therefore can also be seen, in the light of quizzes-tutor's Core Domain, as separate, independent applications that can be available on demand. Therefore, a Pluggable Component Framework pattern emerges where each module in the **Engagement** layers maps to a component, pluggable to the interface of an Abstract Core composed of the **Operation**, **Assets** and **Commodities** layers. For this to be applicable, this interface must be explicit and must lie somewhere in the boundaries between the **Engagement** layers and the below layers. In the current implementation of quizzes-tutor each module has Controller classes that provide entrance APIs for that module, to serve the Views of the frontend, as evident in the [Standard Layered View](module_view_layered.md), and Service classes that work as transactionality points and offer the service itself. The interface of the Abstract Core could be a composition of these Service classes, spamming across all modules in the lower layers to the **Engagement** layers, similarly to how a Facade would work. This is both relevant in the context of the [MS2](system_overview.md#modifibility) and [MS3](system_overview.md#modifibility) **modifiability** scenarios, as it makes both the adition (plugging) and deletion (unplugging) of engagement functionalities straightforward, with minimal risk.*
+  
+Rationale on **Modifiability**, scenarios and tactics:
+
+- **M1.**
+This view helps us make a **modifiability** analysis, because a layer is an application of the principle of information hiding(Encapsulation). Consider the modiafiabilty scenarios mentioned in **DLSS1.**, in order to add a new engagement functionality one must consider not just the modules in the layer bellow-**Operation** but also the modules in all the other bottom layers. While this is not ideal in respect to **modifiability**(and **portability**) it is something one must be aware of and to consider for a future improvement to this Quality Attribute.
+
+  
 
 ## Related Views
 
