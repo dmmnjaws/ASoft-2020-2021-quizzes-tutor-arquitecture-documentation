@@ -17,3 +17,7 @@
     1. [Client-Server View](c&c_view_client_server.md)
 3. Allocation Views
     1. [Basic Implementation View](allocation_view_implementation.md)
+
+### Proposed Refactorings
+
+1. [Refactoring: Question Submission](refactoring_question_submission.md)

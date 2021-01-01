@@ -137,7 +137,9 @@ This entity corresponds to a user's data and it's identified primarily by a uniq
 ## Context Diagram
 
 ## Rationale
-The Data Model is particularly important for **modifiability** analysis. Consider, for instance scenario [MS4](system_overview.md#modifibility) where a Software Architecture student must modify the system to improve a quality attribute. In order to properly analyze the impact of the required modifications to the system, it may not be enough to look at the code structure directly. This modification may require altering the data model (addition of new entities or, possibly change existing data abstractions, their operations or their properties) and hence its physical implementation. This can be costly depending on how the data model is structured and therefore a prior analysis is greatly recommended. 
+The Data Model is particularly important for **modifiability** analysis. Consider, for instance scenario [MS4](system_overview.md#modifibility) where a Software Architecture student must modify the system to improve a quality attribute. In order to properly analyze the impact of the required modifications to the system, it may not be enough to look at the code structure directly. This modification may require altering the data model (addition of new entities or, possibly change existing data abstractions, their operations or their properties) and hence its physical implementation. This can be costly depending on how the data model is structured and therefore a prior analysis is greatly recommended.
+
+There's an interesting refactoring towards the process of question submission better described in the [Refactoring: Question Submission](refactoring_question_submission.md) document.
 
 Rationale on **Domain Distillation** comments, improvements and considerations:
 

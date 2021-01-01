@@ -6,9 +6,9 @@
 
 The functionalities and quality attribute scenarios that follow were infered from the following business goals:
 
-- The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course.
-- The Quizzes Tutor promotes the students learning process and self-assessment of their knowledge.
-- The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
+- **BG1:** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course.
+- **BG2:** The Quizzes Tutor promotes the students learning process and self-assessment of their knowledge.
+- **BG3:** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
 
 ## Functionalities
 
@@ -25,7 +25,7 @@ The functionalities and quality attribute scenarios that follow were infered fro
 - **MS2:** A developer adds, deletes or modifies engagement functionalities, requiring change to the code and possibly to data structures of quizzes-tutor during design time. The objective is to make, test and deploy the modification with small effort and without adding defects to the existing code.
 - **MS3:** A Software Engineering student understands quizzes-tutor to the point of being able to add, delete or modify an engagement functionality, requiring change to the code and possibly to data structures of quizzes-tutor during design time. The objective is to make, test and deploy the modifications within the duration of the project.
 - **MS4:** A Software Architectures student understands quizzes-tutor to the point of being able to change a quality attribute, such as improving performance during the process of answering a quiz, requiring change to the code and possibly data, interfaces, components, resources and configurations of quizzes-tutor during design time. The objective is to make, test and deploy the modifications within the duration of the project. 
-**MS5:** A Software Engineering student refactors the system in order to make all questions available to all courses by means of implementing shared question repositories, each of these with its own topic(e.g. Software Engineering, Software Architectures, etc). This will require changes to the code and data structures. The objective is to make, test and deploy the modifications within the duration of the project.
+- **MS5:** A Software Engineering student refactors the system in order to make all questions available to all courses by means of implementing shared question repositories, each of these with its own field of study (e.g. Software Engineering, Software Architectures, etc). This will require changes to the code and data structures. The objective is to make, test and deploy the modifications within the duration of the project.
 
 ### Availability
 
