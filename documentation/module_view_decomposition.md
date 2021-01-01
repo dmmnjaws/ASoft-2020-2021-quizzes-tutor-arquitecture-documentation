@@ -71,7 +71,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - **DMI1.** 
 
-  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is achieved through the introduction of explicit interfaces to each module.*
+  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is made possible through the introduction of explicit interfaces to each module which in turn makes scenarios such as [MS2](system_overview.md#modifibility) and [MS3](system_overview.md#modifibility) more easily attainable.*
 
 Rationale on **Domain Distillation** comments, improvements and considerations:
 
