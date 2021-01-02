@@ -8,15 +8,15 @@ In the actual implementation of quizzes-tutor, the **Course** and **Question** e
 
 To address this problem, and looking from the perspective of the [Data Model](module_view_data_model.md), this SAD proposes the following refactoring:
 
-1. A question is no longer attached to a course, and therefore becomes independent from it. This implies that the **Question** entity looses the *many-to-one* relation with **Course**, becoming a *many-to-none* relation.
+1. A question is no longer attached to a course, and therefore becomes independent from it. This implies that the **Question** entity looses the *many-to-one* relation with **Course**, becoming a *many-to-none* relation. This relation will be better understood in point **5.**.
 
 2. Instead, a question is now a part of a repository of questions. This repository is identified by an unique Integer id and has a name that distinguishes the repository's fields of study and allow similarly named topics in different repositories without risks such as a Software Engineering course including questions about "security policies" related with Law Enforcement. This implies the creation of a **QuestionRepository** entity with a *one-to-many* relation with the **Question** entity. *Note: for now, it's logic to consider a question can be submitted to a single repository.*
 
 3. A repository of questions has an administrator. This implies the **QuestionRepository** entity has a *many-to-one* relation with the **User** entity. *Note: for now, for simplicity, consider a repository has a single administrator.*
 
-4. A question submission is no longer done in the context of a course (in particular, a course's execution), but instead, in the context of a question repository. Therefore, the repository administrator is now responsible for the question's approval or vetting. This implies the *many-to-one* relation between the **QuestionSubmission** entity and **CourseExecution** entity is severed and **QuestionSubmission** gains a new *many-to-one* relation with the **QuestionRepository** entity.
+4. A question submission is no longer done in the context of a course (in particular, a course's execution), but instead, in the context of a question repository. Therefore, the repository's administrator is now responsible for the question's approval or vetting. This implies the *many-to-one* relation between the **QuestionSubmission** entity and **CourseExecution** entity is severed and **QuestionSubmission** gains a new *many-to-one* relation with the **QuestionRepository** entity.
 
-5. There's no relation between courses and repositories. Repositories are freely accessed by courses, and courses only keep the questions, and don't keep the repositories. Therefore, the **Course** entity preserves it's *none-to-many* relation with the **Question** entity and has no relation with **QuestionRepository**.
+5. Questions may be fetched for a course from the question repositories, but there's no relation between courses and repositories. Repositories are freely accessed by courses, and courses only keep the questions, and don't keep information on the repositories these came from. This reduces coupling between courses and repositories. Therefore, the **Course** entity preserves the previously established *none-to-many* relation with the **Question** entity and has no relation with **QuestionRepository**.
 
 ## Possible Implementation Details and Variants
 
@@ -26,7 +26,11 @@ To address this problem, and looking from the perspective of the [Data Model](mo
 
 ## Post-Refactoring Data Model
 
-`TO-DO: Altered Data Model Primary Presentation, with changes in RED.`
+<img src="pictures/Refactoring Proposal.png" width="900" >
+
+Fig 1. Refactoring proposal, reflected in the [Data Model](module_view_data_model.md) graphic representation. Caption:
+
+<img src="pictures/Refactoring Proposal Caption.png" width="900" >
 
 `Isto parece que resolve uma dependencia circular entre course e question, mas nos nao consideramos como dependencia course-uses-question, porque um course pode existir sem nenhuma pergunta lá dentro. No entanto, um course sem nenhuma pergunta não serve para nada. perguntar ao professor rito se uma dependencia de course-uses-question é aceitável.`
 
