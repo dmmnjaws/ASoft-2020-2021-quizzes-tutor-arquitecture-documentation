@@ -64,6 +64,7 @@ Crosscuts any methods with @Service, @Controller, @Repository and @RestControlle
 ## Rationale
 
 The backend of quizzes-tutor was developed in Java in the Spring framework, this enables the use of annotations, among other things. These annotations refer to layers of the software, being Repository the lowest layer which comunicates with the database and the RestController the top, exposed layer. With this design the backend acts like a Service which is available to communicate with the frontend via RESTful requests, that go down the layers, inside Controllers and then Services to filter business logic and end in the Repository when needed. This framework and it's application allows the crosscutting modules more easily.
+The aspect view helps us have a better grasp on the code tangling and code scattering issues that might hinder the system. From here one can more easily improve the **modularity** (and therefore **modifiability**) of the code. Increase semantic coherence is a **modifiability** tactic that can be used in this context.
 
 ## Related Views
 
