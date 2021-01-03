@@ -6,7 +6,7 @@ A Distillation Document typically focuses on Domain Distillation, as does this o
 
 Marked with spoiler tags are some mentions to the SAD, with useful considerations and references in the light of Domain Model Integrity, Domain Distillation and Domain Large-Scale Structure.
 
->Before reading it's recommended to read the [Decomposition View](module_view_decomposition_view.md) for more on the semantic meaning of each module.
+>Before reading it's recommended to read the [Decomposition View](module_view_decomposition.md) for more on the semantic meaning of each module.
 
 ## The Core Domain
 
