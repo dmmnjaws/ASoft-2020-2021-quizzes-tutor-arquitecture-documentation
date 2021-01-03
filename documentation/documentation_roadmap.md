@@ -19,3 +19,10 @@ The architecture described in this SAD was reconstructed from the implementation
     - **Allocation Views**, related with the mapping of software elements with non-software elements, such as hardware, personal, and other resources.
 
     Mappings between views and between requirements and architectural aspects are achieved organically in the **Rationale** sections of each View, where the focus is on the discussion of aspects of Domain Driven Design, and as mentioned prior, on how these satisfy the scenarios for quality attribute requirements.
+
+## Other Documents
+Outside the scope of the SAD, the following documents result from an analysis of Domain Distillation. 
+
+- The [**Domain Vision Statement**](domain_vision_statement.md) provides a summarized look into the value of quizzes-tutor's Core Domain. It's aimed at all stakeholders.
+
+- The [**Distillation Document**](distillation_document.md) provides a deeper look on the technical and implementational value of quizzes-tutor's Core Domain and Core Subdomains. It's aimed at stakeholders interested in some implementation aspects of quizzes-tutor, mainly development distributability.
