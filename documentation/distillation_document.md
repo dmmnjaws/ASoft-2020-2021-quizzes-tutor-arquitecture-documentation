@@ -4,7 +4,7 @@ This Distillation Document is crucial to highlight quizzes-tutor's Core Domain. 
 
 A Distillation Document typically focuses on Domain Distillation, as does this one. However the Core Subdomains of quizzes-tutor are highly related with aspects of development distributability, therefore, there will be considerations on Domain Model Integrity.
 
-Marked with spoiler tags are some mentions to the SAD, with useful considerations and references in the light of Domain Model Integrity and Domain Large-Scale Structure.
+Marked with spoiler tags are some mentions to the SAD, with useful considerations and references in the light of Domain Model Integrity, Domain Distillation and Domain Large-Scale Structure.
 
 >Before reading it's recommended to read the [Decomposition View](module_view_decomposition_view.md) for more on the semantic meaning of each module.
 
@@ -22,13 +22,13 @@ The Core Subdomains of quizzes-tutor include the parts of the system that still 
 
 Types of questions, as mentioned before, can be added independently of the rest of the system, which allows Core Subdomains to be materialized by small localized and independent teams. Of course a team aiming to implement a type of question also needs to implement a type of answer, and therefore, both the **question** and **answer** modules might need to be changed. 
 
->Having this in mind, a principal of model integrity is proposed in **DMI1.** in the [Uses View's **Rationale**](module_view:uses.md#rationale).
+>Having this in mind, a principal of Domain Model Integrity is proposed in **DMI1.** in the [Uses View's **Rationale**](module_view_uses.md#rationale).
 
 Engagement functionalities are accessory functionalities aimed at promoting the engagement of students, as described in [BG2](system_overview.md#business-goals). Similarly to the types of questions, quizzes-tutor is designed to allow engagement functionalities to be added, deleted and changed independently from the rest of the system, allowing the concretization of [BG3](system_overview.md#business-goals), in particular, of the scenario [MS3](system_overview.md#modifiability). In the actual implementation of quizzes-tutor, modules like **discussion**, **tournament** and **statistics** equate to Core Subdomains, each implementing an engagement functionality. A Team working on an engagement functionality is mostly allowed to trust the stable Core Domain of quizzes-tutor, and assume a Separate Ways position towards all other Core Subdomains, including the types of questions.  
 
 >In the light of Domain Model Integrity, **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md#rationale), proposes a handful of approaches teams developing engagement functionalities may take in order to optimize the Continuous Integration of their code with the rest of quizzes-tutor. 
 
->**DLSS1.** in the [Responsability Layered View's **Rationale**]() also proposes some improvements in the light of Domain Large-Scale Structure to allow smoother integration between the engagement functionalities' Core Subdomains and the Core Domain.
+>**DLSS1.**, in the [Responsability Layered View's **Rationale**](module_view_layered_responsability.md#rationale), also proposes some improvements in the light of Domain Large-Scale Structure to allow smoother integration between the engagement functionalities' Core Subdomains and the Core Domain.
 
 The policies of quizzes-tutor include the **Permissions** module that deals with authorization policies.
 
