@@ -4,6 +4,6 @@ The domain model of quizzes-tutor should provide an application for users to sub
 
 >In the flipped classroom model, students study the topics beforehand, and these are discussed in class, with the questioning being of the initative of the student.
 
-One of the goals of quizzes-tutor is for this to be developed by students themselves, so the domain model is design to allow **modifiability** and the independent evolution of teams of developers. 
+One of the goals of quizzes-tutor is for the system to be developed by students themselves, therefore the domain model is designed to allow **modifiability** and the independent evolution of teams of developers. 
 
 Quizzes-tutor is a modular system, allowing functionalities to be enabled/disabled on demand.
