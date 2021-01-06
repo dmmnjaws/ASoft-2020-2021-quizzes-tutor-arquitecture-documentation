@@ -22,11 +22,13 @@ Main module.
 - *Uses*: -
 - *Is used by*: **course**, **user** 
 
-This module *uses* a module from an external Bounded Context, the FenixEdu REST API, whose Ubiquitous Language is a publicly published language to which quizzes-tutor assumes a Conformist posture. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).
+*This module uses a module from an external Bounded Context, provided as an Open Host Service thru the FenixEdu REST API. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).*
 
 ### <span style="color:#0080ff">course</span>
-- *Uses*: **auth**
+- *Uses*: **auth**, **question**
 - *Is used by*: **discussion**, **question**, **questionsubmission**, **quiz**, **tournament** 
+
+*This module has two responsabilities: aggregate questions and aggregate course executions (an annual/semiannual execution of a course). But since without questions the first responsability ceases to make sense, course has a uses relation to **question**. This constitutes a cyclic dependency between **course** and **question**. Between the two dependencies, **question** uses **course** is of special attention, and therefore deepen in the **question**'s entrance.*
 
 ### <span style="color:#0080ff">discussion</span>
 - *Uses*: **answer**, **course**, **question**, **user**
@@ -36,15 +38,15 @@ This module *uses* a module from an external Bounded Context, the FenixEdu REST 
 
 ### <span style="color:#0080ff">question</span>
 - *Uses*: **answer**, **course**
-- *Is used by*: **answer**, **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
+- *Is used by*: **answer**, **course**, **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
 
 *There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section DMI1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+
+*There's yet another cyclic dependency, between **question** and **course**, which was introduced in the **course**'s entrance. This [Refactoring Proposal](refactoring_question_submission.md) eliminates this cyclic dependency, in particular, by dissolving the uses relation from **question** to **course**.*
 
 ### <span style="color:#0080ff">questionsubmission</span>
 - *Uses*: **course**, **question**, **user**
 - *Is used by*: -
-
-`This module was added before the modules of engagement functionality (therefore is part of the Core Domain, but there's an interesting refactoring here if we consider the professor can also submit questions. - Professor Rito`
 
 ### <span style="color:#0080ff">quiz</span>
 - *Uses*: **course**, **question**, **user**
@@ -100,7 +102,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
   *As a consequence of the decoupling between the generic attributes of questions/answers and the types of questions/answers (described in **DD1.** in the [Data Model's **Rationale**](module_view_data_model.md/#rationale)), the **question**/**answer** modules are not likely to be modified in ways that directly affect the engagement functionalities, which in turn allows for a more independent relation between the Core Subdomains and this crucial part of the Core Domain, therefore suggesting the possibility of a Conformist position for developers of **tournament**, **discussion** and **statistics** towards the **question+answer** Bounded Context, with emphasis on a Separate Ways relation between any engagement functionality and the types of questions/answers.*
   
-  *The Core Domain should be relatively stable, but modules like **course**, **quiz** and **user**, may still change over time, and these changes may ultimately affect the engagement functionalities, given the uses relations. What can be done? A Customer/Supplier relation implies responsability from the upstream teams of the Core Domain, which isn't be ideal here, given the fact the engagement functionalities are largely of the responsability of teams of students (which are normally in no position to negotiate changes with upstream teams), therefore, it's best to shift the responsability to each of these downstream teams individually. This can be done through the implementation of Anticorruption Layers (each engagement functionality team is responsible for it's own), saving the Bounded Contexts of the Core Domain from additional constraints imposed by Customer/Supplier relations. The **modifiability** scenario [MS3](system_overview.md#modifibility) should be mentioned here and the Anticorruption layer functions as Intermediary that breaks dependency between modules and therefore reducing coupling*
+  *The Core Domain should be relatively stable, but modules like **course**, **quiz** and **user**, may still change over time, and these changes may ultimately affect the engagement functionalities, given the uses relations. What can be done? A Customer/Supplier relation implies responsability from the upstream teams of the Core Domain, which isn't be ideal here, given the fact the engagement functionalities are largely of the responsability of teams of students (which are normally in no position to negotiate changes with upstream teams), therefore, it's best to shift the responsability to each of these downstream teams individually. This can be done through the implementation of Anticorruption Layers (each engagement functionality team is responsible for it's own, together with the Bounded Contexts of the Core Domain), saving the Bounded Contexts of the Core Domain from additional constraints imposed by Customer/Supplier relations. The **modifiability** scenario [MS3](system_overview.md#modifibility) should be mentioned here and the Anticorruption Layer functions as Intermediary that breaks dependency between modules and therefore reducing coupling*
   
   *It's also worth noting that **tournament**, **discussion** and **statistics** don't use each other, because otherwise their Bounded Contexts would be coupled, which is impractical for the teams of students, so these and other similar future engagement functionalities should be designed and implemented with Separated Ways in mind, rejecting any integration among other engagement functionalities' Bounded Contexts.*
 

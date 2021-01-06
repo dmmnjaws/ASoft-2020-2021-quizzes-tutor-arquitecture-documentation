@@ -10,13 +10,14 @@ Fig 1. Decomposition View graphic representation. Modules in white are strictly 
 ## Element Catalog
 
 ### <span style="color:#0080ff">quizzes-tutor</span>
- This module equates to the whole of quizzes-tutor. The functionalities it provides include:
-- Users (students and teachers) may submit multiple choice questions based on topics and create quizzes based on the existing questions in the system;
+ This module equates to the whole of quizzes-tutor. The functionalities it provides are listed in the [System Overview](system_overview.md), but are refined as follows:
+- Students may submit multiple choice questions based on topics and create quizzes based on the existing questions in the system;
+- Similarly to students, teachers may also "create" questions, a process different from "submission" since it doesn't require revising.
 - Multiple courses are supported, a course can have distinct executions over the years, with reuse of questions;
 - Teachers can approve or vet question submissions;
 - Teachers can create topics;
 - Students may answer quizzes;
-- Discussions between users can be created and carried for each quizz question;
+- Discussions between users can be created and carried for each quiz question;
 - Tournaments between students can be organized. These tournaments may be password restricted;
 - Student are allowed to view their current stats. (Gamification)
 
@@ -27,7 +28,7 @@ This module contains the business logic related to the various answers of a ques
 This module provides the means to authenticate a user into the system using token-based authentication. Authentication works for both IST students and external students. 
 
 ### <span style="color:#0080ff">course</span>
-This module contains the business logic related to a course. A distinction is done between a Cource and a CourceExecution, since a course can be executed multiple times over the years, and with different students, but reuse of questions.
+This module contains the business logic related to a course. A distinction is done between a Cource and a CourceExecution, since a course can be executed multiple times over the years, and with different students, but reuse of questions. Therefore, roughly speaking, this module has two responsabilities: aggregate course executions and aggregate questions.
 
 ### <span style="color:#0080ff">discussion</span>
 This module contains the business logic related to the discussions functionality and management of replies.

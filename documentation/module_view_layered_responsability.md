@@ -47,8 +47,6 @@ This layer has the following modules:
 - questionsubmission
 - quiz
 
-`*Typically, according to the definition of the common **Operation** layer, an Operational object may reference or even be composed of Potential objects (here, **Assets** is the analogous layer), therefore, something that hasn't been mentioned yet and is worth considering is that the quiz object (**quiz** module, in the **Operation** layer) is a composition of question objects (**question** module, in the **Assets** layer), and therefore, can be looked at as a DDD Aggregate. Also, considering these are saved and loaded as a whole to and from data storage (How? Refer to the **QuizAnswerItem** and **QuestionAnswerItem** entities described in the [Data Model's **Element Catalog**]((module_view_data_model.md/#element-catalogue))).*`
-
 ### <span style="color:#0080ff">Assets</span>
 This layer's responsability is associated with the resources (assets) that characterize the business model of quizzes-tutor, in particular questions and users.
 

@@ -92,7 +92,7 @@ This entity is a link entity that maps to a single **Question** entity, and vice
 
 ### <span style="color:#0080ff">QuestionSubmission</span>
 This entity corresponds to a question-submission's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **Question** entity.
-- **Semantics:** A question submission corresponds to the act of a user submitting a question to the system, that then becomes dependent on reviews (**Review** entity) for approval/vetting.
+- **Semantics:** A question submission corresponds to the act of a student submitting a question to the system, that then becomes dependent on reviews (**Review** entity) for approval/vetting.
 
 ### <span style="color:#0080ff">Quiz</span>
 This entity corresponds to a quiz's data and it's identified by a unique Integer id. It's a weak entity depending on one and only one **CourseExecution** entity.
@@ -116,7 +116,7 @@ This entity corresponds to a reply's data and it's identified primarily by a uni
 
 ### <span style="color:#0080ff">Review</span>
 This entity corresponds to a review's data and it's identified primarily by a unique Integer id. It's a weak entity depending on one and only one **QuestionSubmission** entity. 
-- **Semantics:** A review is only relevant in the context of a question submission and corresponds to the concept of a user reviewing another user's question submission. A question submission can however have multiple reviews.
+- **Semantics:** A review is only relevant in the context of a question submission and corresponds to the concept of a user reviewing a student's question submission. A question submission can however have multiple reviews.
 
 ### <span style="color:#0080ff">Topic</span>
 This entity corresponds to a topic's data and it's identified primarily by a unique Integer id. 
