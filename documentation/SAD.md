@@ -5,6 +5,8 @@
 
 [System Overview](system_overview.md)
 
+[Captured Metrics](./metrics)
+
 ### Views
 1. Module Views
     1. [Decomposition View](module_view_decomposition.md)

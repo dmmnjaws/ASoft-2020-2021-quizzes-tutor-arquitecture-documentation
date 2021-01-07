@@ -1,5 +1,8 @@
 # Using Structure101 to measure complexity in Quizes Tutor
 
+## Metrics
+For a quick explanation of the captured metrics, please click [here](./structure101/how_structure101_measures_complexity.md)
+
 ## Overview
 
 ### XS Contribution pie chart
@@ -39,4 +42,4 @@ Fig 5. *Tangle* inside the `question` package
 ### `user`
 ![](images/user-metric-pie-chart.png)
 
-The `user` package's complexity, however, is made exclusively of *fat* coming from the `user.domain.User` class.
+The `user` package's complexity, however, is made exclusively of [*fat*](./how_structure101_measures_complexity.md#Fat) coming from the `user.domain.User` class.
