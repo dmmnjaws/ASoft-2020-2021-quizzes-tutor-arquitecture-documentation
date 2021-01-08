@@ -64,6 +64,15 @@
 - `Response` : Prevent the fault from becoming a failure and log it
 - `Response Measure` : percentage of evaluation of a class lost during the course of the semester
 
+**SS1:** An outside attacker(using demo user credentials) launches a Denial of Service attack(using jmeter scripts or others) on quizzes-tutor services and/or data consumed by these, preventing the system from being fully available during the normal operation of the system, in particular during the period of evaluation of the students. The attack must be detect and assurances put in place that allow the data and system services will be available for legitimate use. A good measure would be the percentage of evaluation of a class lost during the course of the semester.
+
+- `Source` : Attacker
+- `Stimulus` : Denial of Service attack on the system by means of demo user logins(using jmeter scripts or others) prevents quizzes-tutor from being fully available during assessment quizzes.
+- `Artifacts` : System services and/or data consumed by the system(answers)
+- `Environment` : Normal operation, during the period of evaluation of a student 
+- `Response` : Detect the attack and assure that the data and system services will be available for legitimate use.
+- `Response Measure` : percentage of evaluation of a class lost during the course of the semester
+
 
 
 -----------------
