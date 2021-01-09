@@ -1,4 +1,4 @@
-[< Back](SAD.md)
+[< Back to SAD](SAD.md)
 
 # Quizzes-Tutor - Module View: Decomposition View
 
@@ -65,8 +65,6 @@ These submodules contains the server-side logic of their parent module.
 
 ### <span style="color:#0080ff">frontend modules</span>
 These submodules contains the client-side logic of their parent module and handle related presentation.
-
-## Context Diagram
 
 ## Rationale
 

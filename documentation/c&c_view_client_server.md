@@ -1,4 +1,4 @@
-[< Back](SAD.md)
+[< Back to SAD](SAD.md)
 
 # Quizzes-Tutor - Component and Connector View: Client-Server View
 
@@ -30,8 +30,6 @@ This **connector** is a typical REST-based request/reply connector, with a multi
 
 ### <span style="color:#0080ff">database-access</span>
 This **connector** mediates access from the server to the database. It has a multiplicity of 1. The protocol is assured at `jdbc:postgresql://localhost:5432/tutortestdb`.
-
-## Context Diagram
 
 ## Rationale
 Quizzes-Tutor follows a standard client-server architecture, therefore it makes sense to document a Component and Connector View such as this one. Tiers are implicit, but are as follows: a Frontend, a Backend and a Repository. The Components map to the code structure in a straightforward fashion, with the Frontend Tier mapping to the code of the **frontend** modules, the Backend Tier mapping to the **backend** modules, and the Repository Tier mapping to to the PostgreSQL Relational Database. Refer to the [Decomposition](module_view_decomposition) and [Standard Layered](module_view_layered.md) Views to know more about these modules' semantics and layered organization. The [Implementation View](allocation_view_implementation.md) contains a concise description of how quizzes-tutor's development file system is organized, and the Components may also be mapped to the code structure itself in a similar fashion.

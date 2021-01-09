@@ -1,4 +1,4 @@
-[< Back](SAD.md)
+[< Back to SAD](SAD.md)
 
 # Quizzes-Tutor - Module View: Data Model
 
@@ -137,8 +137,6 @@ This entity corresponds to a tournament's data and it's identified primarily by 
 ### <span style="color:#0080ff">User</span>
 This entity corresponds to a user's data and it's identified primarily by a unique Integer id. 
 - **Semantics:** A user corresponds to a real user that uses quizzes tutor.
-
-## Context Diagram
 
 ## Rationale
 The Data Model is particularly important for **modifiability** analysis. Consider, for instance scenario [MS4](system_overview.md#modifibility) where a Software Architecture student must modify the system to improve a quality attribute. In order to properly analyze the impact of the required modifications to the system, it may not be enough to look at the code structure directly. This modification may require altering the data model (addition of new entities or, possibly change existing data abstractions, their operations or their properties) and hence its physical implementation. This can be costly depending on how the data model is structured and therefore a prior analysis is greatly recommended.

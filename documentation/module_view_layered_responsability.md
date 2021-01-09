@@ -1,4 +1,4 @@
-[< Back](SAD.md)
+[< Back to SAD](SAD.md)
 
 # Quizzes-Tutor - Module View: Layered View (Large Scale Structure - Responsability Layers)
 
@@ -65,8 +65,6 @@ This layer has the following modules:
 - auth
 
 Other modules present in the [Decomposition View](module_view_decomposition.md) such as the **mailer** or **impexp** may also be seen as commodities, but they do not contain business logic so we're not including them in the responsability layers, as they don't have a responsability towards the business and are not a part of the domain model.
-
-## Context Diagram
 
 ## Rationale
 
