@@ -1,3 +1,5 @@
+[< Back](SAD.md)
+
 # Quizzes-Tutor - Module View: Aspects View
 
 ## Primary Presentation
@@ -40,10 +42,11 @@ Contains functions:
 * fenixAuth()
 * externalUserAuth()
 
-Uses to entitys:
+Uses entitys:
 
 * AuthExternalUser
 * AuthTecnicoUser
+* AuthDemoUser
 
 Also has a demo entity but was not considered relevant to the scope of the program execution.
 
@@ -51,9 +54,13 @@ Also has a demo entity but was not considered relevant to the scope of the progr
 
 Entity used by AuthController to refer to external users, also known as non-Fenix users.
 
-### <span style="color:#0080ff">«entity» AuthTecnico</span>
+### <span style="color:#0080ff">«entity» AuthTecnicoUser</span>
 
 Entity used by AuthController to refer to Tecnico's Fenix users.
+
+### <span style="color:#0080ff">«entity» AuthDemoUser</span>
+
+Entity used by AuthController to refer to demo user, this entity serves the purpose of teaching and it's the key to achieve one of the business goals.
 
 ### <span style="color:#0080ff">«aspect» Enforcement</span>
 
