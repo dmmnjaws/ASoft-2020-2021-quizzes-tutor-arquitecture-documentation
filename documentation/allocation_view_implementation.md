@@ -7,7 +7,7 @@
 
 ### Main Source Code Distribution
 
-| Modules            | [**Backend**](pictures/backend_complete_folder_structure.png)            | [**Frontend**](pictures/backend_complete_folder_structure.png)                         |
+| [Modules](module_view_decomposition.md)            | [**Backend**](pictures/backend_complete_folder_structure.png)            | [**Frontend**](pictures/backend_complete_folder_structure.png)                         |
 | ------------------ | ------------------ | -------------------------------- |
 | answer             | answer             | models/management/questions <br /> models/management <br /> views/teacher/assessments components/multiple-choice       |
 | auth               | auth               | models/user  <br /> components/auth                  |
@@ -31,7 +31,7 @@
 
 ### Test Code Availability/Distribution
 
-| Modules            | [**Backend**](pictures/backend_complete_folder_structure.png) : <br />src/test/groovy/<br />jmeter/            | [**Frontend**](pictures/backend_complete_folder_structure.png) : <br /> tests/unit/                         |
+| [Modules](module_view_decomposition.md)            | [**Backend**](pictures/backend_complete_folder_structure.png) : <br />src/test/groovy/<br />jmeter/            | [**Frontend**](pictures/backend_complete_folder_structure.png) : <br /> tests/unit/                         |
 | ------------------ | ------------------ | -------------------------------- |
 | answer             | src/test/groovy/answer<br />jmeter/answer             | -                  |
 | auth               | src/test/groovy/auth               | -                  |
