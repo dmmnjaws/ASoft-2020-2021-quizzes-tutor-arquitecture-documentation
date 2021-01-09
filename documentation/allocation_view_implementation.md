@@ -5,7 +5,7 @@
 ## Primary Presentation
 
 
-| Modules            | Backend            | Frontend                         |
+| Modules            | [Backend](pictures/backend_complete_folder_structure.png)            | [Frontend](pictures/backend_complete_folder_structure.png)                         |
 | ------------------ | ------------------ | -------------------------------- |
 | answer             | answer             | models/management/questions <br /> models/management <br /> views/teacher/assessments components/multiple-choice       |
 | auth               | auth               | models/user  <br /> components/auth                  |
@@ -76,11 +76,6 @@ The assets folder contains style sheets and binary resources, such as images.
 ### <span style="color:#0080ff">Frontend - project and source root folders</span>
 The project folder corresponds to the frontend project root. And the source folder corresponds to the “src” folder inside it.
 
-
-
-## Context Diagram
-
-//note: should we have a more detailed frontend diagram here?
 
 ## Rationale
 
