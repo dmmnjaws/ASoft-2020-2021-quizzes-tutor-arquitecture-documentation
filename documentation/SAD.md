@@ -5,7 +5,7 @@
 
 [System Overview](system_overview.md)
 
-[Captured Metrics](./metrics)
+[Captured Metrics](metrics/README.md)
 
 ### Views
 1. Module Views

@@ -1,5 +1,5 @@
 # Captured metrics
-This folder contains some captured metrics.
+This section provides information about the quizzes-tutor's captured metrics for code complexity, structure and cohesion.
 
 * [Better Code Hub](./better-code-hub) contains the downloaded website and a screenshot of the results.
 * [Structure101](./structure101) contains:
