@@ -1,6 +1,8 @@
-# **C3**  Write general scenarios for the Business Goals
+# General scenarios for the proposed Business Goals.
 
-## **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
+These scenarios were written as a starting point in order to better grasp the essential aspects of the proposed business goals. Following these, system functionalities and Quality Attribute scenarios were derived, as compiled in the [System Overview](system_overview.md).
+
+### **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
 
 1. Goal-source
     - Course teachers that own quizzes-tutor are the ones who provide the business goal.
@@ -29,7 +31,7 @@
 
 
 
-## **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge.
+### **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge.
 
 1. Goal-source
 	- Course teachers that own quizzes-tutor are the ones who provide the business goal.
@@ -55,9 +57,9 @@
 
 
 
-## **BG3** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
+### **BG3** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
 
-### Scenario 1: The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects.
+#### BG3 Scenario 1: The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects.
 1. Goal-source
 	- Course teachers that desire to use quizzes-tutor as a pedagogical tool, as project-study material, are the ones who provide the business goal. 
 
@@ -82,7 +84,7 @@
 
 
 
-### Scenario 2: The students learn how to develop a web application more easily.
+#### BG3 Scenario 2: The students learn how to develop a web application more easily.
 1. Goal-source
 	- Course teachers that desire to use quizzes-tutor as a pedagogical tool, as project-study material, are the ones who provide the business goal.
 	
@@ -103,7 +105,3 @@
 
 7. Value
 	- High
-
-`NOTES`
-   - Was it ok that we broke BG3 into 2 distinct Business Goals Scenarios? 
-   - Should we had a 3rd Goal ? `(5.3 The quizzes-tutor gets refined each year)`
