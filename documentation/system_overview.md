@@ -35,4 +35,8 @@ This SAD won't be focusing on Availability, but rather on Modifiability. However
 
 - **AS1:** An internal, omission fault (such as a student requesting a quiz and the quiz not appearing; or a question in a quiz being skipped without the student's consent, among others) happens during the normal operation of the system, in particular during the period of evaluation of a student, causing an unfair grade to be registered in the database. The fault must be isolated, preventing it from becoming a failure, and it must be logged to safeguard the student's evaluation. A good measure would be the percentage of evaluation of a class lost during the course of the semester (Ex: In a semester with 10 students, each answering 10 5-question quizzes, each question equates to (100/(10 x 10 x 5)) % = 0,2%. If, over the semester, student A fails to answer one question due to a fault, and the same happens to student B, the amount of lost evaluation during the semester would be of 0,4%).
 
+### Security 
+
+- **SS1:** An outside attacker(using demo user credentials) launches a Denial of Service attack(using jmeter scripts or others) on quizzes-tutor services and/or data consumed by these, preventing the system from being fully available during the normal operation of the system, in particular during the period of evaluation of the students. The attack must be detect and assurances put in place that allow the data and system services will be available for legitimate use. A good measure would be the percentage of evaluation of a class lost during the course of the semester.
+
 Refer to [QA Formal Scenarios](quality_attribute_formal_scenarios.md) for a formal description of the identified QA scenarios.
