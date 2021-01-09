@@ -5,7 +5,9 @@
 ## Primary Presentation
 
 
-| Modules            | [Backend](pictures/backend_complete_folder_structure.png)            | [Frontend](pictures/backend_complete_folder_structure.png)                         |
+### Main Source Code Distribution
+
+| Modules            | [**Backend**](pictures/backend_complete_folder_structure.png)            | [**Frontend**](pictures/backend_complete_folder_structure.png)                         |
 | ------------------ | ------------------ | -------------------------------- |
 | answer             | answer             | models/management/questions <br /> models/management <br /> views/teacher/assessments components/multiple-choice       |
 | auth               | auth               | models/user  <br /> components/auth                  |
@@ -24,6 +26,31 @@
 | {impexp}           | {impexp}           | views/teacher/impexp             |
 | {mailer}           | {mailer}           |                                  |
 | {utils}            | {utils}            | components/ <br /> views/ <br /> services/ <br /> {assets}                         |
+
+
+
+### Test Code Availability/Distribution
+
+| Modules            | [**Backend**](pictures/backend_complete_folder_structure.png) : <br />src/test/groovy/<br />jmeter/            | [**Frontend**](pictures/backend_complete_folder_structure.png) : <br /> tests/unit/                         |
+| ------------------ | ------------------ | -------------------------------- |
+| answer             | src/test/groovy/answer<br />jmeter/answer             | -                  |
+| auth               | src/test/groovy/auth               | -                  |
+| course             | src/test/groovy/course<br />jmeter/administration             | -                  |
+| discussion         | src/test/groovy/discussion         | -                  |
+| question           | src/test/groovy/question<br />jmeter/question           | tests/unit/views/teacher/questions       |
+| questionsubmission | src/test/groovy/questionsubmission | -                  |
+| quiz               | src/test/groovy/quiz               | -                  |
+| statistics         | -                  | -                  |
+| tournament         | src/test/groovy/tournament         | -                  |
+| user               | src/test/groovy/user               | -                  |
+| statement          | src/test/groovy/statement          | -                  |
+| {config}           | -                  | -                  |
+| config/permission  | -                  | -                  |
+| {exceptions}       | -                  | -                  |
+| {impexp}           | -                  | -                  |
+| {mailer}           | -                  | -                  |
+| {utils}            | -                  | -                  |
+
 
 
 ## Element Catalog
