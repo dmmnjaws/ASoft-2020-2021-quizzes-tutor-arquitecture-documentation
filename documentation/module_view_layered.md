@@ -1,4 +1,4 @@
-[< Back](SAD.md)
+[< Back to SAD](SAD.md)
 
 # Quizzes-Tutor - Module View: Layered View
 
@@ -47,8 +47,6 @@ This layer features the Springboot and NodeJS frameworks, purely for completion 
 
 ### <span style="color:#0080ff">VIRTUAL MACHINE</span>
 This layer features the JVM (Java Virtual Machine), purely for completion purposes, but as mentioned before, this SAD's focus isn't the technology used.
-
-## Context Diagram
 
 ## Rationale
 Considering quizzes-tutor was meant, from the beginning to be a web application, a layered architecture ended up being a constraint on the design of the system. This favored **modifiability** and **portability** even outside the scenarious highlighted in the [System Overview](system_overview.md). However, even though this layered view highlights Domain Distillation, and helps easily trace dependencies, a different kind of layered view is more suitable for rationalizing about the domain modeling decisions and responsabilities. - [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md).

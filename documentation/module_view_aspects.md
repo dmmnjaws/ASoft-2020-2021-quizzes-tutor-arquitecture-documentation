@@ -1,4 +1,4 @@
-[< Back](SAD.md)
+[< Back to SAD](SAD.md)
 
 # Quizzes-Tutor - Module View: Aspects View
 
@@ -65,8 +65,6 @@ Entity used by AuthController to refer to demo user, this entity serves the purp
 ### <span style="color:#0080ff">«aspect» Enforcement</span>
 
 Crosscuts any methods with @Service, @Controller, @Repository and @RestController annotations.
-
-## Context Diagram  
 
 ## Rationale
 

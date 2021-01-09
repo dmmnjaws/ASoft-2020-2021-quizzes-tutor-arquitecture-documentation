@@ -1,4 +1,4 @@
-[< Back](SAD.md)
+[< Back to SAD](SAD.md)
 
 # Quizzes-Tutor - Module View: Uses View
 
@@ -81,10 +81,6 @@ The StatsService in this module collects statistics on quizzes, questions and an
 ### <span style="color:#0080ff">permission</span>
 - *Uses*: **answer**, **course**, **discussion**, **question**, **questionsubmission**, **quiz**, **user**
 - *Is used by*: -
-
-## Context Diagram
-
-`NOTE: To document the interfaces of each module, the best place to look is at the Service classes in each module.`
 
 ## Rationale
 
