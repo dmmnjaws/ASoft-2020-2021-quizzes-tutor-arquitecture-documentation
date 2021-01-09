@@ -1,15 +1,3 @@
-### **BG1** The Quizzes Tutor supports a course that follows the flipped classroom model relaxing the load on the teaching body while promoting the student's engagement in the course
-
-------
-
-### **BG2** The Quizzes Tutor promotes the student's learning process and self-assessment of their knowledge
-
-------
-
-### **BG3** The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application
-
-------
-
 **MS1:** A developer adds, deletes or modifies types of questions, requiring change to the code and possibly to data structures of quizzes-tutor during design time. The objective is to make, test and deploy the modification with small effort and without adding defects to the existing code.
 
 - `Source` : A developer
