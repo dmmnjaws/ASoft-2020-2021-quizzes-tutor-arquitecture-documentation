@@ -28,3 +28,7 @@ Outside the scope of the SAD, the following documents result from an analysis of
 - The [**Domain Vision Statement**](domain_vision_statement.md) provides a summarized look into the value of quizzes-tutor's Core Domain. It's aimed at all stakeholders.
 
 - The [**Distillation Document**](distillation_document.md) provides a deeper look on the technical and implementational value of quizzes-tutor's Core Domain and Core Subdomains. It's aimed at stakeholders interested in some implementation aspects of quizzes-tutor, mainly development distributability.
+
+Finally, the [metrics folder](metrics/) contains complexity-related measurements captured using:
+- [BetterCodeHub](metrics/better-code-hub) which contains a download of the website that presents the results, along with a screenshot.
+- [Structure101](metrics/structure101) which contains a brief explanation of the metrics used to measure complexity and an analysis of the Structure101's output.
