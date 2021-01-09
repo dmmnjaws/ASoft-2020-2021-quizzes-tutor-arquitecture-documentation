@@ -13,4 +13,4 @@ For this section the following tools were used:
 
 * [Better Code Hub](https://bettercodehub.com/) which checks your GitHub codebase against 10 engineering guidelines devised by the authority in software quality, Software Improvement Group (SIG).
 
-* [Structure101](https://structure101.com/) wich helps visualizing the structure that emerges from source code and gives an instant boost to developer productivity.
+* [Structure101](https://structure101.com/) which helps visualizing the structure that emerges from source code and gives an instant boost to developer productivity.
