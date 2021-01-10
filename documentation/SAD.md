@@ -19,6 +19,7 @@
     1. [Client-Server View](c&c_view_client_server.md)
 3. Allocation Views
     1. [Basic Implementation View](allocation_view_implementation.md)
+    2. [Work Assignment View](allocation_view_work_assignment.md)
 
 ### Proposed Refactorings
 

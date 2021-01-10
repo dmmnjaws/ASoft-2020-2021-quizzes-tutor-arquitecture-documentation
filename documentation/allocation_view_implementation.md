@@ -116,7 +116,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - **DMI1.** 
 
-    *The use of small Bounded Contexts (refer to [Uses View - DMI-SUMMARY](module_view_uses.md#Rationale)), contributes to the desired **modifiability** trait, specially with scenarios such as [MS2](system_overview.md#modifibility), [MS3](system_overview.md#modifibility) and [MS4](system_overview.md#modifibility).*
+    *The use of small Bounded Contexts (refer to the **DMI** section in the [Uses View](module_view_uses.md#r**ationale)), contributes to the desired **modifiability** trait, especially with scenarios such as [MS2](system_overview.md#modifibility), [MS3](system_overview.md#modifibility) and [MS4](system_overview.md#modifibility).*
 
 
     *The backend side takes considerable benefits from this due to what was commented in the Rationale's intro. In the frontend we notice 3 new terms that overlap more than 1 Bounded Contexts:*
