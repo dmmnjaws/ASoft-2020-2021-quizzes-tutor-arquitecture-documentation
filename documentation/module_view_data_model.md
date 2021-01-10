@@ -26,6 +26,8 @@ This entity corresponds to an assessment's data and it's identified by a unique 
 This entity is a *specialization* of **AuthUser**, relating to the authentication of a demo user. It's identified by a unique Integer id.
 - **Semantics:** A demo user is used for testing. Anyone can test-drive quizzes-tutor as a demo user without logging in.
 
+This entity has an associated vulnerability. Refer to the [Aspects View](module_view_aspects.md#rationale) for a detailed explanation.
+
 ### <span style="color:#0080ff">AuthExternalUser</span>
 This entity is a *specialization* of **AuthUser**, relating to the authentication of external users. It's identified by a unique Integer id and contains, aditionally, a *token* for authentication.
 - **Semantics:** An external user is a user outside IST. For instance, a user that authenticates into quizzes-tutor with a *gmail.com* email address is an external user.
