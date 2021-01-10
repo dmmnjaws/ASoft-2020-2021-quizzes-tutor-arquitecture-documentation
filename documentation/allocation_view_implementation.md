@@ -106,15 +106,34 @@ The project folder corresponds to the frontend project root. And the source fold
 
 ## Rationale
 
-We can see from the primary presentation that while the backend project has a very straight forward (typically 1 to 1) representation of the modules in the implementation, the frontend spreads the modules more, using a different organization.
-This is due to the backend organizing the first level folders based on the modules, and only deeper in the tree the architectural and then technical categories are used. While the frontend does the opposite, starting by the architectural and technical categories, and only at the deeper level separating the modules.
-One could propose a different general approach. But even in the current one, if in the frontend we organize the module level folders according to the decomposition view, a much-cleared appreciation of the overall system could be achieved.
+Rationale on **Domain Model Integrity** comments, improvements and considerations:
+
+- **DMI1.** 
+
+    *We can see from the primary presentation that while the backend project has a very straight forward (typically 1 to 1) representation of the modules in the implementation, the frontend spreads the modules more, using a different organization.*
+    
+    *The backend organizes the first level folders based on the modules, and only deeper in the tree the architectural and then technical categories are used. While the frontend does the opposite, starting by the architectural and technical categories, and only at the deeper level separating the modules.*
+
+    *One could propose a different general approach. But even in the current one, if in the frontend we organize the module level folders according to the decomposition view, a cleared appreciation of the overall system could be achieved.*
+
+
+- **DMI2.** 
+
+    *The use of small bounded contexts (refer to [Uses View - DMI-SUMMARY](module_view_uses.md#Rationale)), contributes to the our desired Modifiability trait, specially on the scenarios [MS2](system_overview.md#modifibility), [MS3](system_overview.md#modifibility) and [MS4](system_overview.md#modifibility).*
+
+
+    *The backend side takes considerable benefits from this due to what was commented in **DMI1**. In the frontend we notice 3 new terms that overlap more than 1 bounded contexts:*
+    * teacher
+    * student
+    * management
 
 
 
 ## Related Views
 
 - Refer to the [Decomposition View](module_view_decomposition.md) for more details on the modules.
-- Refer to the [Uses View](module_view_uses.md) for the follow-up on which modules *use* each module.
+- Refer to the [Uses View](module_view_uses.md) for the follow-up on which modules *use* each module and the bounding contexts.
 - Refer to the [Layered View](module_view_layered.md) for the follow-up layered distribution of the modules, taking in consideration DDD Distillation principles.
+- Refer to the [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md) for a layered view on the optics of Domain Large Scale Structure Responsability Layers.
+
 
