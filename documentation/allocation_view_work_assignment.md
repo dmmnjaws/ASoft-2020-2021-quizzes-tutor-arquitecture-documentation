@@ -4,7 +4,7 @@
 
 ## Primary Presentation
 
-<img src="pictures/Work Assignment View.png" width="500" >
+<img src="pictures/Work Assignment View.png" width="900" >
 
 Fig 1. Work Assignment View graphic representation. Represents the actors contributing to the project and their change from one semester to another.
 
