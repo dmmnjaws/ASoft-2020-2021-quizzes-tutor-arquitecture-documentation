@@ -72,7 +72,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - **DMI1.** 
 
-  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is made possible through the introduction of explicit interfaces to each module which in turn makes scenarios such as [MS2](system_overview.md#modifibility) and [MS3](system_overview.md#modifibility) more easily attainable.*
+  *Quizzes-tutor was planned to be developed by multiple independent teams which called for the distinction of Bounded Contexts. This is achieved by using a decomposition style that uses the information-hiding principle of the Encapsulation **modifiability** tactic. Encapsulation reduces the probability that a change to one module propagates to other modules. This is made possible through the introduction of explicit interfaces to each module which in turn makes scenarios such as [MS2](system_overview.md#modifiability) and [MS3](system_overview.md#modifiability) more easily attainable.*
 
 Rationale on **Domain Distillation** comments, improvements and considerations:
 
@@ -95,14 +95,14 @@ Rationale on **Domain Distillation** comments, improvements and considerations:
   - **auth**
   - **mailer**
 
-  *It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.* 
+  *It's worth to consult the [Standard Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.* 
   
   *This is a rough reference, because in some cases, the boundaries between the Core Subdomains don't equate to the boundaries between modules and this is made clear through the rest of this SAD. An example of this is the **question** and **answer** modules.*
 
 ## Related Views
 
 - Refer to the [Uses View](module_view_uses.md) for the follow-up on which modules *use* each module.
-- Refer to the [Layered View](module_view_layered.md) for the follow-up layered distribution of the modules, taking in consideration DDD Distillation principles.
+- Refer to the [Standard Layered View](module_view_layered.md) for the follow-up layered distribution of the modules, taking in consideration DDD Distillation principles.
 
 ## References
 For a detailed style guide, refer to Chapter 2.1 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.

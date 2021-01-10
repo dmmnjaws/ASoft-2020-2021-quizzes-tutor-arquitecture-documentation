@@ -44,7 +44,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - **DMI1.** 
 
-    *If the criteria mentioned in **DMI3.** in the [Uses View](module_view_uses.md#rationale) is respected, Student groups can develop their engagement functionalities independently, contributing to [BG3](system_overview.md#business-goals) business goal in respect to scenario [MS3](system_overview.md#modifibility).*
+    *If the criteria mentioned in **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) is respected, Student groups can develop their engagement functionalities independently, contributing to [BG3](system_overview.md#business-goals) business goal in respect to scenario [MS3](system_overview.md#modifiability).*
 
     *The Engagement functionality of each Student group would then correspond to a new Bounded Context. Keeping the desired **modifiability** benefits of using small Bounded Contexts.*
 

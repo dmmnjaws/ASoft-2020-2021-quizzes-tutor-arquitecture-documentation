@@ -7,7 +7,7 @@
 <img src="pictures/Layered View.png" width="1200" >
 
 
-Fig 1. Layered View graphic representation (magnifier recommended). Layers are represented with different shades of grey. Layers contain modules - these are presented as white boxes and they are perceptible as *parts-of* the same parent module if they are contained within the same opaque box (Take note that the submodules of the backend modules (**.domain**, .**repository**, **.dto** and **.api**) are not represented in the [Decomposition View](module_view_decomposition.md), but here, since they are relevant in the layered context. Please refer to the [Allocation Implementation View](allocation_view_implementation.md) for a perspective on their locations in the file system). All the arrows in this diagram symbolize *is-allowed-to-use* relations. Noteworthy relations or exceptions to the guidelines of a typical Layered Arquitecture are prescribed below, in the Element Catalog.
+Fig 1. Layered View graphic representation (magnifier recommended). Layers are represented with different shades of grey. Layers contain modules - these are presented as white boxes and they are perceptible as *parts-of* the same parent module if they are contained within the same opaque box (Take note that the submodules of the backend modules (**.domain**, .**repository**, **.dto** and **.api**) are not represented in the [Decomposition View](module_view_decomposition.md), but here, since they are relevant in the layered context. Please refer to the [Implementation View](allocation_view_implementation.md) for a perspective on their locations in the file system). All the arrows in this diagram symbolize *is-allowed-to-use* relations. Noteworthy relations or exceptions to the guidelines of a typical Layered Arquitecture are prescribed below, in the Element Catalog.
 
 ## Element Catalog
 
@@ -54,7 +54,7 @@ Considering quizzes-tutor was meant, from the beginning to be a web application,
 ## Related Views
 
 - Refer to the [Decomposition View](module_view_decomposition.md) for a brief uncollapsed description of each module.
-- Refer to the [Allocation Implementation View](allocation_view_implementation.md) to form a better understanding of how the modules represented in this layered view are organized in the development environment file system.
+- Refer to the [Implementation View](allocation_view_implementation.md) to form a better understanding of how the modules represented in this layered view are organized in the development environment file system.
 - Refer to the [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md) for a layered view on the optics of Domain Large Scale Structure Responsability Layers.
 
 ## References

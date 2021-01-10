@@ -21,7 +21,7 @@ The functionalities and quality attribute scenarios that follow were infered fro
 
 ## Quality Attribute Scenarios
 
-### Modifibility
+### Modifiability
 
 - **MS1:** A developer adds, deletes or modifies types of questions, requiring change to the code and possibly to data structures of quizzes-tutor during design time. The objective is to make, test and deploy the modification with small effort and without adding defects to the existing code.
 - **MS2:** A developer adds, deletes or modifies engagement functionalities, requiring change to the code and possibly to data structures of quizzes-tutor during design time. The objective is to make, test and deploy the modification with small effort and without adding defects to the existing code.

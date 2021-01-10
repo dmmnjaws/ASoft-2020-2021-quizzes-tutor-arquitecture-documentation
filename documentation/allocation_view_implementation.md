@@ -7,7 +7,7 @@
 
 ### Main Source Code Distribution
 
-| [Modules](module_view_decomposition.md)            | [**Backend**](pictures/backend_complete_folder_structure.png)            | [**Frontend**](pictures/backend_complete_folder_structure.png)                         |
+| [Modules](module_view_decomposition.md)            | [**Backend**](pictures/backend_complete_folder_structure.png)            | [**Frontend**](pictures/frontend_complete_folder_structure.png)                         |
 | ------------------ | ------------------ | -------------------------------- |
 | answer             | answer             | models/management/questions <br /> models/management <br /> views/teacher/assessments components/multiple-choice       |
 | auth               | auth               | models/user  <br /> components/auth                  |
@@ -31,7 +31,7 @@ Table 1. Main source code distribution, mapping the modules highlighted in the [
 
 ### Test Code Availability/Distribution
 
-| [Modules](module_view_decomposition.md)            | [**Backend**](pictures/backend_complete_folder_structure.png) : <br />src/test/groovy/<br />jmeter/            | [**Frontend**](pictures/backend_complete_folder_structure.png) : <br /> tests/unit/                         |
+| [Modules](module_view_decomposition.md)            | [**Backend**](pictures/backend_complete_folder_structure.png) : <br />src/test/groovy/<br />jmeter/            | [**Frontend**](pictures/frontend_complete_folder_structure.png) : <br /> tests/unit/                         |
 | ------------------ | ------------------ | -------------------------------- |
 | answer             | src/test/groovy/answer<br />jmeter/answer             | -                  |
 | auth               | src/test/groovy/auth               | -                  |
@@ -77,7 +77,7 @@ We can simplify the folder structure to this hierarchy:
         - views
 
 In the table we mention locations in a file system path notation, being “src” the root folder.
-The Frontend corresponds to the Web (VIEW) layer in the [Layered View](module_view_layered.md).
+The Frontend corresponds to the Web (VIEW) layer in the [Standard Layered View](module_view_layered.md).
 
 
 ### <span style="color:#0080ff">Frontend - models</span>
@@ -116,7 +116,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - **DMI1.** 
 
-    *The use of small Bounded Contexts (refer to the **DMI** section in the [Uses View](module_view_uses.md#r**ationale)), contributes to the desired **modifiability** trait, especially with scenarios such as [MS2](system_overview.md#modifibility), [MS3](system_overview.md#modifibility) and [MS4](system_overview.md#modifibility).*
+    *The use of small Bounded Contexts (refer to the **DMI** section in the [Uses View](module_view_uses.md#rationale)), contributes to the desired **modifiability** trait, especially with scenarios such as [MS2](system_overview.md#modifiability), [MS3](system_overview.md#modifiability) and [MS4](system_overview.md#modifiability).*
 
 
     *The backend side takes considerable benefits from this due to what was commented in the Rationale's intro. In the frontend we notice 3 new terms that overlap more than 1 Bounded Contexts:*
@@ -128,7 +128,7 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - Refer to the [Decomposition View](module_view_decomposition.md) for more details on the modules.
 - Refer to the [Uses View](module_view_uses.md) for the follow-up on which modules *use* each module and the bounding contexts.
-- Refer to the [Layered View](module_view_layered.md) for the follow-up layered distribution of the modules, taking in consideration DDD Distillation principles.
+- Refer to the [Standard Layered View](module_view_layered.md) for the follow-up layered distribution of the modules, taking in consideration DDD Distillation principles.
 - Refer to the [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md) for a layered view on the optics of Domain Large Scale Structure Responsability Layers.
 
 ## References
