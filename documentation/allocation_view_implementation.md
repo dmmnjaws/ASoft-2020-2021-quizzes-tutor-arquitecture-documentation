@@ -27,7 +27,7 @@
 | {mailer}           | {mailer}           |                                  |
 | {utils}            | {utils}            | components/ <br /> views/ <br /> services/ <br /> {assets}                         |
 
-
+Table 1. Main source code distribution, mapping the modules highlighted in the [Decomposition View](module_view_decomposition.md) to the development file system elements of quizzes-tutor.
 
 ### Test Code Availability/Distribution
 
@@ -51,7 +51,7 @@
 | {mailer}           | -                  | -                  |
 | {utils}            | -                  | -                  |
 
-
+Table 2. Test code distribution, mapping the modules highlighted in the [Decomposition View](module_view_decomposition.md) to quizzes-tutor's test files.
 
 ## Element Catalog
 
@@ -106,28 +106,23 @@ The project folder corresponds to the frontend project root. And the source fold
 
 ## Rationale
 
+It can be seen from the primary presentation that while the backend project has a very straight forward (typically 1 to 1) representation of the modules in the implementation, the frontend spreads the modules more, using a different organization.*
+    
+The backend organizes the first level folders based on the modules, and only deeper in the tree the architectural and then technical categories are used. While the frontend does the opposite, starting by the architectural and technical categories, and only at the deeper level separating the modules.*
+
+One could propose a different general approach. But even in the current one, if in the frontend we organize the module level folders according to the decomposition view, a cleared appreciation of the overall system could be achieved.*
+
 Rationale on **Domain Model Integrity** comments, improvements and considerations:
 
 - **DMI1.** 
 
-    *We can see from the primary presentation that while the backend project has a very straight forward (typically 1 to 1) representation of the modules in the implementation, the frontend spreads the modules more, using a different organization.*
-    
-    *The backend organizes the first level folders based on the modules, and only deeper in the tree the architectural and then technical categories are used. While the frontend does the opposite, starting by the architectural and technical categories, and only at the deeper level separating the modules.*
-
-    *One could propose a different general approach. But even in the current one, if in the frontend we organize the module level folders according to the decomposition view, a cleared appreciation of the overall system could be achieved.*
+    *The use of small Bounded Contexts (refer to [Uses View - DMI-SUMMARY](module_view_uses.md#Rationale)), contributes to the desired **modifiability** trait, specially with scenarios such as [MS2](system_overview.md#modifibility), [MS3](system_overview.md#modifibility) and [MS4](system_overview.md#modifibility).*
 
 
-- **DMI2.** 
-
-    *The use of small bounded contexts (refer to [Uses View - DMI-SUMMARY](module_view_uses.md#Rationale)), contributes to the our desired Modifiability trait, specially on the scenarios [MS2](system_overview.md#modifibility), [MS3](system_overview.md#modifibility) and [MS4](system_overview.md#modifibility).*
-
-
-    *The backend side takes considerable benefits from this due to what was commented in **DMI1**. In the frontend we notice 3 new terms that overlap more than 1 bounded contexts:*
+    *The backend side takes considerable benefits from this due to what was commented in the Rationale's intro. In the frontend we notice 3 new terms that overlap more than 1 Bounded Contexts:*
     * teacher
     * student
     * management
-
-
 
 ## Related Views
 
@@ -135,5 +130,9 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 - Refer to the [Uses View](module_view_uses.md) for the follow-up on which modules *use* each module and the bounding contexts.
 - Refer to the [Layered View](module_view_layered.md) for the follow-up layered distribution of the modules, taking in consideration DDD Distillation principles.
 - Refer to the [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md) for a layered view on the optics of Domain Large Scale Structure Responsability Layers.
+
+## References
+
+For a brief description of the Implementation style, refer to Chapter 5.5 of Documenting Software Architectures: Views and Beyond (2nd Edition): Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford 2010 Addison-Wesley.
 
 
