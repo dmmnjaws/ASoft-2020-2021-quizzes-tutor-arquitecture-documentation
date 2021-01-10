@@ -7,7 +7,7 @@
 <img src="pictures/Layered View.png" width="1200" >
 
 
-Fig 1. Layered View graphic representation (magnifier recommended). Layers are represented with different shades of grey. Layers contain modules - these are presented as white boxes and they are perceptible as *parts-of* the same parent module if they are contained within the same opaque box (Keep in mind that the submodules of the backend modules (**.domain**, .**repository**, **.dto** and **.api**) are not represented in the [Decomposition View](module_view_decomposition.md), but here, since they are relevant in the layered context. Please refer to the [Allocation Implementation View](allocation_view_implementation.md) for a perspective on their locations in the file system). All the arrows in this diagram symbolize *is-allowed-to-use* relations. Noteworthy relations or exceptions to the guidelines of a typical Layered Arquitecture are prescribed below, in the Element Catalog.
+Fig 1. Layered View graphic representation (magnifier recommended). Layers are represented with different shades of grey. Layers contain modules - these are presented as white boxes and they are perceptible as *parts-of* the same parent module if they are contained within the same opaque box (Take note that the submodules of the backend modules (**.domain**, .**repository**, **.dto** and **.api**) are not represented in the [Decomposition View](module_view_decomposition.md), but here, since they are relevant in the layered context. Please refer to the [Allocation Implementation View](allocation_view_implementation.md) for a perspective on their locations in the file system). All the arrows in this diagram symbolize *is-allowed-to-use* relations. Noteworthy relations or exceptions to the guidelines of a typical Layered Arquitecture are prescribed below, in the Element Catalog.
 
 ## Element Catalog
 
@@ -43,13 +43,13 @@ Similarly to how the modules in the **api (CONTROLLER)** layer are separated, th
 *Is-allowed-to-use*:
 - **VIRTUAL MACHINE** layer.
 
-This layer features the Springboot and NodeJS frameworks, purely for completion purposes, but this SAD's focus isn't the technology used.
+This layer features the Springboot and NodeJS frameworks, purely for completion purposes, but the technology used isn't the focus of this SAD.
 
 ### <span style="color:#0080ff">VIRTUAL MACHINE</span>
-This layer features the JVM (Java Virtual Machine), purely for completion purposes, but as mentioned before, this SAD's focus isn't the technology used.
+This layer features the JVM (Java Virtual Machine), purely for completion purposes, but as mentioned before, the technology used isn't the focus of this SAD.
 
 ## Rationale
-Considering quizzes-tutor was meant, from the beginning to be a web application, a layered architecture ended up being a constraint on the design of the system. This favored **modifiability** and **portability** even outside the scenarious highlighted in the [System Overview](system_overview.md). However, even though this layered view highlights Domain Distillation, and helps easily trace dependencies, a different kind of layered view is more suitable for rationalizing about the domain modeling decisions and responsabilities. - [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md).
+Considering quizzes-tutor was meant, from the beginning to be a web application, a layered architecture ended up being a constraint on the design of the system. This favored **modifiability** and **portability** even outside the scenarios highlighted in the [System Overview](system_overview.md). This view highlights both Domain Distillation and the use of the Model-View-Controller tactic, and helps to easily trace dependencies. However, a different kind of layered view is more suitable for rationalizing about the domain modeling decisions and responsabilities - [Layered View II (Large Scale Structure - Responsability Layers)](module_view_layered_responsability.md).
 
 ## Related Views
 

@@ -11,7 +11,7 @@ Fig 1. Responsability Layered View graphic representation. Layers are represente
 
 ## Element Catalog
 
-*"..., these layers might have to be completely original"* - Eric Evans, Domain Driven Design
+*"..., these layers might have to be completely original..."* - Eric Evans, Domain Driven Design
 
 In his book on Domain Driven Design, Eric Evans defends that in some cases, in order to shape a domain design into a set of Responsability Layers that work, these layers might need to be original, therefore, this SAD proposes the following Responsability Layers:
 
@@ -38,10 +38,10 @@ This layer has the following modules:
 
 *For the same reason the **Analysis and Decision** and **Engagement** layers are not allowed to use each other, the modules within this layer are also not allowed to use each other.*
 
-*This layer is especially relevant to allow the quizzes-tutor's functionalities to be flexible on demand. Please refer to the **Rationale's section DLSS1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This layer is especially relevant to allow the quizzes-tutor's functionalities to be flexible on demand. Refer to the **Rationale's section DLSS1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">Operation</span>
-This layer's responsability is associated with the basic operations allowed on the assets of quizzes-tutor. In short, what kinds of "operations" quizzes-tutor offers. In particular, questions can be submitted, grouped into quizzes, and answered. 
+This layer's responsability is associated with the basic operations allowed on the assets of quizzes-tutor. In short, what kinds of "operations" quizzes-tutor offers. In particular, questions can be submitted, grouped into quizzes, and answered by users. 
 
 This layer has the following modules:
 - answer
@@ -56,7 +56,7 @@ This layer has the following modules:
 - question
 - user
 
-Due to **DD1.** in the [Data Model](module_view_data_model.md/#rationale), question is allowed to be used freely by above layers independently of the adition/removal of types of questions.
+*Due to **DD1.** in the [Data Model](module_view_data_model.md/#rationale), question is allowed to be used freely by above layers independently of the adition/removal of types of questions.*
 
 ### <span style="color:#0080ff">Commodities</span>
 This layer's responsability is associated with commodities useful for quizzes-tutor but not motivational, in particular authentication. 
@@ -68,11 +68,11 @@ Other modules present in the [Decomposition View](module_view_decomposition.md) 
 
 ## Rationale
 
+This view highlights the modules of quizzes-tutor in cohesive responsability units and organizes them in Responsability Layers, bringing out the priorities of the system. Higher layers can be changed freely without affecting lower layers, so this View in particular is useful to understand what layers are susceptible to grow and change.
+
 Rationale on **Domain Large-Scale Structure** comments, improvements and considerations:
 
 - **DLSS1.**
-
-  *This view highlights the modules of quizzes-tutor in cohesive responsability units and organizes them in Responsability Layers, bringing out the priorities of the system. Higher layers can be changed freely without affecting lower layers, so this View in particular is useful to understand what layers are susceptible to grow and change.*
 
   *The engagement functionality modules, in the **Analysis and Decision Making** and the **Engagement** layers (for simplicity, both refered to as "**Engagement** layers" from here on) can, as mentioned in **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md/#rationale), be treated almost as external systems, and therefore can also be seen, in the light of quizzes-tutor's Core Domain, as separate, independent applications that can be available on demand. Therefore, a Pluggable Component Framework pattern emerges where each module in the **Engagement** layers maps to a component, pluggable to the interface of an Abstract Core composed of the **Operation**, **Assets** and **Commodities** layers. For this to be applicable, this interface must be explicit and must lie somewhere in the boundaries between the **Engagement** layers and the below layers. In the current implementation of quizzes-tutor each module has Controller classes that provide entrance APIs for that module, to serve the Views of the frontend, as evident in the [Standard Layered View](module_view_layered.md), and Service classes that work as transactionality points and offer the service itself. The interface of the Abstract Core could be a composition of these Service classes, spamming across all modules in the lower layers to the **Engagement** layers, similarly to how a Facade would work. This is both relevant in the context of the [MS2](system_overview.md#modifibility) and [MS3](system_overview.md#modifibility) **modifiability** scenarios, as it makes both the adition (plugging) and deletion (unplugging) of engagement functionalities straightforward, with minimal risk.*
   
@@ -80,6 +80,7 @@ Rationale on **Domain Large-Scale Structure** comments, improvements and conside
 ## Related Views
 
 - Refer to the [Standard Layered View](module_view_layered.md) for a layered view focused on technical aspects and dependencies, highlighting Domain Distillation.
+- Refer to the [Uses View](module_view_uses.md) to establish a bridge between this layered composition and the *uses* relations among modules.
 
 ### References
 
