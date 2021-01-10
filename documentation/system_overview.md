@@ -41,8 +41,8 @@ Similarly to the Availability consideration above, Security won't be the main fo
 
 - **SS1:** An outside attacker (using demo user credentials) launches a Denial of Service attack (using jmeter scripts or others) at the quizzes-tutor services and/or data consumed by these, reducing the overall availability of the system during normal operation, in particular during the period of evaluation of the students. The attack must be detected and assurances must be put in place to allow the data and system services to be available for legitimate use. A good measure would be the percentage of evaluation of a class lost during the course of the semester.
 
----
+## Appendix
 
-Refer to [QA Formal Scenarios](quality_attribute_formal_scenarios.md) for a formal description of the identified QA scenarios.
+- Refer to [QA Formal Scenarios](quality_attribute_formal_scenarios.md) for a formal description of the identified QA scenarios.
 
-Refer to [Business Goals General Scenarios](business_goals_general_scenarios.md) for a better understanding of the proposed business goals.
+- Refer to [Business Goals General Scenarios](business_goals_general_scenarios.md) for a better understanding of the proposed business goals.
