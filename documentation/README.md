@@ -1,11 +1,15 @@
 # ASoF course project. Group 6
 
 ## Objectives 
-- Propose a decomposition of the Quizzes Tutor domain model using the domain-driven design strategic patterns. Write the scenarios and document the architecture of the Quizzes Tutor.
+Propose a decomposition of the Quizzes Tutor domain model using the domain-driven design strategic patterns. Write the scenarios and document the architecture of the Quizzes Tutor.
 The work should be driven by the following business goals for the Quizzes Tutor:
 1. The Quizzes Tutor supports a course that follows the flipped classroom model facilitating the reuse of questions across the different executions of the course. `(This business goal was refined in the SAD)`
 2. The Quizzes Tutor promotes the students learning process and self-assessment of their knowledge.
 3. The Quizzes Tutor is used as a pedagogical tool, such that groups of students can easily use the system in their projects to learn how to develop a web application.
+
+## Project Documentation Entry Point
+
+[Project SAD](SAD.md)
 
 ## Group members:
 | Name | student number | 
