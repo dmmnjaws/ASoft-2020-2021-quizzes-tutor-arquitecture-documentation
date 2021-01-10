@@ -24,19 +24,19 @@ Fig 1. Decomposition View graphic representation. Modules in white are strictly 
 - Student are allowed to view their current stats. (Gamification)
 
 ### <span style="color:#0080ff">answer</span>
-This module contains the business logic related to the various answers of a question.
+This module contains the business logic related to the answers given to questions.
 
 ### <span style="color:#0080ff">auth</span>
 This module provides the means to authenticate a user into the system using token-based authentication. Authentication works for both IST students and external students. 
 
 ### <span style="color:#0080ff">course</span>
-This module contains the business logic related to a course. A distinction is done between a Cource and a CourceExecution, since a course can be executed multiple times over the years, and with different students, but reuse of questions. Therefore, roughly speaking, this module has two responsabilities: aggregate course executions and aggregate questions.
+This module contains the business logic related to a course. A distinction is done between a **Course** and a **CourseExecution**, since a course can be executed multiple times over the years, and with different students, but reuse of questions. Therefore, roughly speaking, this module has two responsabilities: aggregate course executions and aggregate questions. Refer to the [Data Model](module_view_data_model.md) for details.
 
 ### <span style="color:#0080ff">discussion</span>
 This module contains the business logic related to the discussions functionality and management of replies.
 
 ### <span style="color:#0080ff">question</span>
-This module contains the business logic related to questions and topics. A Topic has a set of Questions and a Question has a Topic.
+This module contains the business logic related to questions and topics.
 
 ### <span style="color:#0080ff">questionsubmission</span>
 This module contains the business logic related to question submissions and posterior review/vetting of such submissions.
@@ -45,8 +45,8 @@ This module contains the business logic related to question submissions and post
 This module contains the business logic related to quizzes, including the ordering of the questions, among others.
 
 ### <span style="color:#0080ff">statement</span>
-This module contains services to handle the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed. The data is collected in a format relevant for audit trails and frontend presentation.
-*This module is deprecated. In the future it is expected to disappear and all data to be handled directly by other elements of the domain.*
+This module handles the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed, and bridges it to the frontend. The data is collected in a format relevant for audit trails and frontend presentation.
+*This module is intended to become deprecated. In the future it is expected to disappear and all data to be handled directly by other elements of the domain.*
 
 ### <span style="color:#0080ff">statistics</span>
 This module doesn't have persistent content and is simply used to present data. It is however relevant for the business logic as it materializes the gamification aspect of the system, in the form of a stats board.
@@ -55,7 +55,7 @@ This module doesn't have persistent content and is simply used to present data. 
 This module contains the business logic related with the tournaments functionality.
 
 ### <span style="color:#0080ff">user</span>
-This module contains the business logic related with a user. In particular, it contains the god class User.
+This module contains the business logic related with a user. In particular, it contains the god-class User.
 
 ### <span style="color:#0080ff">permission</span>
 This module handles permissions of access to all the logical business entities - Relevant questions like: Can a user view this course? Can a user view this tournament? ...
@@ -85,19 +85,19 @@ Rationale on **Domain Distillation** comments, improvements and considerations:
   - **quiz**
   - **user**
   
-  *And the following modules are Core Subdomains:*
+  *The following modules are Core Subdomains:*
   - **discussion**
   - **tournament**
   - **statistics**
   - **permission**
 
-  *And the following modules are Generic Subdomains:*
+  *The following modules are Generic Subdomains:*
   - **auth**
   - **mailer**
 
   *It's worth to consult the [Layered View](module_view_layered.md) to form a better understanding of the logic behind this Distillation.* 
   
-  *This is a rough reference, because in some cases, the boundaries between the Subdomains don't equate to the boundaries between modules and this is made clear through the rest of this SAD. An example of this is the **question** and **answer** modules, so keep this in mind.*
+  *This is a rough reference, because in some cases, the boundaries between the Core Subdomains don't equate to the boundaries between modules and this is made clear through the rest of this SAD. An example of this is the **question** and **answer** modules.*
 
 ## Related Views
 

@@ -18,31 +18,31 @@ Main module.
 - *Uses*: **question**
 - *Is used by*: **discussion**, **question**, **statistics**
 
-*There's a cyclic uses-dependency between this module and the **question** module. Please refer to the **Rationale's section DMI1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*There's a cyclic dependency between this module and the **question** module. Please refer to the **Rationale's section DMI1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">auth</span>
 - *Uses*: -
 - *Is used by*: **course**, **user** 
 
-*This module uses a module from an external Bounded Context, provided as an Open Host Service thru the FenixEdu REST API. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).*
+*This module uses a module from an external Bounded Context, provided as an Open Host Service through the FenixEdu REST API. For more information consult [FenixEdu REST API's SLA](https://fenix.tecnico.ulisboa.pt/personal/external-applications/api-service-agreement).*
 
 ### <span style="color:#0080ff">course</span>
 - *Uses*: **auth**, **question**
 - *Is used by*: **discussion**, **question**, **questionsubmission**, **quiz**, **tournament** 
 
-*This module has two responsabilities: aggregate questions and aggregate course executions (an annual/semiannual execution of a course). But since without questions the first responsability ceases to make sense, course has a uses relation to **question**. This constitutes a cyclic dependency between **course** and **question**. Between the two dependencies, **question** uses **course** is of special attention, and therefore deepen in the **question**'s entrance.*
+*This module has two responsabilities: aggregate questions and aggregate course executions (an annual/semiannual execution of a course). But since without questions the first responsability ceases to make sense, course has a uses relation to **question**. This constitutes a cyclic dependency between **course** and **question**. Between the two dependencies, **question** uses **course** deserves further attention, and therefore is deepen in the **question**'s entrance.*
 
 ### <span style="color:#0080ff">discussion</span>
 - *Uses*: **answer**, **course**, **question**, **user**
 - *Is used by*: -
 
-*This module, like **tournament** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **tournament** implements an engagement functionality and has no incoming uses-dependency. Refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">question</span>
 - *Uses*: **answer**, **course**
 - *Is used by*: **answer**, **course**, **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
 
-*There's a cyclic uses-dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Please refer to the **Rationale's section DMI1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*There's a cyclic dependency between this module and the **answers** module. Furthermore, this module has many incoming uses-dependencies as it is a part of the Core Domain of quizzes-tutor. Refer to the **Rationale's section DMI1.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 *There's yet another cyclic dependency, between **question** and **course**, which was introduced in the **course**'s entrance. This [Refactoring Proposal](refactoring_question_submission.md) eliminates this cyclic dependency, in particular, by dissolving the uses relation from **question** to **course**.*
 
@@ -62,21 +62,21 @@ Main module.
 - *Uses*: **answer**, **question**, **quiz**, **user**
 - *Is used by*: -
 
-The StatsService in this module collects statistics on quizzes, questions and answers for each user. However, it does so solely by accessing the **user** module. However, without the existence of the **answer**, **question** and **quiz** modules, **statistics** would make no sense conceptually, and therefore it's said to have outbound uses-dependencies to these modules as well.
+The StatsService in this module collects statistics on quizzes, questions and answers for each user. However, it does so solely by accessing the **user** module. Without the existence of the **answer**, **question** and **quiz** modules, **statistics** would make no sense conceptually, and therefore it's said to have outbound uses-dependencies to these modules as well.
 
-*This module, like **discussion** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **discussion** implements an engagement functionality and has no incoming uses-dependency. Refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">tournament</span>
 - *Uses*: **course**, **question**, **quiz**, **user**
 - *Is used by*: -
 
-*This module, like **discussion** and **statistics** implements an engagement functionality and has no incoming uses-dependency. Please refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **discussion** and **statistics** implements an engagement functionality and has no incoming uses-dependency. Refer to the **Rationale's section DD1.** followed by **DMI3.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">user</span>
 - *Uses*: **auth**
 - *Is used by*: **discussion**, **questionsubmission**, **quiz**, **statistics**, **tournament**
 
-*This module, like **question**, has a lot of incoming *uses* dependencies. Please refer to the **Rationale's section DMI2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
+*This module, like **question**, has a lot of incoming *uses* dependencies. Refer to the **Rationale's section DMI2.** below for reasoning on possible considerations/solutions in the optics of Domain Driven Design.*
 
 ### <span style="color:#0080ff">permission</span>
 - *Uses*: **answer**, **course**, **discussion**, **question**, **questionsubmission**, **quiz**, **user**
@@ -96,40 +96,40 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
  
 - **DMI3.** 
 
-  (It's recommended to read **DD1.** in the **Domain Distillation** section first) *In **DMI1.**, it's suggested that the **question+answer** could be a Shared Kernel among the peripheral functionalities, which is a tactic that applies typically to modules internal to the system under design. However, also in **DMI1.** the conclusion was that perhaps it was best for peripheral functionalities to assume a Conformist posture, a relationship more suited to be had with external systems. This is the perfect opportunity to further justify this - Due to **DD1.**, we can almost look at the modules of engagement functionalities as external systems (they don't work as external systems, but should aim to evolve as such, independently, so there are some tactics in respect to these that may work here, such as the Conformist and Anticorruption Layer tactics). The Bounded Contexts of the **tournament**, **discussion** and **statistics** peripheral functionalities (likely to be teams of Software Engineering students) have a couple of options: either assume Conformist positions or Customer/Supplier relations towards the Bounded Contexts of the Core Domain, or even put in place Anticorruption Layers to retrench the effect of changes in the Bounded Contexts of the Core Domain.*
+  (It's recommended to read **DD1.** in the **Domain Distillation** section first) *In **DMI1.**, it's initially suggested that the **question+answer** could be a Shared Kernel among the peripheral functionalities, which is a tactic that applies typically to modules internal to the system under design. However, also in **DMI1.**, the conclusion was that perhaps it was best for peripheral functionalities to assume a Conformist posture (instead of **question+answer** being considered a Shared Kernel), a relationship more suited to be had with external systems. This is the perfect opportunity to further justify this - Due to **DD1.**, the modules of engagement functionalities can almost be seen as external systems (they don't work as external systems, but should aim to evolve as such, independently, so there are some tactics in respect to these that may work here, such as the Conformist and Anticorruption Layer tactics). The Bounded Contexts of the **tournament**, **discussion** and **statistics** peripheral functionalities (likely to be teams of Software Engineering students) have a couple of options: either assume Conformist positions or Customer/Supplier relations towards the Bounded Contexts of the Core Domain, or even put in place Anticorruption Layers to retrench the effect of changes in the Bounded Contexts of the Core Domain.*
 
   *As a consequence of the decoupling between the generic attributes of questions/answers and the types of questions/answers (described in **DD1.** in the [Data Model's **Rationale**](module_view_data_model.md/#rationale)), the **question**/**answer** modules are not likely to be modified in ways that directly affect the engagement functionalities, which in turn allows for a more independent relation between the Core Subdomains and this crucial part of the Core Domain, therefore suggesting the possibility of a Conformist position for developers of **tournament**, **discussion** and **statistics** towards the **question+answer** Bounded Context, with further emphasis on a Separate Ways relation between any engagement functionality and the types of questions/answers.*
   
-  *The Core Domain should be relatively stable, but modules like **course**, **quiz** and **user**, may still change over time, and these changes may ultimately affect the engagement functionalities, given the uses relations. What can be done? A Customer/Supplier relation implies responsability from the upstream teams of the Core Domain, which isn't ideal here, given the fact the engagement functionalities are largely of the responsability of teams of students (which are normally in no position to negotiate changes with upstream teams), therefore, it's best to shift the responsability to each of these downstream teams individually by implementing translation layers. However, for similar reasons, the use of simple translation layers will likely become impractical, so, the aforementioned challenge can be tackled through the implementation of Anticorruption Layers (each engagement functionality team is responsible for it's own, together with the Bounded Contexts of the Core Domain), saving the Bounded Contexts of the Core Domain from additional constraints imposed by Customer/Supplier relations. The **modifiability** scenario [MS3](system_overview.md#modifibility) should be mentioned here, and the Anticorruption Layer functions as an Intermediary that breaks dependency between modules and reduces coupling.*
+  *The Core Domain should be relatively stable, but modules like **course**, **quiz** and **user**, may still change over time, and these changes may ultimately affect the engagement functionalities, given the uses relations. What can be done? A Customer/Supplier relation implies responsability from the upstream teams of the Core Domain, which in this case may not be ideal, given the fact the engagement functionalities are largely of the responsability of teams of students (which are normally in no position to negotiate changes with upstream teams), therefore, it's best to shift the responsability to each of these downstream teams individually by implementing translation layers. However, for similar reasons, the use of simple translation layers will likely become impractical, so, the aforementioned challenge can be tackled through the implementation of Anticorruption Layers (each engagement functionality team is responsible for it's own, together with the Bounded Contexts of the Core Domain), saving the Bounded Contexts of the Core Domain from additional constraints imposed by Customer/Supplier relations. The **modifiability** scenario [MS3](system_overview.md#modifibility) should be mentioned here, and the Anticorruption Layer functions as an Intermediary that breaks dependency between modules and reduces coupling.*
   
-  *It's also worth noting that **tournament**, **discussion** and **statistics** don't use each other, because otherwise their Bounded Contexts would be coupled, which is impractical for the teams of students, so these and other similar future engagement functionalities should be designed and implemented with Separated Ways in mind, rejecting any integration among other engagement functionalities' Bounded Contexts.*
+  *It's also worth noting that **tournament**, **discussion** and **statistics** don't use each other, because otherwise their Bounded Contexts would be coupled, which is impractical for the teams of students. So, these and other similar future engagement functionalities should be designed and implemented with Separated Ways in mind, rejecting any integration among other engagement functionalities' Bounded Contexts.*
 
 - **DMI4.**
 
-  *As a consequence of the changes proposed in **DMI3.**, each engagement functionality's Bounded Context should implement Anticorruption Layers. A little part of this responsability however is also in the Bounded Contexts of the Core Domain (such as **course**, **quiz** and **user** as mentioned prior, which we will be mentioning as the "Core Domain's Bounded Contexts" from now on), who may need to assure the semantics of their services are not badly translated in the transformations proposed for the engagement functionalities. At one point, the increase of engagement functionalities may lead to an unhealthy growth in responsability for the Core Domain's Bounded Contexts. A way to counterbalance this, since the further in the future, the more stable the Core Domain is expected to get, is to strip the Core Domain's Bounded Contexts of the responsability of "patrolling" Anticorruption Layers, by instead, offering their services as Open Host Services for the engagement functionalities' Bounded Contexts to use. The tradeoff here is that this requires the engagement functionalities' Bounded Contexts to learn the language used by the Core Domain's Bounded Contexts, requiring this to be a well known Published Language.*
+  *As a consequence of the changes proposed in **DMI3.**, each engagement functionality's Bounded Context should implement Anticorruption Layers. A very small part of this responsability however lands in the Bounded Contexts of the Core Domain (such as **course**, **quiz** and **user** as mentioned prior, which we will be mentioning as the "Core Domain's Bounded Contexts" from now on), who may need to assure the semantics of their services are not badly translated in the transformations proposed for the engagement functionalities. At one point, the increase of engagement functionalities may lead to an unhealthy growth in responsability for the Core Domain's Bounded Contexts. A way to counterbalance this, since the further in the future, the more stable the Core Domain is expected to get, is to strip the Core Domain's Bounded Contexts of the responsability of "patrolling" Anticorruption Layers, by instead, offering their services as Open Host Services for the engagement functionalities' Bounded Contexts to use. The tradeoff here is that this requires the engagement functionalities' Bounded Contexts to learn the language used by the Core Domain's Bounded Contexts, requiring this to be a well known Published Language.*
 
 - **DMI-SUMMARY:**
   
   <img src="pictures/Uses View Context Map.png" width="500" >
   
-  Fig 2. The proposed Context Map of quizzes-tutor, reflecting the considerations in this section. Each Bounded Context is highlighted in a different color. Anticorruption Layers are represented as small boxes with **ACL** notation. The color scheme is an attempt to map the Bounded Contexts with the bigger portion of each Subdomain they are a part of (explicit in **DD1.** in the [Decomposition View's **Rationale**](module_view_decomposition.md#rationale)). Once again, keep in mind that the boundaries between Subdomains don't equate to neither the boundaries between Bounded Contexts, or the boundaries between modules.
+  Fig 2. The proposed Context Map of quizzes-tutor, reflecting the considerations in this section. Each Bounded Context is highlighted in a different color. Anticorruption Layers are represented as small boxes with **ACL** tag. The color scheme is an attempt to map the Bounded Contexts with the bigger portion of each Core Subdomain they are a part of (explicit in **DD1.** in the [Decomposition View's **Rationale**](module_view_decomposition.md#rationale)). Take note that the boundaries between Subdomains don't equate to neither the boundaries between Bounded Contexts, or the boundaries between modules.
 
   - **DMI1.** 
     - The **question** and **answer** modules should be a part of the same Bounded Context - **question+answer**.
-    - Peripheral functionalities should assume a Conformist position towards the **question+answer** Bounded Context, as if they were part of a different system, since these are implemented as so changes are unlikely to leak to other modules.
+    - Peripheral functionalities should assume a Conformist position towards the **question+answer** Bounded Context, as if they were part of a different system, since these are implemented in a way that makes changes unlikely to leak to other modules.
     
   - **DMI2.**
-    - The **user** module could be turned into an event publisher if quizzes-tutor migrates from a monolith to a microservices architecture. A part of the *user* Bounded Context would be preserved, but the dependent Bounded Contexts would need to adapt.
+    - The **user** module could be turned into an event publisher if quizzes-tutor migrates from a monolith to a microservices architecture. A part of the **user** Bounded Context would be preserved, but the dependent Bounded Contexts would need to adapt.
 
   - **DMI3.**
-    - The Bounded Contexts of the **tournament**, **discussion** and **statistics** modules, implementating of engagement functionalities, should:
-      - Assume a Conformist position towards **questions+answers**, as these are implemented as so changes are unlikely to affect the engagement functionalities.
+    - The Bounded Contexts of the **tournament**, **discussion** and **statistics** modules, implementating engagement functionalities, should:
+      - Assume a Conformist position towards **questions+answers**, as these are implemented in a way tha makes changes unlikely to affect the engagement functionalities.
       - Assume a Separate Ways position towards the different types of questions/answers.
       - Implement Anticorruption Layers between other Bounded Contexts of the Core Domain, such as **course**, **quiz** and **user**.
       - Allow their modules to evolve separately from other engagement functionalities' Bounded Contexts, following the Separated Ways tactic. 
 
   - **DMI4.**
-    - In the future, with the increase of engagement functionalities, so will the number of Anticorruption Layers, and consequentially, the responsabilities of the **course**, **quiz** and **user** Core Domain's Bounded Contexts. Therefore:
+    - In the future, the increase of engagement functionalities and Anticorruption Layers will culminate in an accumulation of responsabilities for the **course**, **quiz** and **user** Core Domain's Bounded Contexts. Therefore:
        - The Core Domain's Bounded Contexts can offer their services as Open Host Services instead. 
        - The Core Domain's Bounded Contexts will need their language to be well known by the engagement functionality's Bounded Contexts - a Published Language.
 
