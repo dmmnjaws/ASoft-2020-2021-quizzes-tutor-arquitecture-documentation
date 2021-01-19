@@ -38,11 +38,11 @@
 - `Response` : Make the modifications test and deploy them
 - `Response Measure` : Time to implement the change. Number of defects introduced
 
-**MS5:** A Software Engineering student refactors the system in order to make all questions available to all courses by means of implementing shared question repositories, each of these with its own field of study (e.g. Software Engineering, Software Architectures, etc). This will require changes to the code and data structures. The objective is to make, test and deploy the modifications within the duration of the project.
+**MS5:** A Software Engineering student refactors the system in order to decouple the question bank from the curriculum structure of a course. This will require changes to the code and data structures. The objective is to make, test and deploy the modifications within the duration of the project.
 
 - `Source` : Software Engineering student
-- `Stimulus` : Change the system in order to make all questions available to all courses
-- `Artifacts` : Code and data structures.
+- `Stimulus` : Change the system in order to decouple the question bank from the curriculum structure of a course
+- `Artifacts` : Code and data structures
 - `Environment` : Design time
 - `Response` : Make the modifications test and deploy them
 - `Response Measure` : Time to implement the change

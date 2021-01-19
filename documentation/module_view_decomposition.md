@@ -11,6 +11,8 @@ Fig 1. Decomposition View graphic representation. Modules in white are strictly 
 
 ## Element Catalog
 
+Since the decomposition view is an entry-point view, it addresses the decomposition of quizzes-tutor in a simple and comprehensible way. The (Standard Layered View)[module_view_layered.md] provides an overview of a deeper decomposition.
+
 ### <span style="color:#0080ff">quizzes-tutor</span>
  This module equates to the whole of quizzes-tutor. The functionalities it provides are listed in the [System Overview](system_overview.md), but are refined as follows:
 - Students may submit multiple choice questions based on topics and create quizzes based on the existing questions in the system;
@@ -24,25 +26,25 @@ Fig 1. Decomposition View graphic representation. Modules in white are strictly 
 - Student are allowed to view their current stats. (Gamification)
 
 ### <span style="color:#0080ff">answer</span>
-This module contains the business logic related to the answers given to questions.
+This module is responsible for semantics related to the answers given to questions.
 
 ### <span style="color:#0080ff">auth</span>
-This module provides the means to authenticate a user into the system using token-based authentication. Authentication works for both IST students and external students. 
+This module is responsible for authentication of a user into the system using token-based authentication. Authentication works for both IST students and external students. 
 
 ### <span style="color:#0080ff">course</span>
-This module contains the business logic related to a course. A distinction is done between a **Course** and a **CourseExecution**, since a course can be executed multiple times over the years, and with different students, but reuse of questions. Therefore, roughly speaking, this module has two responsabilities: aggregate course executions and aggregate questions. Refer to the [Data Model](module_view_data_model.md) for details.
+This module is responsible for the semantics of a course. A distinction is done between a **Course** and a **CourseExecution**, since a course can be executed multiple times over the years, and with different students, but reuse of questions. Therefore, roughly speaking, this module has two responsabilities: aggregate course executions and aggregate questions. Refer to the [Data Model](module_view_data_model.md) for details.
 
 ### <span style="color:#0080ff">discussion</span>
-This module contains the business logic related to the discussions functionality and management of replies.
+This module is responsible for the semantics of the discussions functionality and management of replies.
 
 ### <span style="color:#0080ff">question</span>
-This module contains the business logic related to questions and topics.
+This module is responsible for the semantics of questions and topics.
 
 ### <span style="color:#0080ff">questionsubmission</span>
-This module contains the business logic related to question submissions and posterior review/vetting of such submissions.
+This module is responsible for the semantics of question submissions and posterior review/vetting of such submissions.
 
 ### <span style="color:#0080ff">quiz</span>
-This module contains the business logic related to quizzes, including the ordering of the questions, among others.
+This module is responsible for the semantics of quizzes, including the ordering of the questions, among others.
 
 ### <span style="color:#0080ff">statement</span>
 This module handles the data collected in the various stages of a student answering the quiz, including the start of the quiz, when there's a click in a multiple choice answer, or the quiz is completed, and bridges it to the frontend. The data is collected in a format relevant for audit trails and frontend presentation.
@@ -52,10 +54,10 @@ This module handles the data collected in the various stages of a student answer
 This module doesn't have persistent content and is simply used to present data. It is however relevant for the business logic as it materializes the gamification aspect of the system, in the form of a stats board.
 
 ### <span style="color:#0080ff">tournament</span>
-This module contains the business logic related with the tournaments functionality.
+This module is responsible forthe semantics of the tournaments functionality.
 
 ### <span style="color:#0080ff">user</span>
-This module contains the business logic related with a user. In particular, it contains the god-class User.
+This module is responsible for the semantics of a user. In particular, it contains the god-class User.
 
 ### <span style="color:#0080ff">permission</span>
 This module handles permissions of access to all the logical business entities - Relevant questions like: Can a user view this course? Can a user view this tournament? ...
