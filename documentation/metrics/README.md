@@ -17,4 +17,5 @@ For this section the following tools were used:
 * The [Structure101](./structure101) folder contains:
     * [A short explanation](./structure101/how_structure101_measures_complexity.md) of the metrics used by Structure101
     * [An analysis](./structure101/quizes_tutor_complexity_analysis.md) of the results presentented by Structure101 when examining the quizzes-tutor's code;
+    * [Relating the analysis to our suggestions](./structure101/relating.md)
     * The Structure101 project file (`s101project.java.hsp`).
