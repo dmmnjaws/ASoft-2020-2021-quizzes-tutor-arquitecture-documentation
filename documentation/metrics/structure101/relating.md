@@ -10,10 +10,12 @@ This solution would decrease the `user` module (and class) and in turn reduce si
 ## Cyclic dependencies in the [Uses View](../../module_view_uses.md)
 
 Using *Structure101* it is also easy to spot the cyclic dependencies highlighted in the [Uses View](../../module_view_uses.md). Namely the ones between `question` and `answer` and between `question` and `course`. 
-In the following images the solid arrows represent dependencies and the dotted arrows represent feedback dependencies. Thus, the cycling dependencies exist between the `domain` and `dto` subpackages in each of these cases.
+The following images aim to represent these cyclic dependencies between each package and respective `domain` subpackages side by side. The solid arrows represent dependencies and the dotted arrows represent feedback dependencies.
 
-![](images/question-answer.png)\
-Fig1. Dependencies between the `question` and `answer` packages
+`question` - `answer`         |  `question/domain` - `answer/domain`
+:-------------------------:|:-------------------------:
+![](images/question-answer.png)  |  ![](images/question-answer-domain.png)
 
-![](images/question-course.png)\
-Fig2. Dependencies between the `question` and `course` packages
+`question` - `course`         |  `question/domain` - `course/domain`
+:-------------------------:|:-------------------------:
+![](images/question-course.png)  |  ![](images/question-course-domain.png)
