@@ -21,8 +21,8 @@ The **Students** work in a "fork" of the original project, possibly in a team/or
 The IST course **Teachers**, which use quizzes-tutor development as part of their course plan, and oversee the **Students** work.
 
 
-### <span style="color:#0080ff">Project Mantainers</span>
-**Project Mantainers** correspond to other contributers to the project for a mid to long-term basis, and not restricted by the course period.
+### <span style="color:#0080ff">Project Maintainers</span>
+**Project Maintainers** correspond to other contributers to the project for a mid to long-term basis, and not restricted by the course period.
 
 
 ### <span style="color:#0080ff">Independent Contributors</span>
@@ -53,11 +53,11 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 - **DMI2.** 
 
-    *A conclusion was taken in **DMI1.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) that Question and Answer modules should be considered a Shared Kernel or peripheral functionalities to assume a Conformist posture towards it. In either cases, it would be ideal to not exist different teams working on each of those two modules (Question, Answer). We could further suggest to assign a Project Maintainer or Teacher to this modules.*
+    *A conclusion was taken in **DMI1.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) - the **question** and **answer** modules should be grouped in the same Bounded Context; and peripheral functionalities should assume a Conformist posture towards this Bounded Context. Therefore, idealy there would be a single team working in this **question+answer** Bounded Context. A further suggesting would be the assignment of a **Project Maintainer** or **Teacher** to this Bounded Context.*
 
 - **DMI3.** 
 
-    *In **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) we could see that **course**, **quiz** and **user** are 3 of the Core Domain's Bounded Contexts which will accumulate a lot of responsabilities due to the increase of engagement functionalities. For this reason, assigning a Project Mantainer or Teacher to this modules would be ideal.*
+    *In **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) it's mentioned that the **course**, **quiz** and **user** modules are three of the Core Domain's Bounded Contexts which may accumulate responsabilities due to the increase of engagement functionalities (developed by **Students**). For this reason, assigning a **Project Maintainer** or **Teacher** to these modules would be ideal. Especially in the light of the [BG3](system_overview.md#business-goals) business goal, assigning a **Teacher** would help with possible student doubts.*
 
 
 ## Related Views
