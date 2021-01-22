@@ -11,7 +11,7 @@ Fig 1. Decomposition View graphic representation. Modules in white are strictly 
 
 ## Element Catalog
 
-Since the decomposition view is an entry-point view, it addresses the decomposition of quizzes-tutor in a simple and comprehensible way. The (Standard Layered View)[module_view_layered.md] provides an overview of a deeper decomposition.
+Since the decomposition view is an entry-point view, it addresses the decomposition of quizzes-tutor in a simple and comprehensible way. The [Standard Layered View](module_view_layered.md) provides an overview of a deeper decomposition.
 
 ### <span style="color:#0080ff">quizzes-tutor</span>
  This module equates to the whole of quizzes-tutor. The functionalities it provides are listed in the [System Overview](system_overview.md), but are refined as follows:
