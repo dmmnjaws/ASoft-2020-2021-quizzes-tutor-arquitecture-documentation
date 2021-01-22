@@ -52,10 +52,12 @@ Rationale on **Domain Model Integrity** comments, improvements and consideration
 
 
 - **DMI2.** 
+
     *A conclusion was taken in **DMI1.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) that Question and Answer modules should be considered a Shared Kernel or peripheral functionalities to assume a Conformist posture towards it. In either cases, it would be ideal to not exist different teams working on each of those two modules (Question, Answer). We could further suggest to assign a Project Maintainer or Teacher to this modules.*
 
 - **DMI3.** 
-    *In **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) we could see that **course**, **quiz** and **user** are 3 of the Core Domain's Bounded Contexts which will accumulate a lot of responsabilities due to the increase of engagement functionalities. For this reason, assigning a Project Mantainer or Teacher to this modules would be ideal.
+
+    *In **DMI3.** in the [Uses View's **Rationale**](module_view_uses.md#rationale) we could see that **course**, **quiz** and **user** are 3 of the Core Domain's Bounded Contexts which will accumulate a lot of responsabilities due to the increase of engagement functionalities. For this reason, assigning a Project Mantainer or Teacher to this modules would be ideal.*
 
 
 ## Related Views
